@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JSDSuspensionView.h
 //  JSDWeChat
 //
 //  Created by jersey on 2018/6/6.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface JSDSuspensionView : UIView
 
-
+@property (weak, nonatomic) IBOutlet UIButton *windonButton;
 
 @end
-

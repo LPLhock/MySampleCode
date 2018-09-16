@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JSDTrashView.h
 //  JSDWeChat
 //
 //  Created by jersey on 2018/6/6.
@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface JSDTrashView : UIView
 
 @end
-

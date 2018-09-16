@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B41D02B620D125A00021DC6B /* JSDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B41D02B520D125A00021DC6B /* JSDCategory.m */; };
+		B41D02B920D250600021DC6B /* JSDBlocks.c in Sources */ = {isa = PBXBuildFile; fileRef = B41D02B820D250600021DC6B /* JSDBlocks.c */; };
+		B475B0E020C8DEB5008405FB /* JSDDradRect.m in Sources */ = {isa = PBXBuildFile; fileRef = B475B0DF20C8DEB5008405FB /* JSDDradRect.m */; };
 		B4F9D7EE20C7BA6E00BCC7F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9D7ED20C7BA6E00BCC7F2 /* AppDelegate.m */; };
 		B4F9D7F120C7BA6E00BCC7F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9D7F020C7BA6E00BCC7F2 /* ViewController.m */; };
 		B4F9D7F420C7BA6E00BCC7F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F9D7F220C7BA6E00BCC7F2 /* Main.storyboard */; };
@@ -15,6 +18,10 @@
 		B4F9D7FC20C7BA7200BCC7F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9D7FB20C7BA7200BCC7F2 /* main.m */; };
 		B4F9D80620C7BA7200BCC7F2 /* JSDWeChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9D80520C7BA7200BCC7F2 /* JSDWeChatTests.m */; };
 		B4F9D81120C7BA7200BCC7F2 /* JSDWeChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9D81020C7BA7200BCC7F2 /* JSDWeChatUITests.m */; };
+		B4F9D82020C7DAB400BCC7F2 /* JSDSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9D81F20C7DAB400BCC7F2 /* JSDSuspensionView.m */; };
+		B4F9D82220C7DAC900BCC7F2 /* JSDSuspensionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F9D82120C7DAC900BCC7F2 /* JSDSuspensionView.xib */; };
+		B4F9D82520C7DAE600BCC7F2 /* JSDTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9D82420C7DAE600BCC7F2 /* JSDTrashView.m */; };
+		B4F9D82720C7DAEF00BCC7F2 /* JSDTrashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F9D82620C7DAEF00BCC7F2 /* JSDTrashView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B41D02B420D125A00021DC6B /* JSDCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCategory.h; sourceTree = "<group>"; };
+		B41D02B520D125A00021DC6B /* JSDCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCategory.m; sourceTree = "<group>"; };
+		B41D02B720D250600021DC6B /* JSDBlocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBlocks.h; sourceTree = "<group>"; };
+		B41D02B820D250600021DC6B /* JSDBlocks.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = JSDBlocks.c; sourceTree = "<group>"; };
+		B475B0DE20C8DEB5008405FB /* JSDDradRect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDDradRect.h; sourceTree = "<group>"; };
+		B475B0DF20C8DEB5008405FB /* JSDDradRect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDDradRect.m; sourceTree = "<group>"; };
 		B4F9D7E920C7BA6E00BCC7F2 /* JSDWeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSDWeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F9D7EC20C7BA6E00BCC7F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4F9D7ED20C7BA6E00BCC7F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +64,12 @@
 		B4F9D80C20C7BA7200BCC7F2 /* JSDWeChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSDWeChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F9D81020C7BA7200BCC7F2 /* JSDWeChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDWeChatUITests.m; sourceTree = "<group>"; };
 		B4F9D81220C7BA7200BCC7F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4F9D81E20C7DAB400BCC7F2 /* JSDSuspensionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSuspensionView.h; sourceTree = "<group>"; };
+		B4F9D81F20C7DAB400BCC7F2 /* JSDSuspensionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSuspensionView.m; sourceTree = "<group>"; };
+		B4F9D82120C7DAC900BCC7F2 /* JSDSuspensionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDSuspensionView.xib; sourceTree = "<group>"; };
+		B4F9D82320C7DAE600BCC7F2 /* JSDTrashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTrashView.h; sourceTree = "<group>"; };
+		B4F9D82420C7DAE600BCC7F2 /* JSDTrashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTrashView.m; sourceTree = "<group>"; };
+		B4F9D82620C7DAEF00BCC7F2 /* JSDTrashView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDTrashView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +124,18 @@
 				B4F9D7ED20C7BA6E00BCC7F2 /* AppDelegate.m */,
 				B4F9D7EF20C7BA6E00BCC7F2 /* ViewController.h */,
 				B4F9D7F020C7BA6E00BCC7F2 /* ViewController.m */,
+				B4F9D81E20C7DAB400BCC7F2 /* JSDSuspensionView.h */,
+				B4F9D81F20C7DAB400BCC7F2 /* JSDSuspensionView.m */,
+				B4F9D82120C7DAC900BCC7F2 /* JSDSuspensionView.xib */,
+				B4F9D82320C7DAE600BCC7F2 /* JSDTrashView.h */,
+				B4F9D82420C7DAE600BCC7F2 /* JSDTrashView.m */,
+				B4F9D82620C7DAEF00BCC7F2 /* JSDTrashView.xib */,
+				B475B0DE20C8DEB5008405FB /* JSDDradRect.h */,
+				B475B0DF20C8DEB5008405FB /* JSDDradRect.m */,
+				B41D02B420D125A00021DC6B /* JSDCategory.h */,
+				B41D02B520D125A00021DC6B /* JSDCategory.m */,
+				B41D02B720D250600021DC6B /* JSDBlocks.h */,
+				B41D02B820D250600021DC6B /* JSDBlocks.c */,
 				B4F9D7F220C7BA6E00BCC7F2 /* Main.storyboard */,
 				B4F9D7F520C7BA7200BCC7F2 /* Assets.xcassets */,
 				B4F9D7F720C7BA7200BCC7F2 /* LaunchScreen.storyboard */,
@@ -236,6 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4F9D7F920C7BA7200BCC7F2 /* LaunchScreen.storyboard in Resources */,
+				B4F9D82220C7DAC900BCC7F2 /* JSDSuspensionView.xib in Resources */,
+				B4F9D82720C7DAEF00BCC7F2 /* JSDTrashView.xib in Resources */,
 				B4F9D7F620C7BA7200BCC7F2 /* Assets.xcassets in Resources */,
 				B4F9D7F420C7BA6E00BCC7F2 /* Main.storyboard in Resources */,
 			);
@@ -263,8 +296,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4F9D7F120C7BA6E00BCC7F2 /* ViewController.m in Sources */,
+				B4F9D82520C7DAE600BCC7F2 /* JSDTrashView.m in Sources */,
+				B4F9D82020C7DAB400BCC7F2 /* JSDSuspensionView.m in Sources */,
+				B41D02B920D250600021DC6B /* JSDBlocks.c in Sources */,
 				B4F9D7FC20C7BA7200BCC7F2 /* main.m in Sources */,
+				B475B0E020C8DEB5008405FB /* JSDDradRect.m in Sources */,
 				B4F9D7EE20C7BA6E00BCC7F2 /* AppDelegate.m in Sources */,
+				B41D02B620D125A00021DC6B /* JSDCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +475,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2K6DTDY865;
 				INFOPLIST_FILE = JSDWeChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +495,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2K6DTDY865;
 				INFOPLIST_FILE = JSDWeChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -11,6 +11,22 @@
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+        
+        
+        int (^func) (int count) = ^ int (int number) {
+            return 15;
+        };
+//
+//            int result = func(10);
+//
+//            int value = (func(10));
+//            NSLog(@"%d---%d",result,value);
+        
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        
+        
     }
+    
+    
+    
 }
