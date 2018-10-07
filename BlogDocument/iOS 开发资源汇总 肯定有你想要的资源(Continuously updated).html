@@ -1,0 +1,763 @@
+<!DOCTYPE html><html>
+
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}
+html{line-height:1}
+ol,ul{list-style:none}
+table{border-collapse:collapse;border-spacing:0;
+  margin-top: 0;
+  margin-bottom: 0.8em;
+}
+caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}
+q,blockquote{quotes:none}
+q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}
+a img{border:none}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}
+a{color:#1863a1}
+a:visited{color:#751590}
+a:focus{color:#0181eb}
+a:hover{color:#0181eb}
+a:active{color:#01579f}
+aside.sidebar a{color:#222}
+aside.sidebar a:focus{color:#0181eb}
+aside.sidebar a:hover{color:#0181eb}
+aside.sidebar a:active{color:#01579f}
+a{-webkit-transition:color 0.3s;-moz-transition:color 0.3s;-o-transition:color 0.3s;transition:color 0.3s}
+
+body,h1,h2,h3,h4,h5,h6,footer{font-family:"PT Sans","Helvetica Neue","Optima","Hiragino Sans GB",sans-serif}
+body{line-height:1.5em;color:#222
+	-webkit-text-size-adjust:none;  min-width: 200px;
+  max-width: 760px;
+  margin: 0 auto; padding: 1em;}
+
+pre,code,tt,p code,li code{font-family:Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace}
+
+h1{font-size:2.2em;line-height:1.2em}
+
+h1,h2,h3,h4,h5,h6{text-rendering:optimizelegibility;margin-bottom:1em;font-weight:bold}
+h2,section h1{font-size:1.5em}
+h3,section h2,section section h1{font-size:1.3em}
+h4,section h3,section section h2,section section section h1{font-size:1em}
+h5,section h4,section section h3{font-size:.9em}
+h6,section h5,section section h4,section section section h3{font-size:.8em}
+.markdown-body{padding: 0px 4px;}
+.markdown-body h1{position:relative;padding-top:1em;padding-bottom:0.2em;margin-bottom:1em;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAABCAYAAACsXeyTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQIHWNIS0sr/v//PwMMDzY+ADqMahlW4J91AAAAAElFTkSuQmCC') bottom left repeat-x}
+.markdown-body  h1 a{text-decoration:none}
+.markdown-body  h1 a:hover{text-decoration:underline}
+
+.markdown-body h2{padding-top:0.8em;padding-bottom:0.2em;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAABCAYAAACsXeyTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQIHWNIS0sr/v//PwMMDzY+ADqMahlW4J91AAAAAElFTkSuQmCC') bottom left repeat-x}
+.markdown-body h2:first-child,.markdown-body header+h2{padding-top:0}
+.markdown-body h2:first-child,.markdown-body header+h2{background:none}
+
+
+
+p,.markdown-body blockquote,ul,ol{margin-bottom:0.8em; margin-top:0.8em;}
+ul{list-style-type:disc}
+ul ul{list-style-type:circle;margin-bottom:0px}
+ul ul ul{list-style-type:square;margin-bottom:0px}
+ol{list-style-type:decimal}
+ol ol{list-style-type:lower-alpha;margin-bottom:0px}
+ol ol ol{list-style-type:lower-roman;margin-bottom:0px}
+ul,ul ul,ul ol,ol,ol ul,ol ol{margin-left:1.3em}
+ul ul,ul ol,ol ul,ol ol{margin-bottom:0em}
+strong{font-weight:bold}
+em{font-style:italic}
+sup,sub{font-size:0.75em;position:relative;display:inline-block;padding:0 .2em;line-height:.8em}
+sup{top:-.5em}
+sub{bottom:-.5em}
+a[rev='footnote']{font-size:.75em;padding:0 .3em;line-height:1}
+q{font-style:italic}
+q:before{content:"\201C"}
+q:after{content:"\201D"}
+em,dfn{font-style:italic}
+strong,dfn{font-weight:bold}
+del,s{text-decoration:line-through}
+abbr,acronym{border-bottom:1px dotted;cursor:help}
+small{font-size:.8em}
+big{font-size:1.2em}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body blockquote{font-style:italic;position:relative;font-size:1.2em;line-height:1.5em;padding-left:1em;border-left:4px solid rgba(170,170,170,0.5)}
+.markdown-body blockquote cite{font-style:italic}
+.markdown-body blockquote cite a{color:#aaa !important;word-wrap:break-word}
+.markdown-body blockquote cite:before{content:'\2014';padding-right:.3em;padding-left:.3em;color:#aaa}
+
+.markdown-body a{white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;white-space:pre-wrap;word-wrap:break-word}
+
+body>header{font-size:1em;padding-top:1.5em;padding-bottom:1.5em}
+.markdown-body{overflow:hidden}
+.markdown-body>div,.markdown-body>article{width:100%}
+aside.sidebar{float:none;padding:0 18px 1px;background-color:#f7f7f7;border-top:1px solid #e0e0e0}
+.flex-content,article img,article video,article .flash-video,aside.sidebar img{max-width:100%;height:auto}
+.basic-alignment.left,article img.left,article video.left,article .left.flash-video,aside.sidebar img.left{float:left;margin-right:1.5em}
+.basic-alignment.right,article img.right,article video.right,article .right.flash-video,aside.sidebar img.right{float:right;margin-left:1.5em}
+.basic-alignment.center,article img.center,article video.center,article .center.flash-video,aside.sidebar img.center{display:block;margin:0 auto 1.5em}
+.basic-alignment.left,article img.left,article video.left,article .left.flash-video,aside.sidebar img.left,.basic-alignment.right,article img.right,article video.right,article .right.flash-video,aside.sidebar img.right{margin-bottom:.8em}
+.toggle-sidebar,.no-sidebar .toggle-sidebar{display:none}
+
+
+.markdown-body img,.markdown-body video,.markdown-body .flash-video{ -webkit-border-radius:0.3em;-moz-border-radius:0.3em;-ms-border-radius:0.3em;-o-border-radius:0.3em;border-radius:0.3em;-webkit-box-shadow:rgba(0,0,0,0.15) 0 1px 4px;-moz-box-shadow:rgba(0,0,0,0.15) 0 1px 4px;box-shadow:rgba(0,0,0,0.15) 0 1px 4px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border:#fff 0.5em solid;}
+
+.markdown-body img,.markdown-body video{max-width: 100%;}
+.markdown-body video,.markdown-body .flash-video{margin:0 auto 1.5em}
+.markdown-body video{display:block;width:100%}
+.markdown-body .flash-video>div{position:relative;display:block;padding-bottom:56.25%;padding-top:1px;height:0;overflow:hidden}
+.markdown-body .flash-video>div iframe,.markdown-body .flash-video>div object,.markdown-body .flash-video>div embed{position:absolute;top:0;left:0;width:100%;height:100%}
+.markdown-body>footer{padding-bottom:2.5em;margin-top:2em}
+.markdown-body>footer p.meta{margin-bottom:.8em;font-size:.85em;clear:both;overflow:hidden}
+
+
+body,pre{ background:#fdf6e3 url('data:image/png;base64,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') top left;}
+body{ background-color: #f8f8f8;}
+pre{-webkit-border-radius:0.4em;-moz-border-radius:0.4em;-ms-border-radius:0.4em;-o-border-radius:0.4em;border-radius:0.4em;border:1px solid #e7dec3;line-height:1.45em;font-size:13px;margin-bottom:2.1em;padding:.8em 1em;color:#586e75;overflow:auto}
+.markdown-body code{background: none;}
+h3.filename+pre{-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;border-top-left-radius:0px;-moz-border-radius-topright:0px;-webkit-border-top-right-radius:0px;border-top-right-radius:0px}
+p code,li code{display:inline-block;white-space:no-wrap;background:#fff;font-size:.8em;line-height:1.5em;color:#555;border:1px solid #ddd;-webkit-border-radius:0.4em;-moz-border-radius:0.4em;-ms-border-radius:0.4em;-o-border-radius:0.4em;border-radius:0.4em;padding:0 .3em;margin:-1px 0}
+p pre code,li pre code{font-size:1em !important;background:none;border:none}
+
+/*
+
+Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #fdf6e3;
+  color: #657b83;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-comment,
+.diff .hljs-header,
+.hljs-doctype,
+.hljs-pi,
+.lisp .hljs-string {
+  color: #93a1a1;
+}
+
+/* Solarized Green */
+.hljs-keyword,
+.hljs-winutils,
+.method,
+.hljs-addition,
+.css .hljs-tag,
+.hljs-request,
+.hljs-status,
+.nginx .hljs-title {
+  color: #859900;
+}
+
+/* Solarized Cyan */
+.hljs-number,
+.hljs-command,
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-rule .hljs-value,
+.hljs-doctag,
+.tex .hljs-formula,
+.hljs-regexp,
+.hljs-hexcolor,
+.hljs-link_url {
+  color: #2aa198;
+}
+
+/* Solarized Blue */
+.hljs-title,
+.hljs-localvars,
+.hljs-chunk,
+.hljs-decorator,
+.hljs-built_in,
+.hljs-identifier,
+.vhdl .hljs-literal,
+.hljs-id,
+.css .hljs-function,
+.hljs-name {
+  color: #268bd2;
+}
+
+/* Solarized Yellow */
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body,
+.smalltalk .hljs-number,
+.hljs-constant,
+.hljs-class .hljs-title,
+.hljs-parent,
+.hljs-type,
+.hljs-link_reference {
+  color: #b58900;
+}
+
+/* Solarized Orange */
+.hljs-preprocessor,
+.hljs-preprocessor .hljs-keyword,
+.hljs-pragma,
+.hljs-shebang,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.diff .hljs-change,
+.hljs-special,
+.hljs-attr_selector,
+.hljs-subst,
+.hljs-cdata,
+.css .hljs-pseudo,
+.hljs-header {
+  color: #cb4b16;
+}
+
+/* Solarized Red */
+.hljs-deletion,
+.hljs-important {
+  color: #dc322f;
+}
+
+/* Solarized Violet */
+.hljs-link_label {
+  color: #6c71c4;
+}
+
+.tex .hljs-formula {
+  background: #eee8d5;
+}
+
+
+</style>
+
+<style> @media print{ .hljs{overflow: visible; word-wrap: break-word !important;} }</style></head><body><div class="markdown-body">
+<h1 id="toc_0">iOS 开发资源汇总 肯定有你想要的资源(Continuously updated)</h1>
+
+<h2 id="toc_1">写在文前</h2>
+
+<blockquote>
+<p>为什么还要重复造轮子？ <br/>
+我相信在看到这篇文章之前，大家肯定找到了很多iOS资源收集，自学资源，精品资源，开源项目收集，大牛Blog集合等等。<br/>
+这类文章实在太多太多了，并且也广泛得到大家的认可。<br/>
+我自己也非常喜欢在上面查找我想要的。<br/>
+在这里我想把自己接触iOS这三年以来，所遇到的精品资源加上各个社区用户认可度比较高的资源收集文章都结合起来，作一个相应更加广泛的资源收集整理。</p>
+
+<h1 id="toc_2">相信一定会有你想要的！</h1>
+</blockquote>
+
+<h4 id="toc_3">知名度很高的资源收集文章</h4>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">资源</th>
+<th style="text-align: center">简介</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center"><a href="https://github.com/vsouza/awesome-ios">Awesome-iOS</a></td>
+<td style="text-align: center">非常伟大的Awesome出版的iOS资源图书馆，资源广泛目录内容清晰，非常便于查找，github上相对权威的iOS相关知识库，墙裂推荐</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://github.com/dkhamsing/open-source-ios-apps">开源iOS项目</a></td>
+<td style="text-align: center">GitHub上 收录非常多值得学习的开源项目，不局限于Swift,OC编写，学习开源项目查找必备，非常有趣的是编辑采用🔥🔥🔥🔥🔥方式来标记每个项目、代表其在GitHub的相应Star数</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://github.com/Tim9Liu9/TimLiu-iOS">iOS常用资料</a></td>
+<td style="text-align: center">出自GitHub<a href="https://github.com/Tim9Liu9">@天朝码农</a>整理的常用三方库、插件、开发工具、开源项目、知名博客等等</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://github.com/Draveness/analyze">Draveness收集的资料analyze</a></td>
+<td style="text-align: center">Analyze 关于iOS开源框架源代码解析的文章</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://github.com/nixzhu/dev-blog">翻译、开发心得或学习笔记</a></td>
+<td style="text-align: center">github作者 <a href="https://github.com/nixzhu">nixzhu</a>收集的一些开发心得笔记，还是不错的</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://github.com/apple/swift">Apple 开源Swift</a></td>
+<td style="text-align: center">Apple 官方开源Swift社区，学习Swift的童鞋可以直接从这里入手。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://github.com/numbbbbb/the-swift-programming-language-in-chinese">中文版 Swift</a></td>
+<td style="text-align: center">中文版Swift 官网文档翻译，看英文文档比较吃力的，可以考虑选择Swift 中文翻译版，虽然没有直接看英文的给力，但是这里翻译的还是相当给力的！</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://github.com/hzlzh/Best-App">优秀的iOS 软件</a></td>
+<td style="text-align: center">里面收集了很多非常优秀的iOS 软件，包括付款免费等。真的很棒，在条件允许的情况下，希望大家都能支持正版。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://github.com/ChenYilong/iOSInterviewQuestions">面试题集锦</a></td>
+<td style="text-align: center">出自GitHub 大神<a href="https://github.com/ChenYilong">@iOS程序犭袁</a>iOS面试题集锦（附答案）--学习交流群515295083</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://github.com/tangqiaoboy/iOSBlogCN">iOS/Mac 开发博客作者列表</a></td>
+<td style="text-align: center"><a href="https://github.com/tangqiaoboy">唐巧大神</a> 收集的中文 iOS/Mac 开发博客列表。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://github.com/1c7/chinese-independent-developer">有趣的中国独立开发者的项目</a></td>
+<td style="text-align: center">非常有趣的一个收集项目。中国独立开发者项目列表，聚合所有中国独立开发者的项目， ----分享大家都在做什么。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.jianshu.com/p/d70041eb25d7">iOS开发完全自学资源集合</a></td>
+<td style="text-align: center">来自简书知名作者<a href="https://www.jianshu.com/u/3313b20a4e25">技匠</a>、iOS开发完全自学资源集合，里面的自学资源非常齐全并且基本都是高权威官方认可的资料教程。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.jianshu.com/p/c271c1b05308">一名全栈设计师的Mac工具箱</a></td>
+<td style="text-align: center">来自简书知名作者<a href="https://www.jianshu.com/u/3313b20a4e25">技匠</a>、一名全栈设计师的Mac工具箱（设计,开发,效率）。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://www.cocoachina.com/ios/20151210/14635.html">94个iOS开发资源推荐</a></td>
+<td style="text-align: center">94个iOS开发资源推荐，帮你加速应用开发</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://mobdevgroup.com/development/github">GitHub 资源集</a></td>
+<td style="text-align: center">GitHub资源集,整理GitHub上面分类的资料集合,整理分类了很多GitHub比较不错的项目资源。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.objccn.io/">Objc 中国</a></td>
+<td style="text-align: center">喵神<a href="https://onevcat.com/">OneV&#39;s Den</a>出品的Objc 中国，也是一个相当权威的知名技术文章收录，模块知识点翻译指南期刊，可惜作者后续可能时间关系很少进行更新了，但是里面每篇文章，排版等都是非常用心的。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://airbnb.io/lottie/">React-Native</a> / <a href="https://github.com/airbnb/lottie-react-native">lottie-react-native</a></td>
+<td style="text-align: center">一位Node同事推荐的一个超级棒的动画相关资源。Lottie是Android和iOS的移动库，用于解析<a href="http://www.adobe.com/products/aftereffects.html">Adobe After Effects</a>动画与<a href="https://github.com/airbnb/lottie-web">Bodymovin</a>一起导出为json 并在移动设备和网络<a href="https://github.com/airbnb/lottie-web">上原生</a>呈现它们！</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="toc_4">氛围很棒的社区收集</h4>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">社区</th>
+<th style="text-align: center">简介</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center"><a href="https://github.com/">GitHub</a></td>
+<td style="text-align: center">不用我说了吧，世界上最大的程序员同性交友平台QAQ。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://stackoverflow.com/">StackOverFlow</a></td>
+<td style="text-align: center">目前世界上最权威，人数最活跃的问答社区，和GitHub一样简直不要太赞。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://gitter.im/home/explore/tags/curated:frontend">在线通讯社区Gitter</a>      <a href="http://www.gitter.net.cn/index.html">Gitter中文客户端</a></td>
+<td style="text-align: center">Gitter非常棒的及时在线通讯社区。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.csdn.net/">CSDN</a></td>
+<td style="text-align: center">号称全球中文最大的IT社区，非常优秀了。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.v2ex.com/">V2EX</a></td>
+<td style="text-align: center">国内程序员活跃度高，且氛围不错的V2EX，每天基本3至4千用户同时在线，非常值得推荐。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://bbs.feng.com/">果粉论坛威锋</a></td>
+<td style="text-align: center">国内最权威且用户量最大的果粉论坛，当属威锋</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://xiaozhuanlan.com/">界面简洁优美的小专栏</a></td>
+<td style="text-align: center">小专栏，最近发现的一个非常不错的技术文章社区，里面有很多大牛发的技术文章，如果喜欢可以付费观看完整版</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://www.code4app.com/">Code4App</a></td>
+<td style="text-align: center">Code4App、国内相对人气较高的、iOS开源项目Dome等社区</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://www.cocoachina.com/">CocoaChina</a></td>
+<td style="text-align: center">国内主要针对iOS开发技术文章论坛</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.oschina.net/project/">开源项目</a></td>
+<td style="text-align: center">国内不错的收集不局限于iOS的开源项目社区</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://www.open-open.com/lib/">深度开源</a></td>
+<td style="text-align: center">类似开源社区，收集开源项目且不局限于iOS</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.zhihu.com/">知乎</a></td>
+<td style="text-align: center">知乎，坐地铁上没事的时候喜欢刷，应该不需要多介绍了。虽然包含较广，里面还是有不少技术大佬的！</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://juejin.im/">掘金</a></td>
+<td style="text-align: center">非常不错的技术文章分享社区</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.ityudao.com/">IT遇岛</a></td>
+<td style="text-align: center">简书好友推荐<a href="https://www.jianshu.com/u/b3f7fccceb88">IT遇岛</a>、一个最近新建的程序员社交平台，类似V2EX，由于上线时间较短目前用户量还较少。如果喜欢的话可以来支持一下，界面整体感觉还不错</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="toc_5">开发及自我提升相关不错的文章</h4>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">文章</th>
+<th style="text-align: center">简介</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center"><a href="https://www.jianshu.com/p/0b0d9b1f1f19">关于iOS多线程，你看我就够了</a></td>
+<td style="text-align: center">简书作者:<a href="https://www.jianshu.com/u/5acac5529187">伯恩的遗产</a>、一篇介绍iOS多线程的文章，非常通俗易懂</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://git.oschina.net/progit/index.html">Pro Git(中文版)</a></td>
+<td style="text-align: center">一篇介绍Git 详细指南，里面目录划分的非常明确，解释的也很容易理解</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://blog.ibireme.com/archive/">深入理解RunLoop</a></td>
+<td style="text-align: center">YY大神对RunLoop写的一篇刨根问底详细探究，作者非常用心，想好好RunLoop研究的可以参考这篇</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/">iOS 保持界面流畅的技巧</a></td>
+<td style="text-align: center">YY大神写的一篇关于界面流畅的技巧分享，非常棒👍👍👍</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.jianshu.com/p/bd42bacbe4cc">【如何快速的开发一个完整的iOS直播app】(原理篇)</a></td>
+<td style="text-align: center">入门开发视频直播，可以参考这篇介绍的相当完整</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://blog.sunnyxx.com/2015/05/17/cell-height-calculation/">优化UITableViewCell高度计算的那些事</a></td>
+<td style="text-align: center">Sunny,<a href="https://github.com/forkingdog/UITableView-FDTemplateLayoutCell">UITableView+FDTemplateLayoutCell</a> 主要作者，非常优秀的一个开源框架</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.jianshu.com/p/24236d6b5939">【干货】看了这篇文章，你还找不到你要的资源，那我也没招了……</a></td>
+<td style="text-align: center">里面介绍的搜索资源方法都挺不错的</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://www.desgard.com/TableView-Reuse/">复用的精妙 - UITableView 复用技术原理分析</a></td>
+<td style="text-align: center">深入理解UITableView 复用原理，写的很好</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://me.deepakbhati.com/2016/03/23/multilevel-uitableview/">Multilevel UITableView</a></td>
+<td style="text-align: center">一篇介绍多层级 UITableView附带源码具体实现介绍</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://unbug.github.io/codelf/">CODELF</a></td>
+<td style="text-align: center">还没打算分一个好用工具区，暂时把它放这里。一个专门用来翻译的在线翻译工具，真的非常实用，用了都说好</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://juejin.im/user/5a52075e6fb9a01c9d31b107">老司机iOS周报</a></td>
+<td style="text-align: center"><a href="https://www.jianshu.com/u/88a056103c02">没故事的卓同学</a> 收集的很有趣实用的iOS相关资料，更新很快</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://blog.leichunfeng.com/blog/2016/02/27/mvvm-with-reactivecocoa/">MVVM With ReactiveCocoa</a></td>
+<td style="text-align: center">很经典一篇介绍MVVC框架的文章</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://yulingtianxia.com/blog/2015/11/01/More-than-you-want-to-know-about-synchronized/" title="关于 @synchronized，这儿比你想知道的还要多">关于 @synchronized，这儿比你想知道的还要多</a></td>
+<td style="text-align: center">非常棒的一篇介绍@synchronized的文章</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://mrpeak.cn/blog/tcp-headers/">TCP/IP 系列之 Header 篇</a></td>
+<td style="text-align: center"><a href="http://mrpeak.cn/">MrPeak杂货铺</a>写的TCP/IP 的详细介绍系列不要太棒，这只是其中一篇而已</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.jianshu.com/p/bcefda55bce4">微信,QQ这类IM app怎么做——谈谈Websocket</a></td>
+<td style="text-align: center">采用简单易懂的方式，让你理解Websocket工作原理</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a></td>
+<td style="text-align: center">学习别人是如何写git commit的，工作中非常重要的细节</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.objccn.io/issue-10-6">IP，TCP 和 HTTP</a></td>
+<td style="text-align: center"><a href="https://www.objccn.io/">ObjC 中国</a> 翻译的一篇国外 网络通讯 协议的文章，值得推荐</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://www.sprynthesis.com/2014/12/06/reactivecocoa-mvvm-introduction/">ReactiveCocoa和MVVM，简介</a></td>
+<td style="text-align: center">一遍MVVM 框架结合 ReactiveCocoa 讲解，非常棒</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="toc_6">大牛Blog集合</h4>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">作者集合/作者</th>
+<th style="text-align: center">简介</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center"><a href="https://iosdevdirectory.com/#development-en">iOS开发者博客目录集合</a></td>
+<td style="text-align: center">不得不说这篇文章的收集真的是太棒了，里面每个推荐的作者，组织含金量都是相当高的，排版也不错，非常方便查看，真的是非常值得推荐大家去关注阅读的技术文章。**<strong><em>墙裂推荐</em></strong>**</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://github.com/tangqiaoboy/iOSBlogCN">iOS/Mac 开发博客作者列表</a></td>
+<td style="text-align: center"><a href="https://github.com/tangqiaoboy">唐巧大神</a> 收集的中文 iOS/Mac 开发博客列表</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://onevcat.com/#blog">王魏(喵神)</a></td>
+<td style="text-align: center">国内大牛，(@onevcat)，一名来自中国的 iOS / Unity 开发者。现居日本，就职于 LINE。正在修行，探求创意之源</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://nshipster.cn/">NSHipster</a></td>
+<td style="text-align: center">NSHipster 关注被忽略的 Objective-C、Swift 和 Cocoa 特性。每周更新</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://blog.sunnyxx.com/">Sunnyxx</a></td>
+<td style="text-align: center">Sunnyxx大神很皮、我就是Sunny怎么了？</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://blog.ibireme.com/">YY大神-ibireme</a></td>
+<td style="text-align: center">GitHub人气很高开源项目<a href="https://github.com/ibireme">ibireme</a>/<strong><a href="https://github.com/ibireme/YYKit">YYKit</a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.jianshu.com/u/b09c3959ab3b">袁峥</a></td>
+<td style="text-align: center">别整些没用的，喜欢刨根问底！实用性永远第一位😄</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://draveness.me/index">Draveness&#39;s Blog</a></td>
+<td style="text-align: center">面向信仰编程。被人称为灯塔的 Draveness 的博客。Draveness 涉猎很广，文章也很有深度，一半以上的文章我连标题都看不懂</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://blog.devtang.com/">唐巧</a></td>
+<td style="text-align: center">唐巧，男，80 后，程序员，作为核心员工在 <a href="https://www.yuanfudao.com/">猿辅导</a> 参与创业，担任 <a href="https://www.yuansouti.com/">小猿搜题</a> 产品技术负责人。著有<a href="http://item.jd.com/11598468.html">《iOS 开发进阶》</a> 一书。曾开发 <a href="http://mail.163.com/">网易邮箱</a>、网易微博、<a href="http://note.youdao.com/">有道云笔记</a>、<a href="https://www.yuantiku.com/">猿题库</a>、<a href="https://www.yuansouti.com/">小猿搜题</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://blog.cnbang.net/" title="Opens in a new window">Bang</a></td>
+<td style="text-align: center">大神Bang,GitHub著名热更新开源项目JSPatch。作品：<a href="https://github.com/bang590/JSPatch">JSPatch</a> <a href="http://app.cnbang.net/">iOS APP</a> <a href="http://yishu.cnbang.net/">伊书</a> <a href="http://github.com/bang590/twitese">推特中文圈(twitese)</a> <a href="http://bangswork.googlecode.com/svn/trunk/army/Army-AI/index.html">陆战军棋</a> <a href="http://blog.cnbang.net/works">更多…</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://halfrost.com/">冰霜之地</a></td>
+<td style="text-align: center">在每一个苦思冥想的瞬间求知、人称“霜神”冰霜的博客，冰霜的文章针对某个问题总是能有深入、全面的剖析</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://ming1016.github.io/">星光社 - 戴铭</a></td>
+<td style="text-align: center">滴滴技术专家戴铭的博客，每篇都是精品</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://link.jianshu.com/?t=http%3A%2F%2Fyulingtianxia.com"><strong>玉令天下</strong></a></td>
+<td style="text-align: center">腾讯杨萧玉的博客，底层细节能深入到汇编的实现，令人惊叹。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://casatwy.com/" title="Opens in a new window">Casa Taloyum&#39;s blog</a></td>
+<td style="text-align: center">鼓手、吉他手、还是一名技术顶尖程序员，简直不要太w屌，自12岁起开始编码，目前担任自由开发人员</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://mrpeak.cn/" title="Opens in a new window">MrPeak杂货铺</a></td>
+<td style="text-align: center">高峰大神</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://link.jianshu.com/?t=https%3A%2F%2Fjuejin.im%2Fuser%2F57638ad8207703006b06e3ef%2Fposts"><strong>Bestswifter</strong></a></td>
+<td style="text-align: center"><a href="https://link.jianshu.com/?t=https%3A%2F%2Fgithub.com%2Fbestswifter%2Fblog">@bestswifter </a>张星宇的博客，《<a href="https://link.jianshu.com/?t=https%3A%2F%2Fgithub.com%2Fbestswifter%2Fblog%2Fblob%2Fmaster%2Farticles%2Fbat-offer.md">让 BAT 的 offer 不再难拿</a>》介绍了他在大学时准备面试最后进入百度的经历，这篇文章也引起了不小的积极反响。博客除了如 《<a href="https://link.jianshu.com/?t=https%3A%2F%2Fgithub.com%2Fbestswifter%2Fblog%2Fblob%2Fmaster%2Farticles%2Fios-lock.md">深入理解 iOS 开发中的锁</a>》 iOS 开发也有不少工程化话题的文章</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.jianshu.com/u/8d5b91490ca5"><strong>故胤道长</strong></a></td>
+<td style="text-align: center">顶级 iOS 开发者，曾就职于 Uber，现就职于美帝亚马逊。文风流畅，博客也会谈到不少中美编程文化的差异</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.jianshu.com/u/96a14318a4de"><strong>iOS程序犭袁</strong></a></td>
+<td style="text-align: center"><a href="https://link.jianshu.com/?t=https%3A%2F%2Fgithub.com%2FChenYilong%2FCYLTabBarController">CYLTabBarController</a> 作者，博客也是篇篇经典。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://link.jianshu.com/?t=http%3A%2F%2Fblog.leichunfeng.com%2Fblog%2Farchives%2F"><strong>雷纯锋的技术博客</strong></a></td>
+<td style="text-align: center">有多篇经典的博客，如《<a href="https://link.jianshu.com/?t=http%3A%2F%2Fblog.leichunfeng.com%2Fblog%2F2017%2F02%2F20%2Ftalking-about-the-decompression-of-the-image-in-ios%2F">谈谈 iOS 中图片的解压缩</a>》、《<a href="https://link.jianshu.com/?t=http%3A%2F%2Fblog.leichunfeng.com%2Fblog%2F2016%2F02%2F27%2Fmvvm-with-reactivecocoa%2F">MVVM With ReactiveCocoa</a>》。不过 17 年只更新了一篇文章</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://link.jianshu.com/?t=http%3A%2F%2Fwww.desgard.com"><strong>瓜地</strong></a></td>
+<td style="text-align: center"><a href="https://link.jianshu.com/?t=https%3A%2F%2Fweibo.com%2Fdesgard">冬瓜</a>的博客，作为曾经 acm‘er 的素质与修养，博客总是能够深入底层</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://link.jianshu.com/?t=https%3A%2F%2Fjuejin.im%2Fuser%2F5656f11760b28da566412f03%2Fposts"><strong>Joy_xx</strong></a></td>
+<td style="text-align: center">被人称为架构<a href="https://link.jianshu.com/?t=https%3A%2F%2Fweibo.com%2Fu%2F5419850564"> joy </a>的博客，有不少关于 APM 的好文。</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://link.jianshu.com/?t=https%3A%2F%2Fjuejin.im%2Fuser%2F57f8ffda2e958a005581e3c0%2Fposts"><strong>J_Knight_</strong></a></td>
+<td style="text-align: center"><a href="https://link.jianshu.com/?t=https%3A%2F%2Fweibo.com%2Fu%2F1929625262">J_Knight</a>的文章总是清晰易懂，更新的也很勤快</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://weibo.com/u/1926303682?is_all=1">没故事的卓同学</a></td>
+<td style="text-align: center">互联网资讯博主</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://macshuo.com/?p=36">MacTalk By 池建强</a></td>
+<td style="text-align: center">MacTalk 开通于2012年末，内容起于 Mac 而不止 Mac，沿用了一贯的科技与人文相结合的风格，文风有趣，又增加了一点力量。其中有我对生活的思考，对边界的探寻，有我身边的人和他们的故事，其中的一些文字还记录了这个时代的某个剪影，或某段情感。个人作品：《<a href="http://item.jd.com/11398297.html">MacTalk·人生元编程</a>》《<a href="http://item.jd.com/11803342.html">MacTalk·跨越边界</a>》</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://beyondvincent.com/?p=1434">破船之家</a></td>
+<td style="text-align: center">我就是我，是颜色不一样的烟火…</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://blog.leezhong.com/">Limboy 无网不剩</a></td>
+<td style="text-align: center">limboy, 一个程序员、设计师、创作者，钟爱精良的产品，闲暇时喜欢翻看各类书籍，偶尔也会写点文章。目前就职于蘑菇街，主要负责无线基础相关的事情</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://nianxi.net/">念茜的博客</a></td>
+<td style="text-align: center">程序媛念茜单线程妞，难得一遇的iOS大神妹子，汉子们且行且珍惜吧。Life is what happens to you while you are busy making other plans</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://swift.gg/">SwiftGG</a></td>
+<td style="text-align: center">Swift翻译组</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://ifelseboy.com/" title="前往 James Yu 的主页">James Yu</a></td>
+<td style="text-align: center">James YU 网易支付 工程师</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://blog.tracyone.com/">Tracyone</a></td>
+<td style="text-align: center">James YU的大神好友Tracyone</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://lzcuriosity.github.io/" title="link to homepage">Zen3’s blog</a></td>
+<td style="text-align: center">2015年6月份开始自学iOS开发，此后一发不可收拾。有比较良好的代码习惯，喜欢在实践中进行学习领悟再总结，今年5月开始搭建了自己的个人博客，开始记录下自己平时学习的点滴。生活中是八级段子手，四级篮球迷，零级唱歌男，负级游戏操作手</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://useyourloaf.com/">Use Your Loaf</a></td>
+<td style="text-align: center">国外iOS开发知名博主</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://southpeak.github.io/">南峰子的技术博客</a></td>
+<td style="text-align: center">爱分享的大腿</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://joeyio.com/">代码手工艺人</a></td>
+<td style="text-align: center">男，85 后胖纸，就职于 <a href="http://changba.com/">唱吧 </a>, 前<a href="http://www.towords.com/"> 拓词 </a>主程。3y+ 的 iOS 开发经历，4y+ 的 Java 服务端开发经历。工作之余喜欢电影、桌球、羽毛球、摄影、骑行等。“代码手工艺人”是自己的终极目标，正在努力朝着这个目标前进</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://adad184.com/">里脊串的开发随笔</a></td>
+<td style="text-align: center"><a href="https://github.com/adad184">Github</a>、 <a href="http://stackoverflow.com/users/1340076/adali">StackOverflow</a> 、<a href="http://www.weibo.com/ljc1986">Weibo</a> 、<a href="https://www.linkedin.com/profile/view?id=326069649">Linkedin</a> 、<a href="https://www.dropbox.com/sh/y636n1ysardp0m7/AAD8h0RT37cOVgIKkrtSZcQwa">作品</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://tech.meituan.com/">美团点评技术团队</a></td>
+<td style="text-align: center">美团点评技术团队面临世界级的用户规模和最接地气、真正“入口性”的需求，也面临世界级的技术挑战，欢迎更多优秀技术人才加入，一起打造世界冠军企业</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.zhihu.com/people/zang-qi-long/activities">叶孤城</a></td>
+<td style="text-align: center">大神叶孤城、你全力以赴都打不倒的男人</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://my.csdn.net/wxg694175346">请叫我汪海</a></td>
+<td style="text-align: center">汪海的实验室一名普通小程序员的学习笔记。 博客地址：<a href="http://blog.callmewhy.com">http://blog.callmewhy.com</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://zhowkev.in/">Kevin</a></td>
+<td style="text-align: center">Kevin Blog Thoughts, stories and ideas 让产品从 0 到 1</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://msching.github.io/">码农人生</a></td>
+<td style="text-align: center">iOS开发者，暴雪粉，Falcom粉</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://wufawei.com/">Ted’s Homepage</a></td>
+<td style="text-align: center">吴发伟，博客记录着日常工作点点滴滴</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://yulingtianxia.com/">杨萧玉</a></td>
+<td style="text-align: center">曾痴迷于Web&amp;Android，正努力修炼成为一只合格的iOS程序猿，处女座嗜睡学生党,目前在腾讯实习，负责移动开发</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://andelf.github.io/">猫·仁波切</a></td>
+<td style="text-align: center"><a href="http://weibo.com/234632333">Weibo</a>、 Chinese Twitter <a href="http://twitter.com/andelf">Twitter</a> 、( not accessible in China</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://www.cnblogs.com/biosli/">biosli 摇滚诗人</a></td>
+<td style="text-align: center">随性、激情技术区</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://foggry.com/">王中周的技术博客</a></td>
+<td style="text-align: center">曾就职于拉手网、高德地图；早期在<a href="http://blog.csdn.net/wzzvictory">CSND上写博客</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://www.heyuan110.com/">Bruce</a></td>
+<td style="text-align: center">奋斗ing、起床困难户、天蝎座、80后、各类IT技术好奇者</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://studentdeng.github.io/">不会开机的男孩</a></td>
+<td style="text-align: center">职业iOS开发者、职业PHP开发者、业余健身爱好者</td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="https://www.jianshu.com/u/14431e509ae8">涂耀辉</a></td>
+<td style="text-align: center"><a href="http://www.jianshu.com/p/d1d89ed69098">简书程序员优秀作者</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><a href="http://blog.codingcoder.com/_book/index.html">破土君的博客</a></td>
+<td style="text-align: center">记录自己的成长，感受分享的快乐</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_7">健身</h3>
+
+<p>想了好一会要不要把健身的一些网址链接贴上来，最终还是决定先贴上两篇在知乎上看的，对我精神以及后面锻炼都有很大帮助的两篇文章。<br/>
+<a href="https://www.zhihu.com/question/19850561">如何健身才能练出腹肌？</a><br/>
+<a href="https://www.zhihu.com/question/21189435">真正合理的健身训练流程是什么？</a><br/>
+大家一定要好好爱护自己的身体呀，有时间的话适当锻炼锻炼。<br/>
+17年8月办的卡，经过不到半年努力已成功收获马甲线，（这只是个开始）嘿嘿嘿、、、还成功把公司的几个同事们也拉入健身大队。<br/>
+所以希望大家感兴趣的话，可以一起加入进来哦， 我们是一群腹肌的攻城狮！！！！！</p>
+
+<h2 id="toc_8">最后</h2>
+
+<blockquote>
+<p>陆陆续续一直没发布，总感觉缺了很多想给大家推荐的优秀资源，一时半会也找不着了。 有点难受，还有工具推荐类后面也想在添加一个专栏，给大家写一下优秀的推荐或收集等。  暂时先到这里吧，后面再慢慢补充更新，大家如果有喜欢好优秀的资源也麻烦给我推荐一下哈，谢谢你的耐心阅读。</p>
+</blockquote>
+
+<h5 id="toc_9">希望此篇文章对您有所帮助，如有不对的地方，希望大家能留言指出纠正。谢谢！！！！！</h5>
+
+<h5 id="toc_10">学习的路上, 与君共勉!!!</h5>
+
+</div></body>
+
+</html>
