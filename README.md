@@ -12,3 +12,5 @@
 
 5. UIButtonTool、对 Button 新增的一些 Category。
 
+6. Diary、用于记录一些日记, 健身心得等等, 包括内容不限。
+
