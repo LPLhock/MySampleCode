@@ -44,7 +44,7 @@ static NSTimeInterval kJSDTimeoutIntervalOperation = 30.0f; //默认超时时间
 @property (assign, nonatomic, getter=isFinished) BOOL finished;
 @property (assign, nonatomic, getter=isCancelled) BOOL cancelled;
 
-@end // 
+@end //
 
 @implementation JSDOperation
 
