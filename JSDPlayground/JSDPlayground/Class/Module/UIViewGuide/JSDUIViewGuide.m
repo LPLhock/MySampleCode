@@ -1,26 +1,24 @@
 //
-//  JSDInterViewTopic.m
+//  JSDUIViewGuide.m
 //  JSDPlayground
 //
-//  Created by Jersey on 2019/1/12.
+//  Created by Jersey on 2019/3/5.
 //  Copyright © 2019年 Jersey. All rights reserved.
 //
 
-#import "JSDInterViewTopic.h"
+#import "JSDUIViewGuide.h"
 
-#import "ViewController.h"
-
-@interface JSDInterViewTopic ()<UITableViewDataSource, UITableViewDelegate>
+@interface JSDUIViewGuide () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) NSArray* model;
 
 @end
 
-@implementation JSDInterViewTopic
+@implementation JSDUIViewGuide
+
 
 #pragma mark - 1.View Controller Life Cycle
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,7 +43,7 @@
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
-    self.navigationItem.title = @"面试题汇总";
+    self.navigationItem.title = @"UI视图相关";
 }
 
 - (void)setupView {
@@ -94,7 +92,7 @@
         
         Class class = NSClassFromString([self.model[indexPath.row] objectForKey:@"class"]);
         ViewController* viewController = [[class alloc] init];
-
+        
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }
@@ -128,7 +126,7 @@
     
     if (!_model) {
         
-        NSString* filePath = [[NSBundle mainBundle] pathForResource:@"JSDInterViewTopic" ofType:@"plist"];
+        NSString* filePath = [[NSBundle mainBundle] pathForResource:@"JSDUIViewGuide" ofType:@"plist"];
         _model = [[NSArray array] initWithContentsOfFile:filePath].copy;
     }
     return _model;

@@ -28,5 +28,13 @@
 		<key>class</key>
 		<string>JSDInterViewTopic</string>
 	</dict>
+	<dict>
+		<key>route</key>
+		<true/>
+		<key>title</key>
+		<string>UIView</string>
+		<key>class</key>
+		<string>JSDUIViewGuide</string>
+	</dict>
 </array>
 </plist>

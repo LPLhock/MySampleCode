@@ -1,0 +1,17 @@
+//
+//  JSDPrefix.pch
+//  JSDPlayground
+//
+//  Created by Jersey on 2019/3/5.
+//  Copyright © 2019年 Jersey. All rights reserved.
+//
+
+#ifndef JSDPrefix_pch
+#define JSDPrefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Masonry.h"
+
+#endif /* JSDPrefix_pch */
