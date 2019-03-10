@@ -24,6 +24,15 @@
 		55278EC721E9951E00DF745C /* JSDPerformSelectorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55278EC621E9951E00DF745C /* JSDPerformSelectorVC.m */; };
 		55278ECE21E9970D00DF745C /* NSObject+JSDPerformSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 55278ECD21E9970D00DF745C /* NSObject+JSDPerformSelector.m */; };
 		55CB04FE222E5AB500AB926E /* JSDTouchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CB04FD222E5AB500AB926E /* JSDTouchButton.m */; };
+		55F387DA22336D52000CA174 /* JSDObjective-CVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F387D922336D52000CA174 /* JSDObjective-CVC.m */; };
+		55F387DC22336DEC000CA174 /* JSDObjective-C Guide.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55F387DB22336DEC000CA174 /* JSDObjective-C Guide.plist */; };
+		55F387DF22336EF8000CA174 /* JSDCategoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F387DE22336EF8000CA174 /* JSDCategoryVC.m */; };
+		55F387E222337195000CA174 /* JSDObjectiveCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F387E122337195000CA174 /* JSDObjectiveCVC.m */; };
+		55F387E5223373C5000CA174 /* JSDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F387E4223373C5000CA174 /* JSDViewController.m */; };
+		55F387F32234CE3F000CA174 /* JSDKVOKVCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F387F22234CE3F000CA174 /* JSDKVOKVCVC.m */; };
+		55F387F52234CE53000CA174 /* KVOKVC.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55F387F42234CE53000CA174 /* KVOKVC.plist */; };
+		55F387F82234CE8F000CA174 /* JSDKVOVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F387F72234CE8F000CA174 /* JSDKVOVC.m */; };
+		55F387FB2234CE9A000CA174 /* JSDKVCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F387FA2234CE9A000CA174 /* JSDKVCVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +66,23 @@
 		55278ECD21E9970D00DF745C /* NSObject+JSDPerformSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSDPerformSelector.m"; sourceTree = "<group>"; };
 		55CB04FC222E5AB500AB926E /* JSDTouchButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTouchButton.h; sourceTree = "<group>"; };
 		55CB04FD222E5AB500AB926E /* JSDTouchButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTouchButton.m; sourceTree = "<group>"; };
+		55F387D822336D52000CA174 /* JSDObjective-CVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSDObjective-CVC.h"; sourceTree = "<group>"; };
+		55F387D922336D52000CA174 /* JSDObjective-CVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JSDObjective-CVC.m"; sourceTree = "<group>"; };
+		55F387DB22336DEC000CA174 /* JSDObjective-C Guide.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JSDObjective-C Guide.plist"; sourceTree = "<group>"; };
+		55F387DD22336EF8000CA174 /* JSDCategoryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCategoryVC.h; sourceTree = "<group>"; };
+		55F387DE22336EF8000CA174 /* JSDCategoryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCategoryVC.m; sourceTree = "<group>"; };
+		55F387E022337195000CA174 /* JSDObjectiveCVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDObjectiveCVC.h; sourceTree = "<group>"; };
+		55F387E122337195000CA174 /* JSDObjectiveCVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDObjectiveCVC.m; sourceTree = "<group>"; };
+		55F387E3223373C5000CA174 /* JSDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDViewController.h; sourceTree = "<group>"; };
+		55F387E4223373C5000CA174 /* JSDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDViewController.m; sourceTree = "<group>"; };
+		55F387E622337998000CA174 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		55F387F12234CE3F000CA174 /* JSDKVOKVCVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDKVOKVCVC.h; sourceTree = "<group>"; };
+		55F387F22234CE3F000CA174 /* JSDKVOKVCVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDKVOKVCVC.m; sourceTree = "<group>"; };
+		55F387F42234CE53000CA174 /* KVOKVC.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KVOKVC.plist; sourceTree = "<group>"; };
+		55F387F62234CE8F000CA174 /* JSDKVOVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDKVOVC.h; sourceTree = "<group>"; };
+		55F387F72234CE8F000CA174 /* JSDKVOVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDKVOVC.m; sourceTree = "<group>"; };
+		55F387F92234CE9A000CA174 /* JSDKVCVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDKVCVC.h; sourceTree = "<group>"; };
+		55F387FA2234CE9A000CA174 /* JSDKVCVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDKVCVC.m; sourceTree = "<group>"; };
 		6D4045FB9763F515E80CF679 /* libPods-JSDPlayground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JSDPlayground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C100104A81CDA30F265341 /* Pods-JSDPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSDPlayground.debug.xcconfig"; path = "Target Support Files/Pods-JSDPlayground/Pods-JSDPlayground.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +105,8 @@
 				55278EB921E9887700DF745C /* JSDCatalog.plist */,
 				55278EC021E98CAF00DF745C /* JSDInterViewTopic.plist */,
 				5511A9D4222E2B4B00966A05 /* JSDUIViewGuide.plist */,
+				55F387DB22336DEC000CA174 /* JSDObjective-C Guide.plist */,
+				55F387F42234CE53000CA174 /* KVOKVC.plist */,
 			);
 			path = ResourceData;
 			sourceTree = "<group>";
@@ -192,10 +220,40 @@
 		55278ECB21E9969B00DF745C /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				55F387F02234CE1D000CA174 /* KVOKVC */,
+				55F387D722336D32000CA174 /* Objective-C */,
 				5511A9DC222E46E400966A05 /* UIViewGuide */,
 				55278EBC21E98C6C00DF745C /* interViewTopic */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		55F387D722336D32000CA174 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				55F387E022337195000CA174 /* JSDObjectiveCVC.h */,
+				55F387E122337195000CA174 /* JSDObjectiveCVC.m */,
+				55F387D822336D52000CA174 /* JSDObjective-CVC.h */,
+				55F387D922336D52000CA174 /* JSDObjective-CVC.m */,
+				55F387DD22336EF8000CA174 /* JSDCategoryVC.h */,
+				55F387DE22336EF8000CA174 /* JSDCategoryVC.m */,
+				55F387E3223373C5000CA174 /* JSDViewController.h */,
+				55F387E4223373C5000CA174 /* JSDViewController.m */,
+			);
+			path = "Objective-C";
+			sourceTree = "<group>";
+		};
+		55F387F02234CE1D000CA174 /* KVOKVC */ = {
+			isa = PBXGroup;
+			children = (
+				55F387F12234CE3F000CA174 /* JSDKVOKVCVC.h */,
+				55F387F22234CE3F000CA174 /* JSDKVOKVCVC.m */,
+				55F387F62234CE8F000CA174 /* JSDKVOVC.h */,
+				55F387F72234CE8F000CA174 /* JSDKVOVC.m */,
+				55F387F92234CE9A000CA174 /* JSDKVCVC.h */,
+				55F387FA2234CE9A000CA174 /* JSDKVCVC.m */,
+			);
+			path = KVOKVC;
 			sourceTree = "<group>";
 		};
 		91685C3062DE1DC52C8BC77E /* Pods */ = {
@@ -210,6 +268,7 @@
 		ABA9E824C6C67311F5DBF561 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55F387E622337998000CA174 /* UIKit.framework */,
 				6D4045FB9763F515E80CF679 /* libPods-JSDPlayground.a */,
 			);
 			name = Frameworks;
@@ -275,8 +334,10 @@
 			files = (
 				55278EB021E9811E00DF745C /* LaunchScreen.storyboard in Resources */,
 				55278EC121E98CAF00DF745C /* JSDInterViewTopic.plist in Resources */,
+				55F387F52234CE53000CA174 /* KVOKVC.plist in Resources */,
 				5511A9D5222E2B4B00966A05 /* JSDUIViewGuide.plist in Resources */,
 				55278EAD21E9811E00DF745C /* Assets.xcassets in Resources */,
+				55F387DC22336DEC000CA174 /* JSDObjective-C Guide.plist in Resources */,
 				55278EBA21E9887700DF745C /* JSDCatalog.plist in Resources */,
 				55278EAB21E9811A00DF745C /* Main.storyboard in Resources */,
 			);
@@ -316,14 +377,21 @@
 			files = (
 				55278EA821E9811A00DF745C /* ViewController.m in Sources */,
 				55278EB321E9811E00DF745C /* main.m in Sources */,
+				55F387E222337195000CA174 /* JSDObjectiveCVC.m in Sources */,
 				55278EA521E9811A00DF745C /* AppDelegate.m in Sources */,
 				55CB04FE222E5AB500AB926E /* JSDTouchButton.m in Sources */,
 				5511A9D2222E2AEC00966A05 /* JSDUIViewGuide.m in Sources */,
 				55278EC721E9951E00DF745C /* JSDPerformSelectorVC.m in Sources */,
+				55F387DA22336D52000CA174 /* JSDObjective-CVC.m in Sources */,
 				5511A9D8222E2BCB00966A05 /* JSDViewTouchPointVC.m in Sources */,
 				55278EC421E9909A00DF745C /* JSDCommandModel.m in Sources */,
 				55278ECE21E9970D00DF745C /* NSObject+JSDPerformSelector.m in Sources */,
+				55F387DF22336EF8000CA174 /* JSDCategoryVC.m in Sources */,
+				55F387E5223373C5000CA174 /* JSDViewController.m in Sources */,
 				55278EBF21E98C9000DF745C /* JSDInterViewTopic.m in Sources */,
+				55F387F32234CE3F000CA174 /* JSDKVOKVCVC.m in Sources */,
+				55F387F82234CE8F000CA174 /* JSDKVOVC.m in Sources */,
+				55F387FB2234CE9A000CA174 /* JSDKVCVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

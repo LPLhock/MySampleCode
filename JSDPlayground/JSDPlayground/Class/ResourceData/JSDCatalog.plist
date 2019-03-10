@@ -36,5 +36,21 @@
 		<key>class</key>
 		<string>JSDUIViewGuide</string>
 	</dict>
+	<dict>
+		<key>route</key>
+		<true/>
+		<key>title</key>
+		<string>Objective-C Guide</string>
+		<key>class</key>
+		<string>JSDObjectiveCVC</string>
+	</dict>
+	<dict>
+		<key>route</key>
+		<true/>
+		<key>calss</key>
+		<string>JSDKVOKVCVC</string>
+		<key>title</key>
+		<string>KVO KVC</string>
+	</dict>
 </array>
 </plist>

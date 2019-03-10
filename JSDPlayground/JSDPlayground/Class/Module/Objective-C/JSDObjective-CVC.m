@@ -1,23 +1,22 @@
 //
-//  ViewController.m
+//  JSDObjective-CVC.m
 //  JSDPlayground
 //
-//  Created by Jersey on 2019/1/12.
+//  Created by Jersey on 2019/3/9.
 //  Copyright © 2019年 Jersey. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "JSDObjective-CVC.h"
 
-#import "JSDCommandModel.h"
-NSString* const kJSDCellIdentifier = @"kJSDCellIdentifier";
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface JSDObjective_CVC ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) NSArray* model;
 
 @end
 
-@implementation ViewController
+@implementation JSDObjective_CVC
+
 
 #pragma mark - 1.View Controller Life Cycle
 
@@ -36,13 +35,6 @@ NSString* const kJSDCellIdentifier = @"kJSDCellIdentifier";
     
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    
-    [super viewWillAppear:animated];
-    
-    [self setupNavBar];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -51,7 +43,7 @@ NSString* const kJSDCellIdentifier = @"kJSDCellIdentifier";
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
-    self.navigationItem.title = @"JerseyCafe";
+    self.navigationItem.title = @"Objetive-C Guide";
 }
 
 - (void)setupView {
@@ -59,7 +51,6 @@ NSString* const kJSDCellIdentifier = @"kJSDCellIdentifier";
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.tableView];
-    
 }
 
 - (void)reloadView {
@@ -87,6 +78,7 @@ NSString* const kJSDCellIdentifier = @"kJSDCellIdentifier";
 - (UITableViewCell* )tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:kJSDCellIdentifier forIndexPath:indexPath];
+    
     cell.textLabel.text = [self.model[indexPath.row] objectForKey:@"title"];
     
     return cell;
@@ -98,14 +90,12 @@ NSString* const kJSDCellIdentifier = @"kJSDCellIdentifier";
     
     if ([self.model[indexPath.row] objectForKey:@"route"]) {
         
-        NSString* classString = [self.model[indexPath.row] objectForKey:@"class"];
-        NSLog(@"控制器%@", classString);
-        NSString* classStringUTF8 = [classString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        Class class = NSClassFromString(classStringUTF8);
+        Class class = NSClassFromString([self.model[indexPath.row] objectForKey:@"class"]);
         ViewController* viewController = [[class alloc] init];
         
         [self.navigationController pushViewController:viewController animated:YES];
     }
+    
 }
 
 #pragma mark - 5.Event Response
@@ -137,7 +127,7 @@ NSString* const kJSDCellIdentifier = @"kJSDCellIdentifier";
     
     if (!_model) {
         
-        NSString* filePath = [[NSBundle mainBundle] pathForResource:@"JSDCatalog" ofType:@"plist"];
+        NSString* filePath = [[NSBundle mainBundle] pathForResource:@"JSDObjective-C Guide" ofType:@"plist"];
         _model = [[NSArray array] initWithContentsOfFile:filePath].copy;
     }
     return _model;

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   KVOKVC.plist
+   JSDPlayground
+
+   Created by Jersey on 2019/3/10.
+   Copyright (c) 2019年 Jersey. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>title</key>
+            <string>KVO</string>
+            <key>class</key>
+            <string>JSDKVOVC</string>
+            <key>route</key>
+            <true/>
+        </dict>
+        <dict>
+            <key>title</key>
+            <string>KVC</string>
+            <key>class</key>
+            <string>JSDKVCVC</string>
+            <key>route</key>
+            <true/>
+        </dict>
+    </array>
+</plist>
