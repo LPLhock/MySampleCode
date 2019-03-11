@@ -8,7 +8,7 @@
 
 #import "JSDObjectiveCVC.h"
 
-@interface JSDObjectiveCVC ()
+@interface JSDObjectiveCVC ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) NSArray* model;

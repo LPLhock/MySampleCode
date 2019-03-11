@@ -14,4 +14,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface JSDKVOClass : NSObject
+
+@property (nonatomic, strong) NSString* name;
+
+@end
+
+@interface NSKVONotifying_JSDKVOClass : NSObject
+
+//@property (nonatomic, strong) NSString* name;
+
+@end
+
 NS_ASSUME_NONNULL_END

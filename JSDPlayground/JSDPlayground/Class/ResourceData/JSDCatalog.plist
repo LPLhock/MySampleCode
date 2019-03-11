@@ -47,7 +47,7 @@
 	<dict>
 		<key>route</key>
 		<true/>
-		<key>calss</key>
+		<key>class</key>
 		<string>JSDKVOKVCVC</string>
 		<key>title</key>
 		<string>KVO KVC</string>
