@@ -9,6 +9,13 @@
 #import "JSDPerformSelectorVC.h"
 
 #import "NSObject+JSDPerformSelector.h"
+#import <objc/runtime.h>
+
+void test () {
+    
+    NSLog(@"处理消息转发");
+}
+
 @interface JSDPerformSelectorVC ()
 
 @end
@@ -59,6 +66,7 @@
     
     //调用多个参数方法,  主要用于解决, 我们在调用其他类, 或者别人写的库里面包含一些私有方法时, 可以直接使用其来进行调用。
     [self jsd_performSelector:@selector(eatBreakfast:luncheon:dinner:) withObjects:@[@"汉堡-咖啡", @"牛排-沙拉", @"Coffer"]];
+    
 }
 
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
@@ -77,5 +85,6 @@
 }
 
 #pragma mark - 7.GET & SET
+
 
 @end

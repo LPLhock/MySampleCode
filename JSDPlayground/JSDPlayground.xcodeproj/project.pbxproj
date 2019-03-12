@@ -220,6 +220,7 @@
 		55278ECB21E9969B00DF745C /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				55F387FC22376CBB000CA174 /* Block */,
 				55F387F02234CE1D000CA174 /* KVOKVC */,
 				55F387D722336D32000CA174 /* Objective-C */,
 				5511A9DC222E46E400966A05 /* UIViewGuide */,
@@ -254,6 +255,13 @@
 				55F387FA2234CE9A000CA174 /* JSDKVCVC.m */,
 			);
 			path = KVOKVC;
+			sourceTree = "<group>";
+		};
+		55F387FC22376CBB000CA174 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Block;
 			sourceTree = "<group>";
 		};
 		91685C3062DE1DC52C8BC77E /* Pods */ = {

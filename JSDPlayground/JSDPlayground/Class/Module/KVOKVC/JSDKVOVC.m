@@ -7,6 +7,8 @@
 //
 
 #import "JSDKVOVC.h"
+#import <Foundation/Foundation.h>
+#import <Foundation/NSHashTable.h>
 
 @interface JSDKVOVC ()
 
