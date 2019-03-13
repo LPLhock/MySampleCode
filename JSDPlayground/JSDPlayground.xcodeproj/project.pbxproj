@@ -33,6 +33,21 @@
 		55F387F52234CE53000CA174 /* KVOKVC.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55F387F42234CE53000CA174 /* KVOKVC.plist */; };
 		55F387F82234CE8F000CA174 /* JSDKVOVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F387F72234CE8F000CA174 /* JSDKVOVC.m */; };
 		55F387FB2234CE9A000CA174 /* JSDKVCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F387FA2234CE9A000CA174 /* JSDKVCVC.m */; };
+		55F387FF22376D5A000CA174 /* JSDBlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F387FE22376D5A000CA174 /* JSDBlockVC.m */; };
+		55F3880122376D75000CA174 /* JSDBlock.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55F3880022376D75000CA174 /* JSDBlock.plist */; };
+		55F3880422376DAB000CA174 /* JSDBlockGuideVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F3880322376DAB000CA174 /* JSDBlockGuideVC.m */; };
+		55F3880522377032000CA174 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F387E622337998000CA174 /* UIKit.framework */; };
+		55F388072237ADC0000CA174 /* JSDMultithreading.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55F388062237ADC0000CA174 /* JSDMultithreading.plist */; };
+		55F3880B2237ADE3000CA174 /* JSDMultithreadingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F3880A2237ADE3000CA174 /* JSDMultithreadingVC.m */; };
+		55F3880E2237AE65000CA174 /* JSDGCDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F3880D2237AE65000CA174 /* JSDGCDVC.m */; };
+		55F388112237AE9B000CA174 /* JSDNSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F388102237AE9B000CA174 /* JSDNSOperationVC.m */; };
+		55F388142237AEBF000CA174 /* JSDNSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F388132237AEBF000CA174 /* JSDNSThreadVC.m */; };
+		55F388182238A5EC000CA174 /* JSDRunLoopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F388172238A5EC000CA174 /* JSDRunLoopVC.m */; };
+		55F3881C2238DD23000CA174 /* JSDDesignVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F3881B2238DD23000CA174 /* JSDDesignVC.m */; };
+		55F3881E2238DD72000CA174 /* JSDDesign.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55F3881D2238DD72000CA174 /* JSDDesign.plist */; };
+		55F388212238DDD5000CA174 /* JSDDutyChainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F388202238DDD5000CA174 /* JSDDutyChainVC.m */; };
+		55F388242238DE0F000CA174 /* JSDDutyManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F388232238DE0F000CA174 /* JSDDutyManage.m */; };
+		55F388272238DE32000CA174 /* JSDDutyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F388262238DE32000CA174 /* JSDDutyObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +98,31 @@
 		55F387F72234CE8F000CA174 /* JSDKVOVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDKVOVC.m; sourceTree = "<group>"; };
 		55F387F92234CE9A000CA174 /* JSDKVCVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDKVCVC.h; sourceTree = "<group>"; };
 		55F387FA2234CE9A000CA174 /* JSDKVCVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDKVCVC.m; sourceTree = "<group>"; };
+		55F387FD22376D5A000CA174 /* JSDBlockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBlockVC.h; sourceTree = "<group>"; };
+		55F387FE22376D5A000CA174 /* JSDBlockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBlockVC.m; sourceTree = "<group>"; };
+		55F3880022376D75000CA174 /* JSDBlock.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JSDBlock.plist; sourceTree = "<group>"; };
+		55F3880222376DAB000CA174 /* JSDBlockGuideVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBlockGuideVC.h; sourceTree = "<group>"; };
+		55F3880322376DAB000CA174 /* JSDBlockGuideVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBlockGuideVC.m; sourceTree = "<group>"; };
+		55F388062237ADC0000CA174 /* JSDMultithreading.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JSDMultithreading.plist; sourceTree = "<group>"; };
+		55F388092237ADE3000CA174 /* JSDMultithreadingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMultithreadingVC.h; sourceTree = "<group>"; };
+		55F3880A2237ADE3000CA174 /* JSDMultithreadingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMultithreadingVC.m; sourceTree = "<group>"; };
+		55F3880C2237AE65000CA174 /* JSDGCDVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDGCDVC.h; sourceTree = "<group>"; };
+		55F3880D2237AE65000CA174 /* JSDGCDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDGCDVC.m; sourceTree = "<group>"; };
+		55F3880F2237AE9B000CA174 /* JSDNSOperationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDNSOperationVC.h; sourceTree = "<group>"; };
+		55F388102237AE9B000CA174 /* JSDNSOperationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDNSOperationVC.m; sourceTree = "<group>"; };
+		55F388122237AEBF000CA174 /* JSDNSThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDNSThreadVC.h; sourceTree = "<group>"; };
+		55F388132237AEBF000CA174 /* JSDNSThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDNSThreadVC.m; sourceTree = "<group>"; };
+		55F388162238A5EC000CA174 /* JSDRunLoopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDRunLoopVC.h; sourceTree = "<group>"; };
+		55F388172238A5EC000CA174 /* JSDRunLoopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDRunLoopVC.m; sourceTree = "<group>"; };
+		55F3881A2238DD23000CA174 /* JSDDesignVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDDesignVC.h; sourceTree = "<group>"; };
+		55F3881B2238DD23000CA174 /* JSDDesignVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDDesignVC.m; sourceTree = "<group>"; };
+		55F3881D2238DD72000CA174 /* JSDDesign.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JSDDesign.plist; sourceTree = "<group>"; };
+		55F3881F2238DDD5000CA174 /* JSDDutyChainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDDutyChainVC.h; sourceTree = "<group>"; };
+		55F388202238DDD5000CA174 /* JSDDutyChainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDDutyChainVC.m; sourceTree = "<group>"; };
+		55F388222238DE0F000CA174 /* JSDDutyManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDDutyManage.h; sourceTree = "<group>"; };
+		55F388232238DE0F000CA174 /* JSDDutyManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDDutyManage.m; sourceTree = "<group>"; };
+		55F388252238DE32000CA174 /* JSDDutyObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDDutyObject.h; sourceTree = "<group>"; };
+		55F388262238DE32000CA174 /* JSDDutyObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDDutyObject.m; sourceTree = "<group>"; };
 		6D4045FB9763F515E80CF679 /* libPods-JSDPlayground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JSDPlayground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C100104A81CDA30F265341 /* Pods-JSDPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSDPlayground.debug.xcconfig"; path = "Target Support Files/Pods-JSDPlayground/Pods-JSDPlayground.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F3880522377032000CA174 /* UIKit.framework in Frameworks */,
 				416BD26F85C510BE9780BC94 /* libPods-JSDPlayground.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +148,9 @@
 				5511A9D4222E2B4B00966A05 /* JSDUIViewGuide.plist */,
 				55F387DB22336DEC000CA174 /* JSDObjective-C Guide.plist */,
 				55F387F42234CE53000CA174 /* KVOKVC.plist */,
+				55F3880022376D75000CA174 /* JSDBlock.plist */,
+				55F388062237ADC0000CA174 /* JSDMultithreading.plist */,
+				55F3881D2238DD72000CA174 /* JSDDesign.plist */,
 			);
 			path = ResourceData;
 			sourceTree = "<group>";
@@ -220,6 +264,9 @@
 		55278ECB21E9969B00DF745C /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				55F388192238DD17000CA174 /* Design */,
+				55F388152238A5D8000CA174 /* RunLoop */,
+				55F388082237ADD3000CA174 /* JSDMultithreading */,
 				55F387FC22376CBB000CA174 /* Block */,
 				55F387F02234CE1D000CA174 /* KVOKVC */,
 				55F387D722336D32000CA174 /* Objective-C */,
@@ -260,8 +307,51 @@
 		55F387FC22376CBB000CA174 /* Block */ = {
 			isa = PBXGroup;
 			children = (
+				55F387FD22376D5A000CA174 /* JSDBlockVC.h */,
+				55F387FE22376D5A000CA174 /* JSDBlockVC.m */,
+				55F3880222376DAB000CA174 /* JSDBlockGuideVC.h */,
+				55F3880322376DAB000CA174 /* JSDBlockGuideVC.m */,
 			);
 			path = Block;
+			sourceTree = "<group>";
+		};
+		55F388082237ADD3000CA174 /* JSDMultithreading */ = {
+			isa = PBXGroup;
+			children = (
+				55F388092237ADE3000CA174 /* JSDMultithreadingVC.h */,
+				55F3880A2237ADE3000CA174 /* JSDMultithreadingVC.m */,
+				55F3880C2237AE65000CA174 /* JSDGCDVC.h */,
+				55F3880D2237AE65000CA174 /* JSDGCDVC.m */,
+				55F3880F2237AE9B000CA174 /* JSDNSOperationVC.h */,
+				55F388102237AE9B000CA174 /* JSDNSOperationVC.m */,
+				55F388122237AEBF000CA174 /* JSDNSThreadVC.h */,
+				55F388132237AEBF000CA174 /* JSDNSThreadVC.m */,
+			);
+			path = JSDMultithreading;
+			sourceTree = "<group>";
+		};
+		55F388152238A5D8000CA174 /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				55F388162238A5EC000CA174 /* JSDRunLoopVC.h */,
+				55F388172238A5EC000CA174 /* JSDRunLoopVC.m */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
+		55F388192238DD17000CA174 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				55F3881A2238DD23000CA174 /* JSDDesignVC.h */,
+				55F3881B2238DD23000CA174 /* JSDDesignVC.m */,
+				55F3881F2238DDD5000CA174 /* JSDDutyChainVC.h */,
+				55F388202238DDD5000CA174 /* JSDDutyChainVC.m */,
+				55F388222238DE0F000CA174 /* JSDDutyManage.h */,
+				55F388232238DE0F000CA174 /* JSDDutyManage.m */,
+				55F388252238DE32000CA174 /* JSDDutyObject.h */,
+				55F388262238DE32000CA174 /* JSDDutyObject.m */,
+			);
+			path = Design;
 			sourceTree = "<group>";
 		};
 		91685C3062DE1DC52C8BC77E /* Pods */ = {
@@ -342,8 +432,11 @@
 			files = (
 				55278EB021E9811E00DF745C /* LaunchScreen.storyboard in Resources */,
 				55278EC121E98CAF00DF745C /* JSDInterViewTopic.plist in Resources */,
+				55F3880122376D75000CA174 /* JSDBlock.plist in Resources */,
+				55F388072237ADC0000CA174 /* JSDMultithreading.plist in Resources */,
 				55F387F52234CE53000CA174 /* KVOKVC.plist in Resources */,
 				5511A9D5222E2B4B00966A05 /* JSDUIViewGuide.plist in Resources */,
+				55F3881E2238DD72000CA174 /* JSDDesign.plist in Resources */,
 				55278EAD21E9811E00DF745C /* Assets.xcassets in Resources */,
 				55F387DC22336DEC000CA174 /* JSDObjective-C Guide.plist in Resources */,
 				55278EBA21E9887700DF745C /* JSDCatalog.plist in Resources */,
@@ -383,22 +476,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F388242238DE0F000CA174 /* JSDDutyManage.m in Sources */,
 				55278EA821E9811A00DF745C /* ViewController.m in Sources */,
 				55278EB321E9811E00DF745C /* main.m in Sources */,
+				55F388182238A5EC000CA174 /* JSDRunLoopVC.m in Sources */,
+				55F388272238DE32000CA174 /* JSDDutyObject.m in Sources */,
 				55F387E222337195000CA174 /* JSDObjectiveCVC.m in Sources */,
 				55278EA521E9811A00DF745C /* AppDelegate.m in Sources */,
 				55CB04FE222E5AB500AB926E /* JSDTouchButton.m in Sources */,
 				5511A9D2222E2AEC00966A05 /* JSDUIViewGuide.m in Sources */,
 				55278EC721E9951E00DF745C /* JSDPerformSelectorVC.m in Sources */,
+				55F3881C2238DD23000CA174 /* JSDDesignVC.m in Sources */,
+				55F3880422376DAB000CA174 /* JSDBlockGuideVC.m in Sources */,
 				55F387DA22336D52000CA174 /* JSDObjective-CVC.m in Sources */,
+				55F387FF22376D5A000CA174 /* JSDBlockVC.m in Sources */,
 				5511A9D8222E2BCB00966A05 /* JSDViewTouchPointVC.m in Sources */,
+				55F388112237AE9B000CA174 /* JSDNSOperationVC.m in Sources */,
+				55F3880B2237ADE3000CA174 /* JSDMultithreadingVC.m in Sources */,
 				55278EC421E9909A00DF745C /* JSDCommandModel.m in Sources */,
+				55F388212238DDD5000CA174 /* JSDDutyChainVC.m in Sources */,
 				55278ECE21E9970D00DF745C /* NSObject+JSDPerformSelector.m in Sources */,
 				55F387DF22336EF8000CA174 /* JSDCategoryVC.m in Sources */,
 				55F387E5223373C5000CA174 /* JSDViewController.m in Sources */,
 				55278EBF21E98C9000DF745C /* JSDInterViewTopic.m in Sources */,
+				55F388142237AEBF000CA174 /* JSDNSThreadVC.m in Sources */,
 				55F387F32234CE3F000CA174 /* JSDKVOKVCVC.m in Sources */,
 				55F387F82234CE8F000CA174 /* JSDKVOVC.m in Sources */,
+				55F3880E2237AE65000CA174 /* JSDGCDVC.m in Sources */,
 				55F387FB2234CE9A000CA174 /* JSDKVCVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

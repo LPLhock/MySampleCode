@@ -26,7 +26,9 @@
 		<key>title</key>
 		<string>RunLoop</string>
 		<key>class</key>
-		<string>JSDInterViewTopic</string>
+		<string>JSDRunLoopVC</string>
+        <key>route</key>
+        <true/>
 	</dict>
 	<dict>
 		<key>route</key>
@@ -51,6 +53,30 @@
 		<string>JSDKVOKVCVC</string>
 		<key>title</key>
 		<string>KVO KVC</string>
-	</dict>
+    </dict>
+    <dict>
+            <key>route</key>
+            <true/>
+            <key>class</key>
+            <string>JSDBlockVC</string>
+            <key>title</key>
+            <string>Block</string>
+    </dict>
+    <dict>
+        <key>route</key>
+        <true/>
+        <key>class</key>
+        <string>JSDMultithreadingVC</string>
+        <key>title</key>
+        <string>多线程</string>
+    </dict>
+    <dict>
+        <key>route</key>
+        <true/>
+        <key>title</key>
+        <string>六大设计原则</string>
+        <key>class</key>
+        <string>JSDDesignVC</string>
+    </dict>
 </array>
 </plist>
