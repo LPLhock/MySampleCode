@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   JSDArithmetic.plist
+   JSDPlayground
+
+   Created by Jersey on 2019/3/13.
+   Copyright (c) 2019年 Jersey. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>class</key>
+            <string>JSDStringReversalVC</string>
+            <key>title</key>
+            <string>字符串反转</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>class</key>
+            <string>JSDNTableReversalVC</string>
+            <key>title</key>
+            <string>链表反转</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>class</key>
+            <string>JSDArrayMergeVC</string>
+            <key>title</key>
+            <string>有序数组组合</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>class</key>
+            <string>JSDHashVC</string>
+            <key>title</key>
+            <string>哈希算法</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>class</key>
+            <string>JSDSubViewVC</string>
+            <key>title</key>
+            <string>子视图公同父视图</string>
+        </dict>
+    </array>
+</plist>

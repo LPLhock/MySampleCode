@@ -23,6 +23,13 @@
 		55278EC421E9909A00DF745C /* JSDCommandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55278EC321E9909A00DF745C /* JSDCommandModel.m */; };
 		55278EC721E9951E00DF745C /* JSDPerformSelectorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55278EC621E9951E00DF745C /* JSDPerformSelectorVC.m */; };
 		55278ECE21E9970D00DF745C /* NSObject+JSDPerformSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 55278ECD21E9970D00DF745C /* NSObject+JSDPerformSelector.m */; };
+		5536472522393C49004CAB58 /* JSDArithmeticVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536472422393C49004CAB58 /* JSDArithmeticVC.m */; };
+		5536472722393C89004CAB58 /* JSDArithmetic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5536472622393C89004CAB58 /* JSDArithmetic.plist */; };
+		5536472A22393D36004CAB58 /* JSDStringReversalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536472922393D36004CAB58 /* JSDStringReversalVC.m */; };
+		5536472D22393D50004CAB58 /* JSDTableReversalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536472C22393D50004CAB58 /* JSDTableReversalVC.m */; };
+		5536473022393D60004CAB58 /* JSDArrayMergeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536472F22393D60004CAB58 /* JSDArrayMergeVC.m */; };
+		5536473322393D6C004CAB58 /* JSDHashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536473222393D6C004CAB58 /* JSDHashVC.m */; };
+		5536473622393D78004CAB58 /* JSDSubViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536473522393D78004CAB58 /* JSDSubViewVC.m */; };
 		55CB04FE222E5AB500AB926E /* JSDTouchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CB04FD222E5AB500AB926E /* JSDTouchButton.m */; };
 		55F387DA22336D52000CA174 /* JSDObjective-CVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F387D922336D52000CA174 /* JSDObjective-CVC.m */; };
 		55F387DC22336DEC000CA174 /* JSDObjective-C Guide.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55F387DB22336DEC000CA174 /* JSDObjective-C Guide.plist */; };
@@ -79,6 +86,19 @@
 		55278EC621E9951E00DF745C /* JSDPerformSelectorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDPerformSelectorVC.m; sourceTree = "<group>"; };
 		55278ECC21E9970D00DF745C /* NSObject+JSDPerformSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSDPerformSelector.h"; sourceTree = "<group>"; };
 		55278ECD21E9970D00DF745C /* NSObject+JSDPerformSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSDPerformSelector.m"; sourceTree = "<group>"; };
+		5536472322393C49004CAB58 /* JSDArithmeticVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDArithmeticVC.h; sourceTree = "<group>"; };
+		5536472422393C49004CAB58 /* JSDArithmeticVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDArithmeticVC.m; sourceTree = "<group>"; };
+		5536472622393C89004CAB58 /* JSDArithmetic.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JSDArithmetic.plist; sourceTree = "<group>"; };
+		5536472822393D36004CAB58 /* JSDStringReversalVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDStringReversalVC.h; sourceTree = "<group>"; };
+		5536472922393D36004CAB58 /* JSDStringReversalVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDStringReversalVC.m; sourceTree = "<group>"; };
+		5536472B22393D50004CAB58 /* JSDTableReversalVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTableReversalVC.h; sourceTree = "<group>"; };
+		5536472C22393D50004CAB58 /* JSDTableReversalVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTableReversalVC.m; sourceTree = "<group>"; };
+		5536472E22393D60004CAB58 /* JSDArrayMergeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDArrayMergeVC.h; sourceTree = "<group>"; };
+		5536472F22393D60004CAB58 /* JSDArrayMergeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDArrayMergeVC.m; sourceTree = "<group>"; };
+		5536473122393D6C004CAB58 /* JSDHashVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDHashVC.h; sourceTree = "<group>"; };
+		5536473222393D6C004CAB58 /* JSDHashVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDHashVC.m; sourceTree = "<group>"; };
+		5536473422393D78004CAB58 /* JSDSubViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSubViewVC.h; sourceTree = "<group>"; };
+		5536473522393D78004CAB58 /* JSDSubViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSubViewVC.m; sourceTree = "<group>"; };
 		55CB04FC222E5AB500AB926E /* JSDTouchButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTouchButton.h; sourceTree = "<group>"; };
 		55CB04FD222E5AB500AB926E /* JSDTouchButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTouchButton.m; sourceTree = "<group>"; };
 		55F387D822336D52000CA174 /* JSDObjective-CVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSDObjective-CVC.h"; sourceTree = "<group>"; };
@@ -151,6 +171,7 @@
 				55F3880022376D75000CA174 /* JSDBlock.plist */,
 				55F388062237ADC0000CA174 /* JSDMultithreading.plist */,
 				55F3881D2238DD72000CA174 /* JSDDesign.plist */,
+				5536472622393C89004CAB58 /* JSDArithmetic.plist */,
 			);
 			path = ResourceData;
 			sourceTree = "<group>";
@@ -264,6 +285,7 @@
 		55278ECB21E9969B00DF745C /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				5536472222393C3A004CAB58 /* Arithmetic */,
 				55F388192238DD17000CA174 /* Design */,
 				55F388152238A5D8000CA174 /* RunLoop */,
 				55F388082237ADD3000CA174 /* JSDMultithreading */,
@@ -274,6 +296,25 @@
 				55278EBC21E98C6C00DF745C /* interViewTopic */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		5536472222393C3A004CAB58 /* Arithmetic */ = {
+			isa = PBXGroup;
+			children = (
+				5536472322393C49004CAB58 /* JSDArithmeticVC.h */,
+				5536472422393C49004CAB58 /* JSDArithmeticVC.m */,
+				5536472822393D36004CAB58 /* JSDStringReversalVC.h */,
+				5536472922393D36004CAB58 /* JSDStringReversalVC.m */,
+				5536472B22393D50004CAB58 /* JSDTableReversalVC.h */,
+				5536472C22393D50004CAB58 /* JSDTableReversalVC.m */,
+				5536472E22393D60004CAB58 /* JSDArrayMergeVC.h */,
+				5536472F22393D60004CAB58 /* JSDArrayMergeVC.m */,
+				5536473122393D6C004CAB58 /* JSDHashVC.h */,
+				5536473222393D6C004CAB58 /* JSDHashVC.m */,
+				5536473422393D78004CAB58 /* JSDSubViewVC.h */,
+				5536473522393D78004CAB58 /* JSDSubViewVC.m */,
+			);
+			path = Arithmetic;
 			sourceTree = "<group>";
 		};
 		55F387D722336D32000CA174 /* Objective-C */ = {
@@ -430,6 +471,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5536472722393C89004CAB58 /* JSDArithmetic.plist in Resources */,
 				55278EB021E9811E00DF745C /* LaunchScreen.storyboard in Resources */,
 				55278EC121E98CAF00DF745C /* JSDInterViewTopic.plist in Resources */,
 				55F3880122376D75000CA174 /* JSDBlock.plist in Resources */,
@@ -481,6 +523,7 @@
 				55278EB321E9811E00DF745C /* main.m in Sources */,
 				55F388182238A5EC000CA174 /* JSDRunLoopVC.m in Sources */,
 				55F388272238DE32000CA174 /* JSDDutyObject.m in Sources */,
+				5536472D22393D50004CAB58 /* JSDTableReversalVC.m in Sources */,
 				55F387E222337195000CA174 /* JSDObjectiveCVC.m in Sources */,
 				55278EA521E9811A00DF745C /* AppDelegate.m in Sources */,
 				55CB04FE222E5AB500AB926E /* JSDTouchButton.m in Sources */,
@@ -496,14 +539,19 @@
 				55278EC421E9909A00DF745C /* JSDCommandModel.m in Sources */,
 				55F388212238DDD5000CA174 /* JSDDutyChainVC.m in Sources */,
 				55278ECE21E9970D00DF745C /* NSObject+JSDPerformSelector.m in Sources */,
+				5536473022393D60004CAB58 /* JSDArrayMergeVC.m in Sources */,
 				55F387DF22336EF8000CA174 /* JSDCategoryVC.m in Sources */,
 				55F387E5223373C5000CA174 /* JSDViewController.m in Sources */,
 				55278EBF21E98C9000DF745C /* JSDInterViewTopic.m in Sources */,
 				55F388142237AEBF000CA174 /* JSDNSThreadVC.m in Sources */,
 				55F387F32234CE3F000CA174 /* JSDKVOKVCVC.m in Sources */,
+				5536473322393D6C004CAB58 /* JSDHashVC.m in Sources */,
 				55F387F82234CE8F000CA174 /* JSDKVOVC.m in Sources */,
+				5536472522393C49004CAB58 /* JSDArithmeticVC.m in Sources */,
 				55F3880E2237AE65000CA174 /* JSDGCDVC.m in Sources */,
 				55F387FB2234CE9A000CA174 /* JSDKVCVC.m in Sources */,
+				5536473622393D78004CAB58 /* JSDSubViewVC.m in Sources */,
+				5536472A22393D36004CAB58 /* JSDStringReversalVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

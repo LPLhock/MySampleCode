@@ -78,5 +78,13 @@
         <key>class</key>
         <string>JSDDesignVC</string>
     </dict>
+    <dict>
+        <key>route</key>
+        <true/>
+        <key>title</key>
+        <string>算法相关</string>
+        <key>class</key>
+        <string>JSDArithmeticVC</string>
+    </dict>
 </array>
 </plist>
