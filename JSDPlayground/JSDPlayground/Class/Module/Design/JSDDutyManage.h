@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JSDDutyManage : NSObject
 
 - (void)start;
-- (instancetype)initWithFirestObject:(JSDDutyObject* )object;
+//- (instancetype)initWithFirestObject:(JSDDutyObject* )object;
 
 @end
 

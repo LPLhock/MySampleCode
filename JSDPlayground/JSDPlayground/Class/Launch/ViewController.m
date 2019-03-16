@@ -33,14 +33,11 @@ NSString* const kJSDCellIdentifier = @"kJSDCellIdentifier";
     [self setupData];
     //4.设置通知
     [self setupNotification];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    
-    [self setupNavBar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,7 +56,6 @@ NSString* const kJSDCellIdentifier = @"kJSDCellIdentifier";
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.tableView];
-    
 }
 
 - (void)reloadView {

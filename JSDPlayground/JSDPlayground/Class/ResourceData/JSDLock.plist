@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   JSDLock.plist
+   JSDPlayground
+
+   Created by Jersey on 2019/3/16.
+   Copyright (c) 2019年 Jersey. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>method</key>
+            <string>JSDSubViewVC</string>
+            <key>title</key>
+            <string>OSSpinLock</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>method</key>
+            <string>JSDAsyncDisplayKitVC</string>
+            <key>title</key>
+            <string>dispatch_semaphore</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>method</key>
+            <string>JSDSubViewVC</string>
+            <key>title</key>
+            <string>pthread_mutex</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>method</key>
+            <string>JSDNSLockVC</string>
+            <key>title</key>
+            <string>NSLock</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>method</key>
+            <string>JSDSubViewVC</string>
+            <key>title</key>
+            <string>NSCondition</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>method</key>
+            <string>JSDSubViewVC</string>
+            <key>title</key>
+            <string>pthread_mutex(recursive)</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>method</key>
+            <string>JSDSubViewVC</string>
+            <key>title</key>
+            <string>NSRecursiveLock</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>method</key>
+            <string>JSDSubViewVC</string>
+            <key>title</key>
+            <string>NSConditionLock</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>method</key>
+            <string>JSDAFNetworkingVC</string>
+            <key>title</key>
+            <string>@synchronized</string>
+        </dict>
+    </array>
+</plist>

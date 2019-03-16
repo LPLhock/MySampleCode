@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^completionBlock)(BOOL handle);
-typedef void(^resultBlock)(JSDDutyObject* object, BOOL handle);
+typedef void(^resultBlock)(JSDDutyObject* _Nullable  object, BOOL handle);
 
 @interface JSDDutyObject : NSObject
 

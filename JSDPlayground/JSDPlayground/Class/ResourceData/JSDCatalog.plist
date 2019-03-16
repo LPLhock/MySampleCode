@@ -86,5 +86,21 @@
         <key>class</key>
         <string>JSDArithmeticVC</string>
     </dict>
+    <dict>
+        <key>route</key>
+        <true/>
+        <key>title</key>
+        <string>第三方库</string>
+        <key>class</key>
+        <string>JSDResourceVC</string>
+    </dict>
+    <dict>
+        <key>route</key>
+        <true/>
+        <key>title</key>
+        <string>锁</string>
+        <key>class</key>
+        <string>JSDLockVC</string>
+    </dict>
 </array>
 </plist>

@@ -6,6 +6,9 @@ target 'JSDPlayground' do
   # use_frameworks!
 
   pod 'Masonry'
+  pod 'SDWebImage'
+  pod 'AFNetworking'
+  pod 'Texture'
 
   # Pods for JSDPlayground
 

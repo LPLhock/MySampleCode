@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JSDPlayground/Class/Module/Design/JSDDutyManage.m"
-            timestampString = "574178107.248574"
+            timestampString = "574409792.440949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JSDPlayground/Class/Module/Design/JSDDutyManage.m"
-            timestampString = "574178107.2486629"
+            timestampString = "574409792.441018"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JSDPlayground/Class/Module/Design/JSDDutyManage.m"
-            timestampString = "574178107.248731"
+            timestampString = "574409792.441069"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JSDPlayground/Class/Module/Design/JSDDutyObject.m"
-            timestampString = "574178107.248794"
+            timestampString = "574409792.441116"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JSDPlayground/Class/Module/Design/JSDDutyObject.m"
-            timestampString = "574178107.248854"
+            timestampString = "574409792.441172"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -138,7 +138,7 @@
                   moduleName = "JSDPlayground"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/JerseyCafe/JerseyCafe/MySampleCode/JSDPlayground/JSDPlayground/Class/Module/Design/JSDDutyObject.m"
-                  timestampString = "574178107.355233"
+                  timestampString = "574409792.614747"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -153,7 +153,7 @@
                   moduleName = "JSDPlayground"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/JerseyCafe/JerseyCafe/MySampleCode/JSDPlayground/JSDPlayground/Class/Module/Design/JSDDutyObject.m"
-                  timestampString = "574178107.359135"
+                  timestampString = "574409792.6184421"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -168,7 +168,7 @@
                   moduleName = "JSDPlayground"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/JerseyCafe/JerseyCafe/MySampleCode/JSDPlayground/JSDPlayground/Class/Module/Design/JSDDutyObject.m"
-                  timestampString = "574178107.363964"
+                  timestampString = "574409792.6215349"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -176,6 +176,22 @@
                   offsetFromSymbolStart = "16">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/SDWebImage/SDWebImage/SDImageCache.m"
+            timestampString = "574409792.44122"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
+            landmarkName = "-makeDiskCachePath:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

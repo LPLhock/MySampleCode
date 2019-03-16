@@ -30,6 +30,13 @@
 		5536473022393D60004CAB58 /* JSDArrayMergeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536472F22393D60004CAB58 /* JSDArrayMergeVC.m */; };
 		5536473322393D6C004CAB58 /* JSDHashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536473222393D6C004CAB58 /* JSDHashVC.m */; };
 		5536473622393D78004CAB58 /* JSDSubViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536473522393D78004CAB58 /* JSDSubViewVC.m */; };
+		5536473E223B41CD004CAB58 /* JSDResource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5536473D223B41CD004CAB58 /* JSDResource.plist */; };
+		55364742223B41FA004CAB58 /* JSDResourceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55364741223B41FA004CAB58 /* JSDResourceVC.m */; };
+		55364745223B43B8004CAB58 /* JSDSDWebImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55364744223B43B8004CAB58 /* JSDSDWebImageVC.m */; };
+		55364748223B8333004CAB58 /* JSDAFNetworkingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55364747223B8333004CAB58 /* JSDAFNetworkingVC.m */; };
+		5536474B223B8512004CAB58 /* JSDAsyncDisplayKitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536474A223B8512004CAB58 /* JSDAsyncDisplayKitVC.m */; };
+		5536474E223CBE9B004CAB58 /* JSDLock.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5536474D223CBE9B004CAB58 /* JSDLock.plist */; };
+		55364751223CBEA5004CAB58 /* JSDLockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55364750223CBEA5004CAB58 /* JSDLockVC.m */; };
 		55CB04FE222E5AB500AB926E /* JSDTouchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CB04FD222E5AB500AB926E /* JSDTouchButton.m */; };
 		55F387DA22336D52000CA174 /* JSDObjective-CVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F387D922336D52000CA174 /* JSDObjective-CVC.m */; };
 		55F387DC22336DEC000CA174 /* JSDObjective-C Guide.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55F387DB22336DEC000CA174 /* JSDObjective-C Guide.plist */; };
@@ -99,6 +106,18 @@
 		5536473222393D6C004CAB58 /* JSDHashVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDHashVC.m; sourceTree = "<group>"; };
 		5536473422393D78004CAB58 /* JSDSubViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSubViewVC.h; sourceTree = "<group>"; };
 		5536473522393D78004CAB58 /* JSDSubViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSubViewVC.m; sourceTree = "<group>"; };
+		5536473D223B41CD004CAB58 /* JSDResource.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JSDResource.plist; sourceTree = "<group>"; };
+		55364740223B41FA004CAB58 /* JSDResourceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDResourceVC.h; sourceTree = "<group>"; };
+		55364741223B41FA004CAB58 /* JSDResourceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDResourceVC.m; sourceTree = "<group>"; };
+		55364743223B43B8004CAB58 /* JSDSDWebImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSDWebImageVC.h; sourceTree = "<group>"; };
+		55364744223B43B8004CAB58 /* JSDSDWebImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSDWebImageVC.m; sourceTree = "<group>"; };
+		55364746223B8333004CAB58 /* JSDAFNetworkingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAFNetworkingVC.h; sourceTree = "<group>"; };
+		55364747223B8333004CAB58 /* JSDAFNetworkingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAFNetworkingVC.m; sourceTree = "<group>"; };
+		55364749223B8512004CAB58 /* JSDAsyncDisplayKitVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAsyncDisplayKitVC.h; sourceTree = "<group>"; };
+		5536474A223B8512004CAB58 /* JSDAsyncDisplayKitVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAsyncDisplayKitVC.m; sourceTree = "<group>"; };
+		5536474D223CBE9B004CAB58 /* JSDLock.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JSDLock.plist; sourceTree = "<group>"; };
+		5536474F223CBEA5004CAB58 /* JSDLockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDLockVC.h; sourceTree = "<group>"; };
+		55364750223CBEA5004CAB58 /* JSDLockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDLockVC.m; sourceTree = "<group>"; };
 		55CB04FC222E5AB500AB926E /* JSDTouchButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTouchButton.h; sourceTree = "<group>"; };
 		55CB04FD222E5AB500AB926E /* JSDTouchButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTouchButton.m; sourceTree = "<group>"; };
 		55F387D822336D52000CA174 /* JSDObjective-CVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSDObjective-CVC.h"; sourceTree = "<group>"; };
@@ -172,6 +191,8 @@
 				55F388062237ADC0000CA174 /* JSDMultithreading.plist */,
 				55F3881D2238DD72000CA174 /* JSDDesign.plist */,
 				5536472622393C89004CAB58 /* JSDArithmetic.plist */,
+				5536473D223B41CD004CAB58 /* JSDResource.plist */,
+				5536474D223CBE9B004CAB58 /* JSDLock.plist */,
 			);
 			path = ResourceData;
 			sourceTree = "<group>";
@@ -285,6 +306,8 @@
 		55278ECB21E9969B00DF745C /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				5536474C223CBE92004CAB58 /* Lock */,
+				5536473F223B41EC004CAB58 /* Resource */,
 				5536472222393C3A004CAB58 /* Arithmetic */,
 				55F388192238DD17000CA174 /* Design */,
 				55F388152238A5D8000CA174 /* RunLoop */,
@@ -315,6 +338,30 @@
 				5536473522393D78004CAB58 /* JSDSubViewVC.m */,
 			);
 			path = Arithmetic;
+			sourceTree = "<group>";
+		};
+		5536473F223B41EC004CAB58 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				55364740223B41FA004CAB58 /* JSDResourceVC.h */,
+				55364741223B41FA004CAB58 /* JSDResourceVC.m */,
+				55364743223B43B8004CAB58 /* JSDSDWebImageVC.h */,
+				55364744223B43B8004CAB58 /* JSDSDWebImageVC.m */,
+				55364746223B8333004CAB58 /* JSDAFNetworkingVC.h */,
+				55364747223B8333004CAB58 /* JSDAFNetworkingVC.m */,
+				55364749223B8512004CAB58 /* JSDAsyncDisplayKitVC.h */,
+				5536474A223B8512004CAB58 /* JSDAsyncDisplayKitVC.m */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		5536474C223CBE92004CAB58 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				5536474F223CBEA5004CAB58 /* JSDLockVC.h */,
+				55364750223CBEA5004CAB58 /* JSDLockVC.m */,
+			);
+			path = Lock;
 			sourceTree = "<group>";
 		};
 		55F387D722336D32000CA174 /* Objective-C */ = {
@@ -478,6 +525,8 @@
 				55F388072237ADC0000CA174 /* JSDMultithreading.plist in Resources */,
 				55F387F52234CE53000CA174 /* KVOKVC.plist in Resources */,
 				5511A9D5222E2B4B00966A05 /* JSDUIViewGuide.plist in Resources */,
+				5536474E223CBE9B004CAB58 /* JSDLock.plist in Resources */,
+				5536473E223B41CD004CAB58 /* JSDResource.plist in Resources */,
 				55F3881E2238DD72000CA174 /* JSDDesign.plist in Resources */,
 				55278EAD21E9811E00DF745C /* Assets.xcassets in Resources */,
 				55F387DC22336DEC000CA174 /* JSDObjective-C Guide.plist in Resources */,
@@ -528,6 +577,7 @@
 				55278EA521E9811A00DF745C /* AppDelegate.m in Sources */,
 				55CB04FE222E5AB500AB926E /* JSDTouchButton.m in Sources */,
 				5511A9D2222E2AEC00966A05 /* JSDUIViewGuide.m in Sources */,
+				55364745223B43B8004CAB58 /* JSDSDWebImageVC.m in Sources */,
 				55278EC721E9951E00DF745C /* JSDPerformSelectorVC.m in Sources */,
 				55F3881C2238DD23000CA174 /* JSDDesignVC.m in Sources */,
 				55F3880422376DAB000CA174 /* JSDBlockGuideVC.m in Sources */,
@@ -536,16 +586,20 @@
 				5511A9D8222E2BCB00966A05 /* JSDViewTouchPointVC.m in Sources */,
 				55F388112237AE9B000CA174 /* JSDNSOperationVC.m in Sources */,
 				55F3880B2237ADE3000CA174 /* JSDMultithreadingVC.m in Sources */,
+				55364748223B8333004CAB58 /* JSDAFNetworkingVC.m in Sources */,
 				55278EC421E9909A00DF745C /* JSDCommandModel.m in Sources */,
 				55F388212238DDD5000CA174 /* JSDDutyChainVC.m in Sources */,
 				55278ECE21E9970D00DF745C /* NSObject+JSDPerformSelector.m in Sources */,
+				55364742223B41FA004CAB58 /* JSDResourceVC.m in Sources */,
 				5536473022393D60004CAB58 /* JSDArrayMergeVC.m in Sources */,
+				5536474B223B8512004CAB58 /* JSDAsyncDisplayKitVC.m in Sources */,
 				55F387DF22336EF8000CA174 /* JSDCategoryVC.m in Sources */,
 				55F387E5223373C5000CA174 /* JSDViewController.m in Sources */,
 				55278EBF21E98C9000DF745C /* JSDInterViewTopic.m in Sources */,
 				55F388142237AEBF000CA174 /* JSDNSThreadVC.m in Sources */,
 				55F387F32234CE3F000CA174 /* JSDKVOKVCVC.m in Sources */,
 				5536473322393D6C004CAB58 /* JSDHashVC.m in Sources */,
+				55364751223CBEA5004CAB58 /* JSDLockVC.m in Sources */,
 				55F387F82234CE8F000CA174 /* JSDKVOVC.m in Sources */,
 				5536472522393C49004CAB58 /* JSDArithmeticVC.m in Sources */,
 				55F3880E2237AE65000CA174 /* JSDGCDVC.m in Sources */,
