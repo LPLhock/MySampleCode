@@ -62,9 +62,6 @@ static BOOL runAlways =  YES;
     }
     
     runAlways = NO;
-    [self performSelector:@selector(runLoop) onThread:self.thread withObject:nil waitUntilDone:YES];
-    [self performSelectorOnMainThread:@selector(runLoop) withObject:nil waitUntilDone:NO];
-//    [self performSelector:@selector(runLoop) onThread:self.thread withObject:nil waitUntilDone:YES];
     
 }
 

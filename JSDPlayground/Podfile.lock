@@ -40,12 +40,14 @@ PODS:
     - PINRemoteImage/iOS (= 3.0.0-beta.13)
     - PINRemoteImage/PINCache
     - Texture/Core
+  - XXShield (2.2.0)
 
 DEPENDENCIES:
   - AFNetworking
   - Masonry
   - SDWebImage
   - Texture
+  - XXShield
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -56,6 +58,7 @@ SPEC REPOS:
     - PINRemoteImage
     - SDWebImage
     - Texture
+    - XXShield
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -65,7 +68,8 @@ SPEC CHECKSUMS:
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
+  XXShield: 1627b07bbc34be33040b2fed774cc4bae37c36eb
 
-PODFILE CHECKSUM: 32c1cfd1566700d1385bdf19a1adb981da63dde6
+PODFILE CHECKSUM: f929bdc0068a0dd4d816a4f3b0f214f4ebd5d2ac
 
 COCOAPODS: 1.6.0.beta.2

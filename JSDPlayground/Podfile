@@ -9,6 +9,7 @@ target 'JSDPlayground' do
   pod 'SDWebImage'
   pod 'AFNetworking'
   pod 'Texture'
+  pod 'XXShield'
 
   # Pods for JSDPlayground
 

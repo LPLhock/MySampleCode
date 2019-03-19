@@ -7,6 +7,9 @@
 //
 
 #import "JSDGCDVC.h"
+#import <CoreGraphics/CoreGraphics.h>
+#import <OpenGLES/OpenGLESAvailability.h>
+#import <QuartzCore/CoreAnimation.h>
 
 @interface JSDGCDVC ()
 
