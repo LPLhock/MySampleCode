@@ -43,6 +43,9 @@
 		5536478B223F508F004CAB58 /* JSDRuntimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536478A223F508F004CAB58 /* JSDRuntimeVC.m */; };
 		5536478E223F50EB004CAB58 /* JSDMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536478D223F50EB004CAB58 /* JSDMessageVC.m */; };
 		55364791223FA08D004CAB58 /* JSDHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55364790223FA08D004CAB58 /* JSDHomeVC.m */; };
+		55364795224096B7004CAB58 /* JSDTimerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55364794224096B7004CAB58 /* JSDTimerVC.m */; };
+		5536479B2240971B004CAB58 /* JSDTimerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5536479A2240971B004CAB58 /* JSDTimerView.xib */; };
+		5536479E22423D41004CAB58 /* JSDPokerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536479D22423D41004CAB58 /* JSDPokerVC.m */; };
 		55CB04FE222E5AB500AB926E /* JSDTouchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CB04FD222E5AB500AB926E /* JSDTouchButton.m */; };
 		55F387DA22336D52000CA174 /* JSDObjective-CVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F387D922336D52000CA174 /* JSDObjective-CVC.m */; };
 		55F387DC22336DEC000CA174 /* JSDObjective-C Guide.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55F387DB22336DEC000CA174 /* JSDObjective-C Guide.plist */; };
@@ -146,6 +149,11 @@
 		5536478D223F50EB004CAB58 /* JSDMessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMessageVC.m; sourceTree = "<group>"; };
 		5536478F223FA08D004CAB58 /* JSDHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDHomeVC.h; sourceTree = "<group>"; };
 		55364790223FA08D004CAB58 /* JSDHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDHomeVC.m; sourceTree = "<group>"; };
+		55364793224096B7004CAB58 /* JSDTimerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTimerVC.h; sourceTree = "<group>"; };
+		55364794224096B7004CAB58 /* JSDTimerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTimerVC.m; sourceTree = "<group>"; };
+		5536479A2240971B004CAB58 /* JSDTimerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDTimerView.xib; sourceTree = "<group>"; };
+		5536479C22423D41004CAB58 /* JSDPokerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDPokerVC.h; sourceTree = "<group>"; };
+		5536479D22423D41004CAB58 /* JSDPokerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDPokerVC.m; sourceTree = "<group>"; };
 		55CB04FC222E5AB500AB926E /* JSDTouchButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTouchButton.h; sourceTree = "<group>"; };
 		55CB04FD222E5AB500AB926E /* JSDTouchButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTouchButton.m; sourceTree = "<group>"; };
 		55F387D822336D52000CA174 /* JSDObjective-CVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSDObjective-CVC.h"; sourceTree = "<group>"; };
@@ -346,6 +354,7 @@
 		55278ECB21E9969B00DF745C /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				553647922240969B004CAB58 /* Timer */,
 				55364788223F5085004CAB58 /* Runtime */,
 				55364784223F3A3D004CAB58 /* Crash */,
 				5536474C223CBE92004CAB58 /* Lock */,
@@ -378,6 +387,8 @@
 				5536473222393D6C004CAB58 /* JSDHashVC.m */,
 				5536473422393D78004CAB58 /* JSDSubViewVC.h */,
 				5536473522393D78004CAB58 /* JSDSubViewVC.m */,
+				5536479C22423D41004CAB58 /* JSDPokerVC.h */,
+				5536479D22423D41004CAB58 /* JSDPokerVC.m */,
 			);
 			path = Arithmetic;
 			sourceTree = "<group>";
@@ -433,6 +444,16 @@
 				5536478D223F50EB004CAB58 /* JSDMessageVC.m */,
 			);
 			path = Runtime;
+			sourceTree = "<group>";
+		};
+		553647922240969B004CAB58 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				55364793224096B7004CAB58 /* JSDTimerVC.h */,
+				55364794224096B7004CAB58 /* JSDTimerVC.m */,
+				5536479A2240971B004CAB58 /* JSDTimerView.xib */,
+			);
+			path = Timer;
 			sourceTree = "<group>";
 		};
 		55F387D722336D32000CA174 /* Objective-C */ = {
@@ -618,6 +639,7 @@
 				55278EC121E98CAF00DF745C /* JSDInterViewTopic.plist in Resources */,
 				55F3880122376D75000CA174 /* JSDBlock.plist in Resources */,
 				55F388072237ADC0000CA174 /* JSDMultithreading.plist in Resources */,
+				5536479B2240971B004CAB58 /* JSDTimerView.xib in Resources */,
 				55F387F52234CE53000CA174 /* KVOKVC.plist in Resources */,
 				5511A9D5222E2B4B00966A05 /* JSDUIViewGuide.plist in Resources */,
 				5536474E223CBE9B004CAB58 /* JSDLock.plist in Resources */,
@@ -687,6 +709,7 @@
 				55F387DA22336D52000CA174 /* JSDObjective-CVC.m in Sources */,
 				55F387FF22376D5A000CA174 /* JSDBlockVC.m in Sources */,
 				5536478E223F50EB004CAB58 /* JSDMessageVC.m in Sources */,
+				55364795224096B7004CAB58 /* JSDTimerVC.m in Sources */,
 				5511A9D8222E2BCB00966A05 /* JSDViewTouchPointVC.m in Sources */,
 				55F388112237AE9B000CA174 /* JSDNSOperationVC.m in Sources */,
 				55F3880B2237ADE3000CA174 /* JSDMultithreadingVC.m in Sources */,
@@ -706,6 +729,7 @@
 				55F387F32234CE3F000CA174 /* JSDKVOKVCVC.m in Sources */,
 				5536473322393D6C004CAB58 /* JSDHashVC.m in Sources */,
 				55364751223CBEA5004CAB58 /* JSDLockVC.m in Sources */,
+				5536479E22423D41004CAB58 /* JSDPokerVC.m in Sources */,
 				55F387F82234CE8F000CA174 /* JSDKVOVC.m in Sources */,
 				5536472522393C49004CAB58 /* JSDArithmeticVC.m in Sources */,
 				55F3880E2237AE65000CA174 /* JSDGCDVC.m in Sources */,

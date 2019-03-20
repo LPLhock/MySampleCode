@@ -49,5 +49,13 @@
             <key>title</key>
             <string>子视图公同父视图</string>
         </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>class</key>
+            <string>JSDPokerVC</string>
+            <key>title</key>
+            <string>扑克游戏</string>
+        </dict>
     </array>
 </plist>

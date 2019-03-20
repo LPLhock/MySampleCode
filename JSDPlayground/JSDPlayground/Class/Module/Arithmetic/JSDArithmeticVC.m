@@ -95,8 +95,6 @@
     
     [self.navigationController pushViewController:viewController animated:YES];
     
-    NSLog(@"退出");
-    //    }
     
 }
 

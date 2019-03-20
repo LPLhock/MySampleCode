@@ -12,9 +12,11 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>GCD-NSOperation</string>
+		<string>定时器</string>
+		<key>route</key>
+		<true/>
 		<key>class</key>
-		<string>JSDInterViewTopic</string>
+		<string>JSDTimerVC</string>
 	</dict>
 	<dict>
 		<key>route</key>
