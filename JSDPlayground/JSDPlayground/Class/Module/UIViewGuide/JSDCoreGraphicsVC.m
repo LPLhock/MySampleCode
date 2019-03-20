@@ -1,18 +1,18 @@
 //
-//  JSDPokerVC.m
+//  JSDCoreGraphicsVC.m
 //  JSDPlayground
 //
 //  Created by Jersey on 2019/3/20.
 //  Copyright © 2019年 Jersey. All rights reserved.
 //
 
-#import "JSDPokerVC.h"
+#import "JSDCoreGraphicsVC.h"
 
-@interface JSDPokerVC ()
+@interface JSDCoreGraphicsVC ()
 
 @end
 
-@implementation JSDPokerVC
+@implementation JSDCoreGraphicsVC
 
 
 #pragma mark - 1.View Controller Life Cycle
@@ -40,13 +40,14 @@
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
-    self.navigationItem.title = @"扑克游戏";
+    self.navigationItem.title = @"CoreGraphics";
 }
 
 - (void)setupView {
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+
 }
 
 - (void)reloadView {

@@ -46,6 +46,7 @@
 		55364795224096B7004CAB58 /* JSDTimerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55364794224096B7004CAB58 /* JSDTimerVC.m */; };
 		5536479B2240971B004CAB58 /* JSDTimerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5536479A2240971B004CAB58 /* JSDTimerView.xib */; };
 		5536479E22423D41004CAB58 /* JSDPokerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536479D22423D41004CAB58 /* JSDPokerVC.m */; };
+		553647A122428595004CAB58 /* JSDCoreGraphicsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 553647A022428595004CAB58 /* JSDCoreGraphicsVC.m */; };
 		55CB04FE222E5AB500AB926E /* JSDTouchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CB04FD222E5AB500AB926E /* JSDTouchButton.m */; };
 		55F387DA22336D52000CA174 /* JSDObjective-CVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F387D922336D52000CA174 /* JSDObjective-CVC.m */; };
 		55F387DC22336DEC000CA174 /* JSDObjective-C Guide.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55F387DB22336DEC000CA174 /* JSDObjective-C Guide.plist */; };
@@ -154,6 +155,8 @@
 		5536479A2240971B004CAB58 /* JSDTimerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDTimerView.xib; sourceTree = "<group>"; };
 		5536479C22423D41004CAB58 /* JSDPokerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDPokerVC.h; sourceTree = "<group>"; };
 		5536479D22423D41004CAB58 /* JSDPokerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDPokerVC.m; sourceTree = "<group>"; };
+		5536479F22428594004CAB58 /* JSDCoreGraphicsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCoreGraphicsVC.h; sourceTree = "<group>"; };
+		553647A022428595004CAB58 /* JSDCoreGraphicsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCoreGraphicsVC.m; sourceTree = "<group>"; };
 		55CB04FC222E5AB500AB926E /* JSDTouchButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTouchButton.h; sourceTree = "<group>"; };
 		55CB04FD222E5AB500AB926E /* JSDTouchButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTouchButton.m; sourceTree = "<group>"; };
 		55F387D822336D52000CA174 /* JSDObjective-CVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSDObjective-CVC.h"; sourceTree = "<group>"; };
@@ -267,6 +270,8 @@
 				5511A9D1222E2AEC00966A05 /* JSDUIViewGuide.m */,
 				5511A9D6222E2BCB00966A05 /* JSDViewTouchPointVC.h */,
 				5511A9D7222E2BCB00966A05 /* JSDViewTouchPointVC.m */,
+				5536479F22428594004CAB58 /* JSDCoreGraphicsVC.h */,
+				553647A022428595004CAB58 /* JSDCoreGraphicsVC.m */,
 			);
 			path = UIViewGuide;
 			sourceTree = "<group>";
@@ -715,6 +720,7 @@
 				55F3880B2237ADE3000CA174 /* JSDMultithreadingVC.m in Sources */,
 				55364748223B8333004CAB58 /* JSDAFNetworkingVC.m in Sources */,
 				55278EC421E9909A00DF745C /* JSDCommandModel.m in Sources */,
+				553647A122428595004CAB58 /* JSDCoreGraphicsVC.m in Sources */,
 				55F388212238DDD5000CA174 /* JSDDutyChainVC.m in Sources */,
 				55278ECE21E9970D00DF745C /* NSObject+JSDPerformSelector.m in Sources */,
 				55364742223B41FA004CAB58 /* JSDResourceVC.m in Sources */,

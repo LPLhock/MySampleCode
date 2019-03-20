@@ -8,6 +8,7 @@
 
 #import "JSDViewTouchPointVC.h"
 #import "JSDTouchButton.h"
+#import <CoreGraphics/CoreGraphics.h>
 
 @interface JSDViewTouchPointVC ()
 
