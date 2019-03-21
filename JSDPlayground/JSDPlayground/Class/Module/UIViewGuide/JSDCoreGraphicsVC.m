@@ -7,6 +7,7 @@
 //
 
 #import "JSDCoreGraphicsVC.h"
+#import <CoreGraphics/CoreGraphics.h>
 
 @interface JSDCoreGraphicsVC ()
 
@@ -32,6 +33,32 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    UIImageView* nornerRadiusView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 300, 100, 100)];
+    nornerRadiusView.image = [UIImage imageNamed:@"1551775274999"];
+//    nornerRadiusView.image = [UIImage imageWithContentsOfFile:@"WechatIMG912"];
+UIGraphicsBeginImageContextWithOptions(nornerRadiusView.frame.size, NO, 1.0);
+    UIBezierPath* path = [UIBezierPath bezierPathWithRoundedRect:nornerRadiusView.bounds cornerRadius:50];
+    [path addClip];
+    [nornerRadiusView drawRect:nornerRadiusView.bounds];
+    nornerRadiusView.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    [self.view addSubview:nornerRadiusView];
+    
+//    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 300, 100, 100)];
+//    imageView.image =[ UIImage imageNamed:@"1551775274999"];
+//UIGraphicsBeginImageContextWithOptions(imageView.frame.size, NO, 1.0);
+//    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:imageView.bounds
+//                                                    cornerRadius:50];
+//    [path addClip];
+//    [imageView drawRect:imageView.bounds];
+//    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    [self.view addSubview:imageView];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -45,9 +72,19 @@
 
 - (void)setupView {
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor blackColor];
     
-
+    // 使用贝塞尔曲线UIBezierPath和Core Graphics框架画出一个圆角
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    imageView.image =[ UIImage imageNamed:@"1551775274999"];
+    UIGraphicsBeginImageContextWithOptions(imageView.frame.size, NO, 1.0);
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:imageView.bounds
+                                                    cornerRadius:50];
+    [path addClip];
+    [imageView drawRect:imageView.bounds];
+    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    [self.view addSubview:imageView];
 }
 
 - (void)reloadView {

@@ -7,6 +7,7 @@
 //
 
 #import "JSDBlockGuideVC.h"
+#import <WebKit/WKWebView.h>
 
 static int static_number = 5;
 
@@ -55,6 +56,7 @@ int gloNumber = 5;
     
     int number = 5;
     __block int block_number = 5;
+    __block NSString* jubuname = @"Jersey";
     static int sum = 5;
     NSMutableString* str = @"hello".mutableCopy;
     int (^block)(int) = ^(int num){
@@ -65,6 +67,8 @@ int gloNumber = 5;
         NSLog(@"全局整形变量%d", gloNumber);
         NSLog(@"静态整形变量%d", sum);
         NSLog(@"__block修饰的局部变量%d", block_number);
+        jubuname = @"JerseyCafe";
+        NSLog(@"局部变量名%@", jubuname);
         return num * number;
     };
     
