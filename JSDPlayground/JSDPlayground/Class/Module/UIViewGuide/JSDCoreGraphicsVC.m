@@ -36,6 +36,8 @@
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
+    
+//    btn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
     UIImageView* nornerRadiusView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 300, 100, 100)];
     nornerRadiusView.image = [UIImage imageNamed:@"1551775274999"];
 //    nornerRadiusView.image = [UIImage imageWithContentsOfFile:@"WechatIMG912"];
