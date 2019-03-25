@@ -9,38 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JSDPlayground/Class/Module/KVOKVC/JSDKVOVC.m"
-            timestampString = "574059592.770712"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "-setupNotification"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JSDPlayground/Class/Module/KVOKVC/JSDKVOVC.m"
-            timestampString = "574059592.771504"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "+automaticallyNotifiesObserversOfName"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "JSDPlayground/Class/Module/Design/JSDDutyManage.m"
             timestampString = "574567785.1617301"
             startingColumnNumber = "9223372036854775807"
@@ -122,7 +90,7 @@
                   moduleName = "JSDPlayground"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/JerseyCafe/JerseyCafe/MySampleCode/JSDPlayground/JSDPlayground/Class/Module/Design/JSDDutyObject.m"
-                  timestampString = "574825643.2463419"
+                  timestampString = "575114517.442199"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -137,7 +105,7 @@
                   moduleName = "JSDPlayground"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/JerseyCafe/JerseyCafe/MySampleCode/JSDPlayground/JSDPlayground/Class/Module/Design/JSDDutyObject.m"
-                  timestampString = "574825643.248455"
+                  timestampString = "575114517.444253"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -152,7 +120,7 @@
                   moduleName = "JSDPlayground"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/JerseyCafe/JerseyCafe/MySampleCode/JSDPlayground/JSDPlayground/Class/Module/Design/JSDDutyObject.m"
-                  timestampString = "574825643.251259"
+                  timestampString = "575114517.4464"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -256,6 +224,54 @@
             endingLineNumber = "86"
             landmarkName = "shield_hook_load_group"
             landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JSDPlayground/Class/Module/KVOKVC/JSDKVOVC.m"
+            timestampString = "575114517.1888829"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JSDPlayground/Class/Module/KVOKVC/JSDKVOVC.m"
+            timestampString = "575114517.189649"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-setupNotification"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JSDPlayground/Class/Module/KVOKVC/JSDKVOVC.m"
+            timestampString = "575114517.190209"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "-setupNotification"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

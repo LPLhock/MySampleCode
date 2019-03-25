@@ -70,10 +70,11 @@
  
     JSDKVOClass* kvoCalss = [[JSDKVOClass alloc] init];
     
+//    [kvoCalss addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionOld context:NULL];
     [kvoCalss addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:NULL];
 //    [kvoCalss willChangeValueForKey:@"name"];
-    kvoCalss.name = @"jersey";
-//    [kvoCalss didChangeValueForKey:@"name"];
+//    kvoCalss.name = @"jersey";
+    [kvoCalss didChangeValueForKey:@"name"];
 //    kvoCalss.name = @"jersey";
     
 }
@@ -91,10 +92,10 @@
 
 @implementation JSDKVOClass
 
-+ (BOOL)automaticallyNotifiesObserversOfName {
-
-    return YES;
-}
+//+ (BOOL)automaticallyNotifiesObserversOfName {
+//
+//    return YES;
+//}
 
 //- (void)setValue:(id)value forKey:(NSString *)key {
 //
@@ -103,25 +104,33 @@
 //    [self didChangeValueForKey:key];
 //}
 
-- (void)setName:(NSString *)name {
-
-    [self willChangeValueForKey:@"name"];
-//    [super setValue:name forKey:@"name"];
-    _name = name;
-    [self didChangeValueForKey:@"name"];
-}
-
-@end
-
-@implementation NSKVONotifying_JSDKVOClass
-
-- (void)setValue:(id)value forKey:(NSString *)key {
-
-    NSLog(@"手动设置 KVO");
-    [self willChangeValueForKey:key];
-    [super setValue:value forKey:key];
-    [self didChangeValueForKey:key];
-}
-
+//- (void)setName:(NSString *)name {
+//
+//    [self willChangeValueForKey:@"name"];
+////    [super setValue:name forKey:@"name"];
+//    _name = name;
+//    [self didChangeValueForKey:@"name"];
+//}
 
 @end
+
+//@implementation NSKVONotifying_JSDKVOClass
+
+//- (void)setName:(NSString *)name {
+//
+//    [self willChangeValueForKey:@"name"];
+////    [super setValue:name forKey:@"name"];
+//    [self setValue:name forKey:@"name"];
+//    [self didChangeValueForKey:@"name"];
+//}
+
+//- (void)setValue:(id)value forKey:(NSString *)key {
+//
+//    NSLog(@"手动设置 KVO");
+//    [self willChangeValueForKey:key];
+//    [super setValue:value forKey:key];
+//    [self didChangeValueForKey:key];
+//}
+
+
+//@end
