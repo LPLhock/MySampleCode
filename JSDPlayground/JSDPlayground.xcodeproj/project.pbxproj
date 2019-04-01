@@ -22,6 +22,7 @@
 		55278EC421E9909A00DF745C /* JSDCommandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55278EC321E9909A00DF745C /* JSDCommandModel.m */; };
 		55278EC721E9951E00DF745C /* JSDPerformSelectorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55278EC621E9951E00DF745C /* JSDPerformSelectorVC.m */; };
 		55278ECE21E9970D00DF745C /* NSObject+JSDPerformSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 55278ECD21E9970D00DF745C /* NSObject+JSDPerformSelector.m */; };
+		553094AE2251FB1900BFC6B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F387E622337998000CA174 /* UIKit.framework */; };
 		5536472522393C49004CAB58 /* JSDArithmeticVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536472422393C49004CAB58 /* JSDArithmeticVC.m */; };
 		5536472722393C89004CAB58 /* JSDArithmetic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5536472622393C89004CAB58 /* JSDArithmetic.plist */; };
 		5536472A22393D36004CAB58 /* JSDStringReversalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536472922393D36004CAB58 /* JSDStringReversalVC.m */; };
@@ -60,7 +61,6 @@
 		55F387FF22376D5A000CA174 /* JSDBlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F387FE22376D5A000CA174 /* JSDBlockVC.m */; };
 		55F3880122376D75000CA174 /* JSDBlock.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55F3880022376D75000CA174 /* JSDBlock.plist */; };
 		55F3880422376DAB000CA174 /* JSDBlockGuideVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F3880322376DAB000CA174 /* JSDBlockGuideVC.m */; };
-		55F3880522377032000CA174 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F387E622337998000CA174 /* UIKit.framework */; };
 		55F388072237ADC0000CA174 /* JSDMultithreading.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55F388062237ADC0000CA174 /* JSDMultithreading.plist */; };
 		55F3880B2237ADE3000CA174 /* JSDMultithreadingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F3880A2237ADE3000CA174 /* JSDMultithreadingVC.m */; };
 		55F3880E2237AE65000CA174 /* JSDGCDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F3880D2237AE65000CA174 /* JSDGCDVC.m */; };
@@ -211,7 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55364753223CE6E2004CAB58 /* CoreFoundation.framework in Frameworks */,
-				55F3880522377032000CA174 /* UIKit.framework in Frameworks */,
+				553094AE2251FB1900BFC6B5 /* UIKit.framework in Frameworks */,
 				416BD26F85C510BE9780BC94 /* libPods-JSDPlayground.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -905,6 +905,18 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JSDPlayground/JSDPrefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/PINCache\"",
+					"\"${PODS_ROOT}/Headers/Public/PINOperation\"",
+					"\"${PODS_ROOT}/Headers/Public/PINRemoteImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/Texture\"",
+					"\"${PODS_ROOT}/Headers/Public/XXShield\"",
+				);
 				INFOPLIST_FILE = JSDPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -926,6 +938,18 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JSDPlayground/JSDPrefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/PINCache\"",
+					"\"${PODS_ROOT}/Headers/Public/PINOperation\"",
+					"\"${PODS_ROOT}/Headers/Public/PINRemoteImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/Texture\"",
+					"\"${PODS_ROOT}/Headers/Public/XXShield\"",
+				);
 				INFOPLIST_FILE = JSDPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

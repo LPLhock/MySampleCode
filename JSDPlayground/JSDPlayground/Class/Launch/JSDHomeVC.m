@@ -46,7 +46,7 @@
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
-    self.navigationItem.title = @"JerseyCafe";
+    self.navigationItem.title = @"JerseyCafeHAHAssssdd";
 }
 
 - (void)setupView {
@@ -54,10 +54,23 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.tableView];
+    
+    UIView* view = [[UIView alloc] init];
+    view.backgroundColor = [UIColor redColor];
+    view.frame = CGRectMake(100, 100, 100, 100);
+    
+    [self.tableView addSubview:view];
 }
 
 - (void)reloadView {
     
+}
+
+- (void)injected {
+    
+    [self viewDidLoad];
+    [self viewWillAppear:YES];
+    [self viewWillDisappear:YES];
 }
 
 #pragma mark - 3.Request Data
@@ -121,6 +134,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.backgroundColor = [UIColor whiteColor];
+        _tableView.backgroundColor = [UIColor yellowColor];
         _tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 15);
         _tableView.rowHeight = 50;
     }
@@ -138,3 +152,5 @@
 }
 
 @end
+
+

@@ -6,7 +6,8 @@
 //  Copyright © 2019年 Jersey. All rights reserved.
 //
 
-#import "ViewController.h"
+//#import "ViewController.h"
+#include "ViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

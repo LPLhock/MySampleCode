@@ -18,7 +18,6 @@ typedef struct jersey {
 
 @implementation JSDTimerVC
 
-
 #pragma mark - 1.View Controller Life Cycle
 
 - (void)viewDidLoad {
@@ -50,9 +49,7 @@ typedef struct jersey {
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-//    [self.name willChangeValueForKey:@"name"];
     [self setName:@"Jersey"];
-//    [self.name didChangeValueForKey:@"name"];
     
     UIView* timerView = [[NSBundle mainBundle] loadNibNamed:@"JSDTimerView" owner:nil options:nil].lastObject;
     [self.view addSubview: timerView];

@@ -19,6 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+#if DEBUG
+    // iOS
+    [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle"] load];
+#endif
+    
     UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController: [[JSDHomeVC alloc] init]];
     
     self.window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
