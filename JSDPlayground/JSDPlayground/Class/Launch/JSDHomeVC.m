@@ -46,7 +46,7 @@
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
-    self.navigationItem.title = @"JerseyCafeHAHAssssdd";
+    self.navigationItem.title = @"JerseyCafe";
 }
 
 - (void)setupView {
@@ -54,12 +54,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.tableView];
-    
-    UIView* view = [[UIView alloc] init];
-    view.backgroundColor = [UIColor redColor];
-    view.frame = CGRectMake(100, 100, 100, 100);
-    
-    [self.tableView addSubview:view];
 }
 
 - (void)reloadView {
@@ -125,7 +119,7 @@
 
 #pragma mark - 7.GET & SET
 
-- (UITableView *)tableView{
+- (UITableView *)tableView {
     
     if (_tableView == nil) {
         
@@ -134,7 +128,6 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.backgroundColor = [UIColor whiteColor];
-        _tableView.backgroundColor = [UIColor yellowColor];
         _tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 15);
         _tableView.rowHeight = 50;
     }

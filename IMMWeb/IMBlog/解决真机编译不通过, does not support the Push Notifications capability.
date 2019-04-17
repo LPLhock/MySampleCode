@@ -1,0 +1,12 @@
+# 解决真机编译不通过, does not support the Push Notifications capability.
+
+
+有时候直接下载其他人项目在真机上编译时, 容易遇到这个编译错误, 因为其开启了通知, 但是我们的证书又不支持这个推送证书配置, 我们到项目中找到配置文件,将其删除掉即可。
+
+[![error](https://s1.ax1x.com/2018/09/20/imln8x.png)](https://imgchr.com/i/imln8x)
+
+通过项目内搜索关键字: entitlements, 找到这个文件 将其 aps-environment key 删除掉即可
+
+[![entitlements](https://s1.ax1x.com/2018/09/20/imlrZQ.png)](https://imgchr.com/i/imlrZQ)
+
+
