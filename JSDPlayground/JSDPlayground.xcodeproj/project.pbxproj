@@ -28,6 +28,16 @@
 		552C19C7228D02C4008F30F4 /* JSDCoreAnimation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 552C19C6228D02C4008F30F4 /* JSDCoreAnimation.plist */; };
 		552C19CA228D033F008F30F4 /* JSDTransformVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552C19C9228D033F008F30F4 /* JSDTransformVC.m */; };
 		552C19CD228D041A008F30F4 /* JSDSpecialLayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552C19CC228D041A008F30F4 /* JSDSpecialLayerVC.m */; };
+		552C19D1228D096D008F30F4 /* JSDDDDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552C19CF228D096D008F30F4 /* JSDDDDViewController.m */; };
+		552C19D2228D096D008F30F4 /* JSDDDDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552C19D0228D096D008F30F4 /* JSDDDDViewController.xib */; };
+		552C19D4228D0990008F30F4 /* JSDTransformVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552C19D3228D0990008F30F4 /* JSDTransformVC.xib */; };
+		552C19D8228D37D3008F30F4 /* JSDTransform3DVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552C19D6228D37D3008F30F4 /* JSDTransform3DVC.m */; };
+		552C19D9228D37D3008F30F4 /* JSDTransform3DVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552C19D7228D37D3008F30F4 /* JSDTransform3DVC.xib */; };
+		552C19DD228D3F08008F30F4 /* JSDSpecialLayer.plist in Resources */ = {isa = PBXBuildFile; fileRef = 552C19DC228D3F08008F30F4 /* JSDSpecialLayer.plist */; };
+		552C19E2228D3FA8008F30F4 /* JSDCAShapeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 552C19E0228D3FA8008F30F4 /* JSDCAShapeLayer.m */; };
+		552C19E3228D3FA8008F30F4 /* JSDCAShapeLayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552C19E1228D3FA8008F30F4 /* JSDCAShapeLayer.xib */; };
+		552C19E7228D3FC9008F30F4 /* JSDTextLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 552C19E5228D3FC9008F30F4 /* JSDTextLayer.m */; };
+		552C19E8228D3FC9008F30F4 /* JSDTextLayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552C19E6228D3FC9008F30F4 /* JSDTextLayer.xib */; };
 		552DF02D228ACBBB000EC19A /* JSDCALayerGuideVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552DF02C228ACBBB000EC19A /* JSDCALayerGuideVC.m */; };
 		552DF031228BBC73000EC19A /* JSDImageSpritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552DF02F228BBC73000EC19A /* JSDImageSpritesVC.m */; };
 		552DF032228BBC73000EC19A /* JSDImageSpritesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552DF030228BBC73000EC19A /* JSDImageSpritesVC.xib */; };
@@ -132,6 +142,21 @@
 		552C19C9228D033F008F30F4 /* JSDTransformVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTransformVC.m; sourceTree = "<group>"; };
 		552C19CB228D041A008F30F4 /* JSDSpecialLayerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSpecialLayerVC.h; sourceTree = "<group>"; };
 		552C19CC228D041A008F30F4 /* JSDSpecialLayerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSpecialLayerVC.m; sourceTree = "<group>"; };
+		552C19CE228D096D008F30F4 /* JSDDDDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDDDDViewController.h; sourceTree = "<group>"; };
+		552C19CF228D096D008F30F4 /* JSDDDDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDDDDViewController.m; sourceTree = "<group>"; };
+		552C19D0228D096D008F30F4 /* JSDDDDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDDDDViewController.xib; sourceTree = "<group>"; };
+		552C19D3228D0990008F30F4 /* JSDTransformVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDTransformVC.xib; sourceTree = "<group>"; };
+		552C19D5228D37D3008F30F4 /* JSDTransform3DVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTransform3DVC.h; sourceTree = "<group>"; };
+		552C19D6228D37D3008F30F4 /* JSDTransform3DVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTransform3DVC.m; sourceTree = "<group>"; };
+		552C19D7228D37D3008F30F4 /* JSDTransform3DVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDTransform3DVC.xib; sourceTree = "<group>"; };
+		552C19DA228D3ADC008F30F4 /* JSDMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMacro.h; sourceTree = "<group>"; };
+		552C19DC228D3F08008F30F4 /* JSDSpecialLayer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JSDSpecialLayer.plist; sourceTree = "<group>"; };
+		552C19DF228D3FA8008F30F4 /* JSDCAShapeLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCAShapeLayer.h; sourceTree = "<group>"; };
+		552C19E0228D3FA8008F30F4 /* JSDCAShapeLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCAShapeLayer.m; sourceTree = "<group>"; };
+		552C19E1228D3FA8008F30F4 /* JSDCAShapeLayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDCAShapeLayer.xib; sourceTree = "<group>"; };
+		552C19E4228D3FC9008F30F4 /* JSDTextLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTextLayer.h; sourceTree = "<group>"; };
+		552C19E5228D3FC9008F30F4 /* JSDTextLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTextLayer.m; sourceTree = "<group>"; };
+		552C19E6228D3FC9008F30F4 /* JSDTextLayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDTextLayer.xib; sourceTree = "<group>"; };
 		552DF02B228ACBBB000EC19A /* JSDCALayerGuideVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCALayerGuideVC.h; sourceTree = "<group>"; };
 		552DF02C228ACBBB000EC19A /* JSDCALayerGuideVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCALayerGuideVC.m; sourceTree = "<group>"; };
 		552DF02E228BBC73000EC19A /* JSDImageSpritesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDImageSpritesVC.h; sourceTree = "<group>"; };
@@ -256,10 +281,10 @@
 		5511A9D3222E2B2800966A05 /* ResourceData */ = {
 			isa = PBXGroup;
 			children = (
+				552C19DB228D3EEE008F30F4 /* CoreAnimation */,
 				55278EB921E9887700DF745C /* JSDCatalog.plist */,
 				55278EC021E98CAF00DF745C /* JSDInterViewTopic.plist */,
 				5511A9D4222E2B4B00966A05 /* JSDUIViewGuide.plist */,
-				552C19C6228D02C4008F30F4 /* JSDCoreAnimation.plist */,
 				55F387DB22336DEC000CA174 /* JSDObjective-C Guide.plist */,
 				55F387F42234CE53000CA174 /* KVOKVC.plist */,
 				55F3880022376D75000CA174 /* JSDBlock.plist */,
@@ -357,6 +382,7 @@
 				55EB3E0A22428AD200A1D163 /* Assets.xcassets */,
 				55278EB221E9811E00DF745C /* main.m */,
 				5511A9DE222E47A300966A05 /* JSDPrefix.pch */,
+				552C19DA228D3ADC008F30F4 /* JSDMacro.h */,
 			);
 			path = JSDPlayground;
 			sourceTree = "<group>";
@@ -419,14 +445,44 @@
 		552C19C2228D020F008F30F4 /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				552C19DE228D3F8C008F30F4 /* SpecialLayer */,
 				552C19C3228D0222008F30F4 /* JSDCoreAnimationVC.h */,
 				552C19C4228D0222008F30F4 /* JSDCoreAnimationVC.m */,
 				552C19C8228D033F008F30F4 /* JSDTransformVC.h */,
 				552C19C9228D033F008F30F4 /* JSDTransformVC.m */,
+				552C19D3228D0990008F30F4 /* JSDTransformVC.xib */,
+				552C19D5228D37D3008F30F4 /* JSDTransform3DVC.h */,
+				552C19D6228D37D3008F30F4 /* JSDTransform3DVC.m */,
+				552C19D7228D37D3008F30F4 /* JSDTransform3DVC.xib */,
 				552C19CB228D041A008F30F4 /* JSDSpecialLayerVC.h */,
 				552C19CC228D041A008F30F4 /* JSDSpecialLayerVC.m */,
+				552C19CE228D096D008F30F4 /* JSDDDDViewController.h */,
+				552C19CF228D096D008F30F4 /* JSDDDDViewController.m */,
+				552C19D0228D096D008F30F4 /* JSDDDDViewController.xib */,
 			);
 			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		552C19DB228D3EEE008F30F4 /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				552C19C6228D02C4008F30F4 /* JSDCoreAnimation.plist */,
+				552C19DC228D3F08008F30F4 /* JSDSpecialLayer.plist */,
+			);
+			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		552C19DE228D3F8C008F30F4 /* SpecialLayer */ = {
+			isa = PBXGroup;
+			children = (
+				552C19DF228D3FA8008F30F4 /* JSDCAShapeLayer.h */,
+				552C19E0228D3FA8008F30F4 /* JSDCAShapeLayer.m */,
+				552C19E1228D3FA8008F30F4 /* JSDCAShapeLayer.xib */,
+				552C19E4228D3FC9008F30F4 /* JSDTextLayer.h */,
+				552C19E5228D3FC9008F30F4 /* JSDTextLayer.m */,
+				552C19E6228D3FC9008F30F4 /* JSDTextLayer.xib */,
+			);
+			path = SpecialLayer;
 			sourceTree = "<group>";
 		};
 		5536472222393C3A004CAB58 /* Arithmetic */ = {
@@ -696,16 +752,22 @@
 				55278EC121E98CAF00DF745C /* JSDInterViewTopic.plist in Resources */,
 				55F3880122376D75000CA174 /* JSDBlock.plist in Resources */,
 				55EB3E0B22428AD200A1D163 /* Assets.xcassets in Resources */,
+				552C19D4228D0990008F30F4 /* JSDTransformVC.xib in Resources */,
+				552C19E3228D3FA8008F30F4 /* JSDCAShapeLayer.xib in Resources */,
 				55F388072237ADC0000CA174 /* JSDMultithreading.plist in Resources */,
+				552C19D2228D096D008F30F4 /* JSDDDDViewController.xib in Resources */,
 				5536479B2240971B004CAB58 /* JSDTimerView.xib in Resources */,
 				55F387F52234CE53000CA174 /* KVOKVC.plist in Resources */,
 				5511A9D5222E2B4B00966A05 /* JSDUIViewGuide.plist in Resources */,
 				5536474E223CBE9B004CAB58 /* JSDLock.plist in Resources */,
 				5536473E223B41CD004CAB58 /* JSDResource.plist in Resources */,
 				552C19C1228BF105008F30F4 /* JSDCALayerClockVC.xib in Resources */,
+				552C19DD228D3F08008F30F4 /* JSDSpecialLayer.plist in Resources */,
 				55F3881E2238DD72000CA174 /* JSDDesign.plist in Resources */,
 				55F387DC22336DEC000CA174 /* JSDObjective-C Guide.plist in Resources */,
 				552C19C7228D02C4008F30F4 /* JSDCoreAnimation.plist in Resources */,
+				552C19D9228D37D3008F30F4 /* JSDTransform3DVC.xib in Resources */,
+				552C19E8228D3FC9008F30F4 /* JSDTextLayer.xib in Resources */,
 				552DF032228BBC73000EC19A /* JSDImageSpritesVC.xib in Resources */,
 				55278EBA21E9887700DF745C /* JSDCatalog.plist in Resources */,
 				55278EAB21E9811A00DF745C /* Main.storyboard in Resources */,
@@ -752,6 +814,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55F388242238DE0F000CA174 /* JSDDutyManage.m in Sources */,
+				552C19D8228D37D3008F30F4 /* JSDTransform3DVC.m in Sources */,
 				55278EA821E9811A00DF745C /* ViewController.m in Sources */,
 				552DF02D228ACBBB000EC19A /* JSDCALayerGuideVC.m in Sources */,
 				55278EB321E9811E00DF745C /* main.m in Sources */,
@@ -768,6 +831,7 @@
 				55F3881C2238DD23000CA174 /* JSDDesignVC.m in Sources */,
 				55F3880422376DAB000CA174 /* JSDBlockGuideVC.m in Sources */,
 				55F387DA22336D52000CA174 /* JSDObjective-CVC.m in Sources */,
+				552C19E7228D3FC9008F30F4 /* JSDTextLayer.m in Sources */,
 				55F387FF22376D5A000CA174 /* JSDBlockVC.m in Sources */,
 				5536478E223F50EB004CAB58 /* JSDMessageVC.m in Sources */,
 				55364795224096B7004CAB58 /* JSDTimerVC.m in Sources */,
@@ -776,10 +840,12 @@
 				55F388112237AE9B000CA174 /* JSDNSOperationVC.m in Sources */,
 				55F3880B2237ADE3000CA174 /* JSDMultithreadingVC.m in Sources */,
 				552C19CD228D041A008F30F4 /* JSDSpecialLayerVC.m in Sources */,
+				552C19D1228D096D008F30F4 /* JSDDDDViewController.m in Sources */,
 				55364748223B8333004CAB58 /* JSDAFNetworkingVC.m in Sources */,
 				55278EC421E9909A00DF745C /* JSDCommandModel.m in Sources */,
 				553647A122428595004CAB58 /* JSDCoreGraphicsVC.m in Sources */,
 				55F388212238DDD5000CA174 /* JSDDutyChainVC.m in Sources */,
+				552C19E2228D3FA8008F30F4 /* JSDCAShapeLayer.m in Sources */,
 				55278ECE21E9970D00DF745C /* NSObject+JSDPerformSelector.m in Sources */,
 				55364742223B41FA004CAB58 /* JSDResourceVC.m in Sources */,
 				5536473022393D60004CAB58 /* JSDArrayMergeVC.m in Sources */,

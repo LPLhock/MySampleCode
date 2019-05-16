@@ -10,6 +10,11 @@
 
 @interface JSDTransformVC ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *rotaionImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *scaleImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *translationImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *synthesizeImageView;
+
 @end
 
 @implementation JSDTransformVC
@@ -44,6 +49,37 @@
 - (void)setupView {
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.rotaionImageView.backgroundColor = [UIColor grayColor];
+    self.scaleImageView.backgroundColor = [UIColor grayColor];
+    self.translationImageView.backgroundColor = [UIColor grayColor];
+    self.synthesizeImageView.backgroundColor = [UIColor grayColor];
+//    CGAffineTransform
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused"
+    CGAffineTransform rotaintransform = CGAffineTransformMakeRotation(M_PI_4);
+    CGAffineTransform rotaintransform2 = CGAffineTransformRotate(CGAffineTransformIdentity, M_PI_2);
+//    self.rotaionImageView.layer.affineTransform = transform;
+    self.rotaionImageView.transform = rotaintransform;
+    
+    CGAffineTransform scaleTransform = CGAffineTransformMakeScale(1.5, 0.5);
+    CGAffineTransform scaleTransform2 = CGAffineTransformMakeScale(1.5, 0.5);
+    self.scaleImageView.transform = scaleTransform2;
+    
+    CGAffineTransform concatTransform = CGAffineTransformConcat(rotaintransform, scaleTransform2);
+    CGAffineTransform translate = CGAffineTransformMakeTranslation(100, 0);
+//    self.translationImageView.transform = concatTransform;
+    
+#pragma clang diagnostic pop
+    
+    CGAffineTransform synthesisTransform = CGAffineTransformIdentity;
+    synthesisTransform = CGAffineTransformScale(synthesisTransform, 0.5f, 0.5f);
+    synthesisTransform = CGAffineTransformRotate(synthesisTransform, M_PI / 180 * 90);
+    synthesisTransform = CGAffineTransformTranslate(synthesisTransform, 200, 0);
+    self.synthesizeImageView.transform = synthesisTransform;
+    
+    
+    
 }
 
 - (void)reloadView {

@@ -8,11 +8,15 @@
 
 #import "JSDSpecialLayerVC.h"
 
-@interface JSDSpecialLayerVC ()
+@interface JSDSpecialLayerVC () <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView* tableView;
+@property (nonatomic, strong) NSArray* model;
 
 @end
 
 @implementation JSDSpecialLayerVC
+
 
 #pragma mark - 1.View Controller Life Cycle
 
@@ -45,6 +49,8 @@
 - (void)setupView {
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self.view addSubview:self.tableView];
 }
 
 - (void)reloadView {
@@ -59,6 +65,38 @@
 
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return self.model.count;
+}
+
+- (UITableViewCell* )tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:kJSDCellIdentifier forIndexPath:indexPath];
+    
+    cell.textLabel.text = [self.model[indexPath.row] objectForKey:@"title"];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if ([self.model[indexPath.row] objectForKey:@"route"]) {
+        
+        Class class = NSClassFromString([self.model[indexPath.row] objectForKey:@"class"]);
+        ViewController* viewController = [[class alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+        
+    }
+}
+
 #pragma mark - 5.Event Response
 
 #pragma mark - 6.Private Methods
@@ -68,6 +106,31 @@
 }
 
 #pragma mark - 7.GET & SET
+
+- (UITableView *)tableView{
+    
+    if (_tableView == nil) {
+        
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier: kJSDCellIdentifier];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.backgroundColor = [UIColor whiteColor];
+        _tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 15);
+        _tableView.rowHeight = 50;
+    }
+    return _tableView;
+}
+
+- (NSArray *)model {
+    
+    if (!_model) {
+        
+        NSString* filePath = [[NSBundle mainBundle] pathForResource:@"JSDSpecialLayer" ofType:@"plist"];
+        _model = [[NSArray array] initWithContentsOfFile:filePath].copy;
+    }
+    return _model;
+}
 
 @end
 
