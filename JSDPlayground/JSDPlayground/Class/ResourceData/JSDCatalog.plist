@@ -42,6 +42,14 @@
 		<key>class</key>
 		<string>JSDUIViewGuide</string>
 	</dict>
+    <dict>
+        <key>route</key>
+        <true/>
+        <key>title</key>
+        <string>CoreAnimationGuide</string>
+        <key>class</key>
+        <string>JSDCoreAnimationVC</string>
+    </dict>
 	<dict>
 		<key>route</key>
 		<true/>

@@ -1,21 +1,21 @@
 //
-//  JSDUIViewGuide.m
+//  JSDCoreAnimationVC.m
 //  JSDPlayground
 //
-//  Created by Jersey on 2019/3/5.
-//  Copyright © 2019年 Jersey. All rights reserved.
+//  Created by Jersey on 2019/5/16.
+//  Copyright © 2019 Jersey. All rights reserved.
 //
 
-#import "JSDUIViewGuide.h"
+#import "JSDCoreAnimationVC.h"
 
-@interface JSDUIViewGuide () <UITableViewDataSource, UITableViewDelegate>
+@interface JSDCoreAnimationVC () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) NSArray* model;
 
 @end
 
-@implementation JSDUIViewGuide
+@implementation JSDCoreAnimationVC
 
 
 #pragma mark - 1.View Controller Life Cycle
@@ -43,7 +43,7 @@
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
-    self.navigationItem.title = @"UI视图相关";
+    self.navigationItem.title = @"Core Animation Guide";
 }
 
 - (void)setupView {
@@ -126,7 +126,7 @@
     
     if (!_model) {
         
-        NSString* filePath = [[NSBundle mainBundle] pathForResource:@"JSDUIViewGuide" ofType:@"plist"];
+        NSString* filePath = [[NSBundle mainBundle] pathForResource:@"JSDCoreAnimation" ofType:@"plist"];
         _model = [[NSArray array] initWithContentsOfFile:filePath].copy;
     }
     return _model;

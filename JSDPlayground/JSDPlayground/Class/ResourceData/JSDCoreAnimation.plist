@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   JSDCoreAnimation.plist
+   JSDPlayground
+
+   Created by Jersey on 2019/5/16.
+   Copyright (c) 2019 Jersey. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>title</key>
+            <string>Transform</string>
+            <key>class</key>
+            <string>JSDTransformVC</string>
+            <key>route</key>
+            <true/>
+        </dict>
+        <dict>
+            <key>title</key>
+            <string>SpecialLayer</string>
+            <key>class</key>
+            <string>JSDSpecialLayerVC</string>
+        </dict>
+        <dict>
+            <key>title</key>
+            <string>Runtime</string>
+            <key>class</key>
+            <string>JSDInterViewTopic</string>
+        </dict>
+        <dict>
+            <key>title</key>
+            <string>RunLoop</string>
+            <key>class</key>
+            <string>JSDInterViewTopic</string>
+        </dict>
+    </array>
+</plist>

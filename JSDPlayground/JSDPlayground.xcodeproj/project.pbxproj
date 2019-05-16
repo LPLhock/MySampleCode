@@ -22,6 +22,16 @@
 		55278EC421E9909A00DF745C /* JSDCommandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55278EC321E9909A00DF745C /* JSDCommandModel.m */; };
 		55278EC721E9951E00DF745C /* JSDPerformSelectorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55278EC621E9951E00DF745C /* JSDPerformSelectorVC.m */; };
 		55278ECE21E9970D00DF745C /* NSObject+JSDPerformSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 55278ECD21E9970D00DF745C /* NSObject+JSDPerformSelector.m */; };
+		552C19C0228BF105008F30F4 /* JSDCALayerClockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552C19BE228BF105008F30F4 /* JSDCALayerClockVC.m */; };
+		552C19C1228BF105008F30F4 /* JSDCALayerClockVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552C19BF228BF105008F30F4 /* JSDCALayerClockVC.xib */; };
+		552C19C5228D0222008F30F4 /* JSDCoreAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552C19C4228D0222008F30F4 /* JSDCoreAnimationVC.m */; };
+		552C19C7228D02C4008F30F4 /* JSDCoreAnimation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 552C19C6228D02C4008F30F4 /* JSDCoreAnimation.plist */; };
+		552C19CA228D033F008F30F4 /* JSDTransformVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552C19C9228D033F008F30F4 /* JSDTransformVC.m */; };
+		552C19CD228D041A008F30F4 /* JSDSpecialLayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552C19CC228D041A008F30F4 /* JSDSpecialLayerVC.m */; };
+		552DF02D228ACBBB000EC19A /* JSDCALayerGuideVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552DF02C228ACBBB000EC19A /* JSDCALayerGuideVC.m */; };
+		552DF031228BBC73000EC19A /* JSDImageSpritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552DF02F228BBC73000EC19A /* JSDImageSpritesVC.m */; };
+		552DF032228BBC73000EC19A /* JSDImageSpritesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552DF030228BBC73000EC19A /* JSDImageSpritesVC.xib */; };
+		552DF035228BC904000EC19A /* JSDCALayerDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552DF034228BC904000EC19A /* JSDCALayerDelegateVC.m */; };
 		553094AE2251FB1900BFC6B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F387E622337998000CA174 /* UIKit.framework */; };
 		5536472522393C49004CAB58 /* JSDArithmeticVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536472422393C49004CAB58 /* JSDArithmeticVC.m */; };
 		5536472722393C89004CAB58 /* JSDArithmetic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5536472622393C89004CAB58 /* JSDArithmetic.plist */; };
@@ -112,6 +122,23 @@
 		55278EC621E9951E00DF745C /* JSDPerformSelectorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDPerformSelectorVC.m; sourceTree = "<group>"; };
 		55278ECC21E9970D00DF745C /* NSObject+JSDPerformSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSDPerformSelector.h"; sourceTree = "<group>"; };
 		55278ECD21E9970D00DF745C /* NSObject+JSDPerformSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSDPerformSelector.m"; sourceTree = "<group>"; };
+		552C19BD228BF105008F30F4 /* JSDCALayerClockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCALayerClockVC.h; sourceTree = "<group>"; };
+		552C19BE228BF105008F30F4 /* JSDCALayerClockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCALayerClockVC.m; sourceTree = "<group>"; };
+		552C19BF228BF105008F30F4 /* JSDCALayerClockVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDCALayerClockVC.xib; sourceTree = "<group>"; };
+		552C19C3228D0222008F30F4 /* JSDCoreAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCoreAnimationVC.h; sourceTree = "<group>"; };
+		552C19C4228D0222008F30F4 /* JSDCoreAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCoreAnimationVC.m; sourceTree = "<group>"; };
+		552C19C6228D02C4008F30F4 /* JSDCoreAnimation.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JSDCoreAnimation.plist; sourceTree = "<group>"; };
+		552C19C8228D033F008F30F4 /* JSDTransformVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTransformVC.h; sourceTree = "<group>"; };
+		552C19C9228D033F008F30F4 /* JSDTransformVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTransformVC.m; sourceTree = "<group>"; };
+		552C19CB228D041A008F30F4 /* JSDSpecialLayerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSpecialLayerVC.h; sourceTree = "<group>"; };
+		552C19CC228D041A008F30F4 /* JSDSpecialLayerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSpecialLayerVC.m; sourceTree = "<group>"; };
+		552DF02B228ACBBB000EC19A /* JSDCALayerGuideVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCALayerGuideVC.h; sourceTree = "<group>"; };
+		552DF02C228ACBBB000EC19A /* JSDCALayerGuideVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCALayerGuideVC.m; sourceTree = "<group>"; };
+		552DF02E228BBC73000EC19A /* JSDImageSpritesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDImageSpritesVC.h; sourceTree = "<group>"; };
+		552DF02F228BBC73000EC19A /* JSDImageSpritesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDImageSpritesVC.m; sourceTree = "<group>"; };
+		552DF030228BBC73000EC19A /* JSDImageSpritesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDImageSpritesVC.xib; sourceTree = "<group>"; };
+		552DF033228BC904000EC19A /* JSDCALayerDelegateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCALayerDelegateVC.h; sourceTree = "<group>"; };
+		552DF034228BC904000EC19A /* JSDCALayerDelegateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCALayerDelegateVC.m; sourceTree = "<group>"; };
 		5536472322393C49004CAB58 /* JSDArithmeticVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDArithmeticVC.h; sourceTree = "<group>"; };
 		5536472422393C49004CAB58 /* JSDArithmeticVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDArithmeticVC.m; sourceTree = "<group>"; };
 		5536472622393C89004CAB58 /* JSDArithmetic.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JSDArithmetic.plist; sourceTree = "<group>"; };
@@ -232,6 +259,7 @@
 				55278EB921E9887700DF745C /* JSDCatalog.plist */,
 				55278EC021E98CAF00DF745C /* JSDInterViewTopic.plist */,
 				5511A9D4222E2B4B00966A05 /* JSDUIViewGuide.plist */,
+				552C19C6228D02C4008F30F4 /* JSDCoreAnimation.plist */,
 				55F387DB22336DEC000CA174 /* JSDObjective-C Guide.plist */,
 				55F387F42234CE53000CA174 /* KVOKVC.plist */,
 				55F3880022376D75000CA174 /* JSDBlock.plist */,
@@ -272,6 +300,16 @@
 				5511A9D7222E2BCB00966A05 /* JSDViewTouchPointVC.m */,
 				5536479F22428594004CAB58 /* JSDCoreGraphicsVC.h */,
 				553647A022428595004CAB58 /* JSDCoreGraphicsVC.m */,
+				552DF02B228ACBBB000EC19A /* JSDCALayerGuideVC.h */,
+				552DF02C228ACBBB000EC19A /* JSDCALayerGuideVC.m */,
+				552DF02E228BBC73000EC19A /* JSDImageSpritesVC.h */,
+				552DF02F228BBC73000EC19A /* JSDImageSpritesVC.m */,
+				552DF030228BBC73000EC19A /* JSDImageSpritesVC.xib */,
+				552DF033228BC904000EC19A /* JSDCALayerDelegateVC.h */,
+				552DF034228BC904000EC19A /* JSDCALayerDelegateVC.m */,
+				552C19BD228BF105008F30F4 /* JSDCALayerClockVC.h */,
+				552C19BE228BF105008F30F4 /* JSDCALayerClockVC.m */,
+				552C19BF228BF105008F30F4 /* JSDCALayerClockVC.xib */,
 			);
 			path = UIViewGuide;
 			sourceTree = "<group>";
@@ -359,6 +397,7 @@
 		55278ECB21E9969B00DF745C /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				552C19C2228D020F008F30F4 /* CoreAnimation */,
 				553647922240969B004CAB58 /* Timer */,
 				55364788223F5085004CAB58 /* Runtime */,
 				55364784223F3A3D004CAB58 /* Crash */,
@@ -375,6 +414,19 @@
 				55278EBC21E98C6C00DF745C /* interViewTopic */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		552C19C2228D020F008F30F4 /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				552C19C3228D0222008F30F4 /* JSDCoreAnimationVC.h */,
+				552C19C4228D0222008F30F4 /* JSDCoreAnimationVC.m */,
+				552C19C8228D033F008F30F4 /* JSDTransformVC.h */,
+				552C19C9228D033F008F30F4 /* JSDTransformVC.m */,
+				552C19CB228D041A008F30F4 /* JSDSpecialLayerVC.h */,
+				552C19CC228D041A008F30F4 /* JSDSpecialLayerVC.m */,
+			);
+			path = CoreAnimation;
 			sourceTree = "<group>";
 		};
 		5536472222393C3A004CAB58 /* Arithmetic */ = {
@@ -650,8 +702,11 @@
 				5511A9D5222E2B4B00966A05 /* JSDUIViewGuide.plist in Resources */,
 				5536474E223CBE9B004CAB58 /* JSDLock.plist in Resources */,
 				5536473E223B41CD004CAB58 /* JSDResource.plist in Resources */,
+				552C19C1228BF105008F30F4 /* JSDCALayerClockVC.xib in Resources */,
 				55F3881E2238DD72000CA174 /* JSDDesign.plist in Resources */,
 				55F387DC22336DEC000CA174 /* JSDObjective-C Guide.plist in Resources */,
+				552C19C7228D02C4008F30F4 /* JSDCoreAnimation.plist in Resources */,
+				552DF032228BBC73000EC19A /* JSDImageSpritesVC.xib in Resources */,
 				55278EBA21E9887700DF745C /* JSDCatalog.plist in Resources */,
 				55278EAB21E9811A00DF745C /* Main.storyboard in Resources */,
 			);
@@ -698,6 +753,7 @@
 			files = (
 				55F388242238DE0F000CA174 /* JSDDutyManage.m in Sources */,
 				55278EA821E9811A00DF745C /* ViewController.m in Sources */,
+				552DF02D228ACBBB000EC19A /* JSDCALayerGuideVC.m in Sources */,
 				55278EB321E9811E00DF745C /* main.m in Sources */,
 				55F388182238A5EC000CA174 /* JSDRunLoopVC.m in Sources */,
 				55F388272238DE32000CA174 /* JSDDutyObject.m in Sources */,
@@ -716,8 +772,10 @@
 				5536478E223F50EB004CAB58 /* JSDMessageVC.m in Sources */,
 				55364795224096B7004CAB58 /* JSDTimerVC.m in Sources */,
 				5511A9D8222E2BCB00966A05 /* JSDViewTouchPointVC.m in Sources */,
+				552DF031228BBC73000EC19A /* JSDImageSpritesVC.m in Sources */,
 				55F388112237AE9B000CA174 /* JSDNSOperationVC.m in Sources */,
 				55F3880B2237ADE3000CA174 /* JSDMultithreadingVC.m in Sources */,
+				552C19CD228D041A008F30F4 /* JSDSpecialLayerVC.m in Sources */,
 				55364748223B8333004CAB58 /* JSDAFNetworkingVC.m in Sources */,
 				55278EC421E9909A00DF745C /* JSDCommandModel.m in Sources */,
 				553647A122428595004CAB58 /* JSDCoreGraphicsVC.m in Sources */,
@@ -726,6 +784,7 @@
 				55364742223B41FA004CAB58 /* JSDResourceVC.m in Sources */,
 				5536473022393D60004CAB58 /* JSDArrayMergeVC.m in Sources */,
 				5536474B223B8512004CAB58 /* JSDAsyncDisplayKitVC.m in Sources */,
+				552C19C5228D0222008F30F4 /* JSDCoreAnimationVC.m in Sources */,
 				55364787223F3A48004CAB58 /* JSDCrashVC.m in Sources */,
 				55F387DF22336EF8000CA174 /* JSDCategoryVC.m in Sources */,
 				55F387E5223373C5000CA174 /* JSDViewController.m in Sources */,
@@ -739,7 +798,10 @@
 				55F387F82234CE8F000CA174 /* JSDKVOVC.m in Sources */,
 				5536472522393C49004CAB58 /* JSDArithmeticVC.m in Sources */,
 				55F3880E2237AE65000CA174 /* JSDGCDVC.m in Sources */,
+				552C19C0228BF105008F30F4 /* JSDCALayerClockVC.m in Sources */,
 				55F387FB2234CE9A000CA174 /* JSDKVCVC.m in Sources */,
+				552DF035228BC904000EC19A /* JSDCALayerDelegateVC.m in Sources */,
+				552C19CA228D033F008F30F4 /* JSDTransformVC.m in Sources */,
 				5536473622393D78004CAB58 /* JSDSubViewVC.m in Sources */,
 				5536472A22393D36004CAB58 /* JSDStringReversalVC.m in Sources */,
 			);
