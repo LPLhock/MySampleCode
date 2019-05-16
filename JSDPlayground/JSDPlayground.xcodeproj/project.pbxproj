@@ -38,6 +38,10 @@
 		552C19E3228D3FA8008F30F4 /* JSDCAShapeLayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552C19E1228D3FA8008F30F4 /* JSDCAShapeLayer.xib */; };
 		552C19E7228D3FC9008F30F4 /* JSDTextLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 552C19E5228D3FC9008F30F4 /* JSDTextLayer.m */; };
 		552C19E8228D3FC9008F30F4 /* JSDTextLayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552C19E6228D3FC9008F30F4 /* JSDTextLayer.xib */; };
+		552C19EC228D718C008F30F4 /* JSDCATransformLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 552C19EA228D718C008F30F4 /* JSDCATransformLayer.m */; };
+		552C19ED228D718C008F30F4 /* JSDCATransformLayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552C19EB228D718C008F30F4 /* JSDCATransformLayer.xib */; };
+		552C19F1228D71C4008F30F4 /* JSDCAGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 552C19EF228D71C4008F30F4 /* JSDCAGradientLayer.m */; };
+		552C19F2228D71C4008F30F4 /* JSDCAGradientLayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552C19F0228D71C4008F30F4 /* JSDCAGradientLayer.xib */; };
 		552DF02D228ACBBB000EC19A /* JSDCALayerGuideVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552DF02C228ACBBB000EC19A /* JSDCALayerGuideVC.m */; };
 		552DF031228BBC73000EC19A /* JSDImageSpritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552DF02F228BBC73000EC19A /* JSDImageSpritesVC.m */; };
 		552DF032228BBC73000EC19A /* JSDImageSpritesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552DF030228BBC73000EC19A /* JSDImageSpritesVC.xib */; };
@@ -157,6 +161,12 @@
 		552C19E4228D3FC9008F30F4 /* JSDTextLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTextLayer.h; sourceTree = "<group>"; };
 		552C19E5228D3FC9008F30F4 /* JSDTextLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTextLayer.m; sourceTree = "<group>"; };
 		552C19E6228D3FC9008F30F4 /* JSDTextLayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDTextLayer.xib; sourceTree = "<group>"; };
+		552C19E9228D718C008F30F4 /* JSDCATransformLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCATransformLayer.h; sourceTree = "<group>"; };
+		552C19EA228D718C008F30F4 /* JSDCATransformLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCATransformLayer.m; sourceTree = "<group>"; };
+		552C19EB228D718C008F30F4 /* JSDCATransformLayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDCATransformLayer.xib; sourceTree = "<group>"; };
+		552C19EE228D71C4008F30F4 /* JSDCAGradientLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCAGradientLayer.h; sourceTree = "<group>"; };
+		552C19EF228D71C4008F30F4 /* JSDCAGradientLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCAGradientLayer.m; sourceTree = "<group>"; };
+		552C19F0228D71C4008F30F4 /* JSDCAGradientLayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDCAGradientLayer.xib; sourceTree = "<group>"; };
 		552DF02B228ACBBB000EC19A /* JSDCALayerGuideVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCALayerGuideVC.h; sourceTree = "<group>"; };
 		552DF02C228ACBBB000EC19A /* JSDCALayerGuideVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCALayerGuideVC.m; sourceTree = "<group>"; };
 		552DF02E228BBC73000EC19A /* JSDImageSpritesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDImageSpritesVC.h; sourceTree = "<group>"; };
@@ -481,6 +491,12 @@
 				552C19E4228D3FC9008F30F4 /* JSDTextLayer.h */,
 				552C19E5228D3FC9008F30F4 /* JSDTextLayer.m */,
 				552C19E6228D3FC9008F30F4 /* JSDTextLayer.xib */,
+				552C19E9228D718C008F30F4 /* JSDCATransformLayer.h */,
+				552C19EA228D718C008F30F4 /* JSDCATransformLayer.m */,
+				552C19EB228D718C008F30F4 /* JSDCATransformLayer.xib */,
+				552C19EE228D71C4008F30F4 /* JSDCAGradientLayer.h */,
+				552C19EF228D71C4008F30F4 /* JSDCAGradientLayer.m */,
+				552C19F0228D71C4008F30F4 /* JSDCAGradientLayer.xib */,
 			);
 			path = SpecialLayer;
 			sourceTree = "<group>";
@@ -755,10 +771,12 @@
 				552C19D4228D0990008F30F4 /* JSDTransformVC.xib in Resources */,
 				552C19E3228D3FA8008F30F4 /* JSDCAShapeLayer.xib in Resources */,
 				55F388072237ADC0000CA174 /* JSDMultithreading.plist in Resources */,
+				552C19ED228D718C008F30F4 /* JSDCATransformLayer.xib in Resources */,
 				552C19D2228D096D008F30F4 /* JSDDDDViewController.xib in Resources */,
 				5536479B2240971B004CAB58 /* JSDTimerView.xib in Resources */,
 				55F387F52234CE53000CA174 /* KVOKVC.plist in Resources */,
 				5511A9D5222E2B4B00966A05 /* JSDUIViewGuide.plist in Resources */,
+				552C19F2228D71C4008F30F4 /* JSDCAGradientLayer.xib in Resources */,
 				5536474E223CBE9B004CAB58 /* JSDLock.plist in Resources */,
 				5536473E223B41CD004CAB58 /* JSDResource.plist in Resources */,
 				552C19C1228BF105008F30F4 /* JSDCALayerClockVC.xib in Resources */,
@@ -837,6 +855,7 @@
 				55364795224096B7004CAB58 /* JSDTimerVC.m in Sources */,
 				5511A9D8222E2BCB00966A05 /* JSDViewTouchPointVC.m in Sources */,
 				552DF031228BBC73000EC19A /* JSDImageSpritesVC.m in Sources */,
+				552C19EC228D718C008F30F4 /* JSDCATransformLayer.m in Sources */,
 				55F388112237AE9B000CA174 /* JSDNSOperationVC.m in Sources */,
 				55F3880B2237ADE3000CA174 /* JSDMultithreadingVC.m in Sources */,
 				552C19CD228D041A008F30F4 /* JSDSpecialLayerVC.m in Sources */,
@@ -857,6 +876,7 @@
 				5536478B223F508F004CAB58 /* JSDRuntimeVC.m in Sources */,
 				55278EBF21E98C9000DF745C /* JSDInterViewTopic.m in Sources */,
 				55F388142237AEBF000CA174 /* JSDNSThreadVC.m in Sources */,
+				552C19F1228D71C4008F30F4 /* JSDCAGradientLayer.m in Sources */,
 				55F387F32234CE3F000CA174 /* JSDKVOKVCVC.m in Sources */,
 				5536473322393D6C004CAB58 /* JSDHashVC.m in Sources */,
 				55364751223CBEA5004CAB58 /* JSDLockVC.m in Sources */,

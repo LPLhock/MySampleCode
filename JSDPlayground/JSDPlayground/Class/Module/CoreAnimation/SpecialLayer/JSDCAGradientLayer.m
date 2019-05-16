@@ -1,18 +1,18 @@
 //
-//  JSDTextLayer.m
+//  JSDCAGradientLayer.m
 //  JSDPlayground
 //
 //  Created by Jersey on 2019/5/16.
 //  Copyright © 2019 Jersey. All rights reserved.
 //
 
-#import "JSDTextLayer.h"
+#import "JSDCAGradientLayer.h"
 
-@interface JSDTextLayer ()
+@interface JSDCAGradientLayer ()
 
 @end
 
-@implementation JSDTextLayer
+@implementation JSDCAGradientLayer
 
 #pragma mark - 1.View Controller Life Cycle
 
@@ -39,24 +39,12 @@
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
-    self.navigationItem.title = @"TextLayer";
-    
+    self.navigationItem.title = @"CAGradientLayer";
 }
 
 - (void)setupView {
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    
-    UILabel* titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 0, 0)];
-    titleLabel.text = @"哈哈哈";
-    [titleLabel sizeToFit];
-    [self.view addSubview:titleLabel];
-    if ([titleLabel.layer isMemberOfClass:[CATextLayer class]]) {
-        NSLog(@"是的");
-    }
-    NSLog(@"%@", titleLabel.layer);
-
 }
 
 - (void)reloadView {

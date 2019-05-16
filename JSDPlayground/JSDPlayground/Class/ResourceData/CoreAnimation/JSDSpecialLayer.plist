@@ -27,17 +27,17 @@
         </dict>
         <dict>
             <key>title</key>
-            <string>Transform3D</string>
+            <string>CATransformLayer</string>
             <key>class</key>
-            <string>JSDTransform3DVC</string>
+            <string>JSDCATransformLayer</string>
             <key>route</key>
             <true/>
         </dict>
         <dict>
             <key>title</key>
-            <string>Runtime</string>
+            <string>CAGradientLayer</string>
             <key>class</key>
-            <string>JSDInterViewTopic</string>
+            <string>JSDCAGradientLayer</string>
             <key>route</key>
             <true/>
         </dict>
