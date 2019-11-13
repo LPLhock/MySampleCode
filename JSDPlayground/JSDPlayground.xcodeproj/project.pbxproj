@@ -96,6 +96,7 @@
 		55F388212238DDD5000CA174 /* JSDDutyChainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F388202238DDD5000CA174 /* JSDDutyChainVC.m */; };
 		55F388242238DE0F000CA174 /* JSDDutyManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F388232238DE0F000CA174 /* JSDDutyManage.m */; };
 		55F388272238DE32000CA174 /* JSDDutyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F388262238DE32000CA174 /* JSDDutyObject.m */; };
+		B4204848237AB632009A2907 /* JSDUIViewSelfAdapt.m in Sources */ = {isa = PBXBuildFile; fileRef = B4204847237AB632009A2907 /* JSDUIViewSelfAdapt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,6 +266,8 @@
 		55F388262238DE32000CA174 /* JSDDutyObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDDutyObject.m; sourceTree = "<group>"; };
 		6D4045FB9763F515E80CF679 /* libPods-JSDPlayground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JSDPlayground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C100104A81CDA30F265341 /* Pods-JSDPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSDPlayground.debug.xcconfig"; path = "Target Support Files/Pods-JSDPlayground/Pods-JSDPlayground.debug.xcconfig"; sourceTree = "<group>"; };
+		B4204846237AB632009A2907 /* JSDUIViewSelfAdapt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDUIViewSelfAdapt.h; sourceTree = "<group>"; };
+		B4204847237AB632009A2907 /* JSDUIViewSelfAdapt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDUIViewSelfAdapt.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +348,8 @@
 				552C19BD228BF105008F30F4 /* JSDCALayerClockVC.h */,
 				552C19BE228BF105008F30F4 /* JSDCALayerClockVC.m */,
 				552C19BF228BF105008F30F4 /* JSDCALayerClockVC.xib */,
+				B4204846237AB632009A2907 /* JSDUIViewSelfAdapt.h */,
+				B4204847237AB632009A2907 /* JSDUIViewSelfAdapt.m */,
 			);
 			path = UIViewGuide;
 			sourceTree = "<group>";
@@ -872,6 +877,7 @@
 				552C19C5228D0222008F30F4 /* JSDCoreAnimationVC.m in Sources */,
 				55364787223F3A48004CAB58 /* JSDCrashVC.m in Sources */,
 				55F387DF22336EF8000CA174 /* JSDCategoryVC.m in Sources */,
+				B4204848237AB632009A2907 /* JSDUIViewSelfAdapt.m in Sources */,
 				55F387E5223373C5000CA174 /* JSDViewController.m in Sources */,
 				5536478B223F508F004CAB58 /* JSDRuntimeVC.m in Sources */,
 				55278EBF21E98C9000DF745C /* JSDInterViewTopic.m in Sources */,

@@ -18,38 +18,45 @@
 		<key>route</key>
 		<true/>
 	</dict>
-    <dict>
-        <key>title</key>
-        <string>CALayerGuide</string>
-        <key>class</key>
-        <string>JSDCALayerGuideVC</string>
-        <key>route</key>
-        <true/>
-    </dict>
-    <dict>
-        <key>title</key>
-        <string>图片拼接</string>
-        <key>class</key>
-        <string>JSDImageSpritesVC</string>
-        <key>route</key>
-        <true/>
-    </dict>
-    <dict>
-        <key>title</key>
-        <string>UIView Disply</string>
-        <key>class</key>
-        <string>JSDCALayerDelegateVC</string>
-        <key>route</key>
-        <true/>
-    </dict>
-    <dict>
-        <key>title</key>
-        <string>Clock</string>
-        <key>class</key>
-        <string>JSDCALayerClockVC</string>
-        <key>route</key>
-        <true/>
-    </dict>
-    
+	<dict>
+		<key>title</key>
+		<string>CALayerGuide</string>
+		<key>class</key>
+		<string>JSDCALayerGuideVC</string>
+		<key>route</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>图片拼接</string>
+		<key>class</key>
+		<string>JSDImageSpritesVC</string>
+		<key>route</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>UIView Disply</string>
+		<key>class</key>
+		<string>JSDCALayerDelegateVC</string>
+		<key>route</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Clock</string>
+		<key>class</key>
+		<string>JSDCALayerClockVC</string>
+		<key>route</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>UIView父视图自适应子视图</string>
+		<key>class</key>
+		<string>JSDUIViewSelfAdapt</string>
+		<key>route</key>
+		<true/>
+	</dict>
 </array>
 </plist>
