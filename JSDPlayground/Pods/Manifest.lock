@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - Aspects (1.4.1)
   - Masonry (1.1.0)
   - PINCache (3.0.1-beta.6):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
@@ -44,13 +45,14 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - Aspects
   - Masonry
   - SDWebImage
   - Texture
   - XXShield
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - Masonry
     - PINCache
@@ -59,9 +61,12 @@ SPEC REPOS:
     - SDWebImage
     - Texture
     - XXShield
+  trunk:
+    - Aspects
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
@@ -70,6 +75,6 @@ SPEC CHECKSUMS:
   Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
   XXShield: 1627b07bbc34be33040b2fed774cc4bae37c36eb
 
-PODFILE CHECKSUM: 3936d9da3f822138526b8efd372d26bfb09ee526
+PODFILE CHECKSUM: 2ce196010b010bd5fcc39c68ec0377f96668ab0e
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.8.1

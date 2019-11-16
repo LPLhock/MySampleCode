@@ -11,6 +11,7 @@ target 'JSDPlayground' do
   pod 'AFNetworking'
   pod 'Texture'
   pod 'XXShield'
+  pod 'Aspects'
 
   # Pods for JSDPlayground
 

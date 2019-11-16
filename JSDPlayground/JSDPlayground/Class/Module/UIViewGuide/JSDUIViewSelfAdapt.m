@@ -7,6 +7,7 @@
 //
 
 #import "JSDUIViewSelfAdapt.h"
+#import <Aspects.h>
 
 #define NSLog(format, ...)   {fprintf(stderr, "类名<%s : %d> %s\n",                                           \
 [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
@@ -26,6 +27,13 @@ fprintf(stderr, "-------\n");};
 @implementation JSDUIViewSelfAdapt
 
 #pragma mark - View Controller Life Cycle
+
+- (void)viewWillApper:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    NSLog(@"---");
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -43,14 +51,12 @@ fprintf(stderr, "-------\n");};
     //7.private
     [self setupPrivateMethod];
     
-    int __a0 = 10;
-    int __b1 = 8;
-//    NSLog(@"测试%d", MIN(10, 8));
-    BOOL errorHappend = YES;
-//    if (errorHappend)
-//    NSLog(@"Oops, error happened");
+//    self aspect_hookSelector:@selector(viewWillAppear:) withOptions: usingBlock: error:<#(NSError *__autoreleasing *)#>
     
-    if (errorHappend);
+    [self aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^{
+        NSLog(@"实现交换");
+    } error:nil];
+    
     
 }
 
