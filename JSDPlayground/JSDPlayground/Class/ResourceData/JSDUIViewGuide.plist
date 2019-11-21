@@ -58,5 +58,13 @@
 		<key>route</key>
 		<true/>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>UILabel 实现跑马灯</string>
+		<key>class</key>
+		<string>JSDUIViewLabelVC</string>
+		<key>route</key>
+		<true/>
+	</dict>
 </array>
 </plist>

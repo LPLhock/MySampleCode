@@ -7,6 +7,8 @@
 //
 
 #import "JSDHomeVC.h"
+#import <objc/runtime.h>
+#import <Aspects.h>
 
 @interface JSDHomeVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -15,9 +17,120 @@
 
 @end
 
+@interface _NSZombie_ViewController : NSObject
+
+
+
+@end
+
+@implementation _NSZombie_ViewController
+
+- (void)zexige {
+    
+    NSLog(@"haha");
+}
+//
+//- (id)forwardingTargetForSelector:(SEL)aSelector {
+//
+//    NSLog(@"调用");
+//    return self;
+//}
+//
+//
+//- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+//
+//    NSLog(@"haha");
+//    return nil;
+//}
+//
+//+ (NSMethodSignature *)instanceMethodSignatureForSelector:(SEL)aSelector {
+//
+//    NSLog(@"转发");
+//    return nil;
+//}
+//
+//- (void)forwardInvocation:(NSInvocation *)anInvocation {
+//
+//    NSLog(@"调用");
+//}
+
++ (BOOL)resolveClassMethod:(SEL)sel {
+    
+    return NO;
+}
+
++ (BOOL)resolveInstanceMethod:(SEL)sel {
+    
+    return NO;
+}
+
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    
+    return nil;
+}
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    
+    NSMethodSignature* signature = [NSMethodSignature signatureWithObjCTypes:"v@:"];
+    
+    NSLog(@"处理方法签名");
+    return signature;
+}
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+    
+    NSLog(@"处理方法选择子");
+}
+
+@end
+
 @implementation JSDHomeVC
 
 #pragma mark - 1.View Controller Life Cycle
+
+- (void)loadView {
+    
+    [super loadView];
+    NSLog(@"%s", __func__);
+}
+
+- (void)viewWillLayoutSubviews {
+    
+    [super viewWillLayoutSubviews];
+    
+    NSLog(@"%s", __func__);
+}
+
+- (void)viewDidLayoutSubviews {
+    
+    
+    [super viewDidLayoutSubviews];
+    NSLog(@"%s", __func__);
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    NSLog(@"%s", __func__);
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    NSLog(@"%s", __func__);
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear:animated];
+    NSLog(@"%s", __func__);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,12 +144,37 @@
     [self setupData];
     //4.设置通知
     [self setupNotification];
+    
+    NSLog(@"%s", __func__);
+    // 调试僵尸对象; _NSZombie_ViewController
+    ViewController* vc = [[ViewController alloc] init];
+    NSLog(@"%lu", (unsigned long)vc.retainCount);
+//    [vc release];
+//    NSLog(@"%lu",  vc.retainCount);
+//    [vc zexige];
+    
+//    [vc aspect_hookSelector:@selector(methodSignatureForSelector:) withOptions:AspectPositionAfter usingBlock:^(){
+//        NSLog(@"拦截");
+//     } error:nil];
+//
+//    [vc aspect_hookSelector:@selector(forwardInvocation:) withOptions:AspectPositionAfter usingBlock:^(){
+//        NSLog(@"拦截");
+//    } error:nil];
+    
+    [vc performSelector:@selector(ziziziz)];
+    [vc performSelector:@selector(zexige)];
+    
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    
-    [super viewWillAppear:animated];
-}
+//- (BOOL)respondsToSelector:(SEL)aSelector {
+//
+//    return NO;
+//}
+
+//- (void)viewWillAppear:(BOOL)animated {
+//
+//    [super viewWillAppear:animated];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -109,6 +247,8 @@
     }
 }
 
+
+
 #pragma mark - 5.Event Response
 
 #pragma mark - 6.Private Methods
@@ -143,6 +283,12 @@
     }
     return _model;
 }
+
+//- (BOOL)respondsToSelector:(SEL)aSelector {
+//    
+//    
+//    return YES;
+//}
 
 @end
 

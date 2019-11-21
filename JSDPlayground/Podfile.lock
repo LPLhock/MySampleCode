@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
+  - JhtMarquee (1.0.6)
   - Masonry (1.1.0)
   - PINCache (3.0.1-beta.6):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
@@ -34,6 +35,7 @@ PODS:
   - SDWebImage (4.4.3):
     - SDWebImage/Core (= 4.4.3)
   - SDWebImage/Core (4.4.3)
+  - SKAutoScrollLabel (0.0.6)
   - Texture (2.7):
     - Texture/PINRemoteImage (= 2.7)
   - Texture/Core (2.7)
@@ -46,8 +48,10 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Aspects
+  - JhtMarquee
   - Masonry
   - SDWebImage
+  - SKAutoScrollLabel
   - Texture
   - XXShield
 
@@ -63,18 +67,22 @@ SPEC REPOS:
     - XXShield
   trunk:
     - Aspects
+    - JhtMarquee
+    - SKAutoScrollLabel
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  JhtMarquee: 38eb0ceb3d515092e77a88b9005e2179c7cd1b2d
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  SKAutoScrollLabel: 14f44aa0f93b47cb2e7a02d719c3996ab99bb4c2
   Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
   XXShield: 1627b07bbc34be33040b2fed774cc4bae37c36eb
 
-PODFILE CHECKSUM: 2ce196010b010bd5fcc39c68ec0377f96668ab0e
+PODFILE CHECKSUM: 6bff4344aa085a4ddf8ebf9e0562573636c7427d
 
 COCOAPODS: 1.8.1

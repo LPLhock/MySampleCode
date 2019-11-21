@@ -12,7 +12,7 @@
 		5511A9D5222E2B4B00966A05 /* JSDUIViewGuide.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5511A9D4222E2B4B00966A05 /* JSDUIViewGuide.plist */; };
 		5511A9D8222E2BCB00966A05 /* JSDViewTouchPointVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5511A9D7222E2BCB00966A05 /* JSDViewTouchPointVC.m */; };
 		55278EA521E9811A00DF745C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55278EA421E9811A00DF745C /* AppDelegate.m */; };
-		55278EA821E9811A00DF745C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55278EA721E9811A00DF745C /* ViewController.m */; };
+		55278EA821E9811A00DF745C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55278EA721E9811A00DF745C /* ViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		55278EAB21E9811A00DF745C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55278EA921E9811A00DF745C /* Main.storyboard */; };
 		55278EB021E9811E00DF745C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55278EAE21E9811E00DF745C /* LaunchScreen.storyboard */; };
 		55278EB321E9811E00DF745C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55278EB221E9811E00DF745C /* main.m */; };
@@ -66,7 +66,7 @@
 		55364787223F3A48004CAB58 /* JSDCrashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55364786223F3A48004CAB58 /* JSDCrashVC.m */; };
 		5536478B223F508F004CAB58 /* JSDRuntimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536478A223F508F004CAB58 /* JSDRuntimeVC.m */; };
 		5536478E223F50EB004CAB58 /* JSDMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536478D223F50EB004CAB58 /* JSDMessageVC.m */; };
-		55364791223FA08D004CAB58 /* JSDHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55364790223FA08D004CAB58 /* JSDHomeVC.m */; };
+		55364791223FA08D004CAB58 /* JSDHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55364790223FA08D004CAB58 /* JSDHomeVC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		55364795224096B7004CAB58 /* JSDTimerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55364794224096B7004CAB58 /* JSDTimerVC.m */; };
 		5536479B2240971B004CAB58 /* JSDTimerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5536479A2240971B004CAB58 /* JSDTimerView.xib */; };
 		5536479E22423D41004CAB58 /* JSDPokerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536479D22423D41004CAB58 /* JSDPokerVC.m */; };
@@ -97,6 +97,13 @@
 		55F388242238DE0F000CA174 /* JSDDutyManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F388232238DE0F000CA174 /* JSDDutyManage.m */; };
 		55F388272238DE32000CA174 /* JSDDutyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F388262238DE32000CA174 /* JSDDutyObject.m */; };
 		B4204848237AB632009A2907 /* JSDUIViewSelfAdapt.m in Sources */ = {isa = PBXBuildFile; fileRef = B4204847237AB632009A2907 /* JSDUIViewSelfAdapt.m */; };
+		B43A467A2381270900F649E7 /* JSDQuartzVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B43A46792381270900F649E7 /* JSDQuartzVC.m */; };
+		B43A467D2381281F00F649E7 /* JSDQuartzPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = B43A467C2381281F00F649E7 /* JSDQuartzPointView.m */; };
+		B43A4680238184EF00F649E7 /* JSDWebView.plist in Resources */ = {isa = PBXBuildFile; fileRef = B43A467F238184EF00F649E7 /* JSDWebView.plist */; };
+		B43A46832381856800F649E7 /* JSDWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B43A46822381856800F649E7 /* JSDWebViewVC.m */; };
+		B43A4685238235D400F649E7 /* indexss.html in Resources */ = {isa = PBXBuildFile; fileRef = B43A4684238235D400F649E7 /* indexss.html */; };
+		B43A4688238287C100F649E7 /* JSDUIViewLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B43A4687238287C100F649E7 /* JSDUIViewLabelVC.m */; };
+		B43A468B23838EAD00F649E7 /* JSDMessageForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = B43A468A23838EAD00F649E7 /* JSDMessageForwarding.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -268,6 +275,18 @@
 		95C100104A81CDA30F265341 /* Pods-JSDPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSDPlayground.debug.xcconfig"; path = "Target Support Files/Pods-JSDPlayground/Pods-JSDPlayground.debug.xcconfig"; sourceTree = "<group>"; };
 		B4204846237AB632009A2907 /* JSDUIViewSelfAdapt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDUIViewSelfAdapt.h; sourceTree = "<group>"; };
 		B4204847237AB632009A2907 /* JSDUIViewSelfAdapt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDUIViewSelfAdapt.m; sourceTree = "<group>"; };
+		B43A46782381270900F649E7 /* JSDQuartzVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDQuartzVC.h; sourceTree = "<group>"; };
+		B43A46792381270900F649E7 /* JSDQuartzVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDQuartzVC.m; sourceTree = "<group>"; };
+		B43A467B2381281F00F649E7 /* JSDQuartzPointView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDQuartzPointView.h; sourceTree = "<group>"; };
+		B43A467C2381281F00F649E7 /* JSDQuartzPointView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDQuartzPointView.m; sourceTree = "<group>"; };
+		B43A467F238184EF00F649E7 /* JSDWebView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JSDWebView.plist; sourceTree = "<group>"; };
+		B43A46812381856800F649E7 /* JSDWebViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDWebViewVC.h; sourceTree = "<group>"; };
+		B43A46822381856800F649E7 /* JSDWebViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDWebViewVC.m; sourceTree = "<group>"; };
+		B43A4684238235D400F649E7 /* indexss.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = indexss.html; sourceTree = "<group>"; };
+		B43A4686238287C100F649E7 /* JSDUIViewLabelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDUIViewLabelVC.h; sourceTree = "<group>"; };
+		B43A4687238287C100F649E7 /* JSDUIViewLabelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDUIViewLabelVC.m; sourceTree = "<group>"; };
+		B43A468923838EAD00F649E7 /* JSDMessageForwarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMessageForwarding.h; sourceTree = "<group>"; };
+		B43A468A23838EAD00F649E7 /* JSDMessageForwarding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMessageForwarding.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +325,7 @@
 				5536472622393C89004CAB58 /* JSDArithmetic.plist */,
 				5536473D223B41CD004CAB58 /* JSDResource.plist */,
 				5536474D223CBE9B004CAB58 /* JSDLock.plist */,
+				B43A467F238184EF00F649E7 /* JSDWebView.plist */,
 			);
 			path = ResourceData;
 			sourceTree = "<group>";
@@ -350,6 +370,8 @@
 				552C19BF228BF105008F30F4 /* JSDCALayerClockVC.xib */,
 				B4204846237AB632009A2907 /* JSDUIViewSelfAdapt.h */,
 				B4204847237AB632009A2907 /* JSDUIViewSelfAdapt.m */,
+				B43A4686238287C100F649E7 /* JSDUIViewLabelVC.h */,
+				B43A4687238287C100F649E7 /* JSDUIViewLabelVC.m */,
 			);
 			path = UIViewGuide;
 			sourceTree = "<group>";
@@ -363,6 +385,8 @@
 				55364790223FA08D004CAB58 /* JSDHomeVC.m */,
 				55278EA621E9811A00DF745C /* ViewController.h */,
 				55278EA721E9811A00DF745C /* ViewController.m */,
+				B43A468923838EAD00F649E7 /* JSDMessageForwarding.h */,
+				B43A468A23838EAD00F649E7 /* JSDMessageForwarding.m */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -438,6 +462,8 @@
 		55278ECB21E9969B00DF745C /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				B43A467E238184C300F649E7 /* WebView */,
+				B43A46772381268500F649E7 /* Quartz */,
 				552C19C2228D020F008F30F4 /* CoreAnimation */,
 				553647922240969B004CAB58 /* Timer */,
 				55364788223F5085004CAB58 /* Runtime */,
@@ -687,6 +713,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B43A46772381268500F649E7 /* Quartz */ = {
+			isa = PBXGroup;
+			children = (
+				B43A46782381270900F649E7 /* JSDQuartzVC.h */,
+				B43A46792381270900F649E7 /* JSDQuartzVC.m */,
+				B43A467B2381281F00F649E7 /* JSDQuartzPointView.h */,
+				B43A467C2381281F00F649E7 /* JSDQuartzPointView.m */,
+			);
+			path = Quartz;
+			sourceTree = "<group>";
+		};
+		B43A467E238184C300F649E7 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				B43A46812381856800F649E7 /* JSDWebViewVC.h */,
+				B43A46822381856800F649E7 /* JSDWebViewVC.m */,
+				B43A4684238235D400F649E7 /* indexss.html */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -777,6 +824,7 @@
 				552C19E3228D3FA8008F30F4 /* JSDCAShapeLayer.xib in Resources */,
 				55F388072237ADC0000CA174 /* JSDMultithreading.plist in Resources */,
 				552C19ED228D718C008F30F4 /* JSDCATransformLayer.xib in Resources */,
+				B43A4685238235D400F649E7 /* indexss.html in Resources */,
 				552C19D2228D096D008F30F4 /* JSDDDDViewController.xib in Resources */,
 				5536479B2240971B004CAB58 /* JSDTimerView.xib in Resources */,
 				55F387F52234CE53000CA174 /* KVOKVC.plist in Resources */,
@@ -789,6 +837,7 @@
 				55F3881E2238DD72000CA174 /* JSDDesign.plist in Resources */,
 				55F387DC22336DEC000CA174 /* JSDObjective-C Guide.plist in Resources */,
 				552C19C7228D02C4008F30F4 /* JSDCoreAnimation.plist in Resources */,
+				B43A4680238184EF00F649E7 /* JSDWebView.plist in Resources */,
 				552C19D9228D37D3008F30F4 /* JSDTransform3DVC.xib in Resources */,
 				552C19E8228D3FC9008F30F4 /* JSDTextLayer.xib in Resources */,
 				552DF032228BBC73000EC19A /* JSDImageSpritesVC.xib in Resources */,
@@ -836,6 +885,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B43A4688238287C100F649E7 /* JSDUIViewLabelVC.m in Sources */,
 				55F388242238DE0F000CA174 /* JSDDutyManage.m in Sources */,
 				552C19D8228D37D3008F30F4 /* JSDTransform3DVC.m in Sources */,
 				55278EA821E9811A00DF745C /* ViewController.m in Sources */,
@@ -870,8 +920,11 @@
 				553647A122428595004CAB58 /* JSDCoreGraphicsVC.m in Sources */,
 				55F388212238DDD5000CA174 /* JSDDutyChainVC.m in Sources */,
 				552C19E2228D3FA8008F30F4 /* JSDCAShapeLayer.m in Sources */,
+				B43A46832381856800F649E7 /* JSDWebViewVC.m in Sources */,
+				B43A467D2381281F00F649E7 /* JSDQuartzPointView.m in Sources */,
 				55278ECE21E9970D00DF745C /* NSObject+JSDPerformSelector.m in Sources */,
 				55364742223B41FA004CAB58 /* JSDResourceVC.m in Sources */,
+				B43A467A2381270900F649E7 /* JSDQuartzVC.m in Sources */,
 				5536473022393D60004CAB58 /* JSDArrayMergeVC.m in Sources */,
 				5536474B223B8512004CAB58 /* JSDAsyncDisplayKitVC.m in Sources */,
 				552C19C5228D0222008F30F4 /* JSDCoreAnimationVC.m in Sources */,
@@ -884,6 +937,7 @@
 				55F388142237AEBF000CA174 /* JSDNSThreadVC.m in Sources */,
 				552C19F1228D71C4008F30F4 /* JSDCAGradientLayer.m in Sources */,
 				55F387F32234CE3F000CA174 /* JSDKVOKVCVC.m in Sources */,
+				B43A468B23838EAD00F649E7 /* JSDMessageForwarding.m in Sources */,
 				5536473322393D6C004CAB58 /* JSDHashVC.m in Sources */,
 				55364751223CBEA5004CAB58 /* JSDLockVC.m in Sources */,
 				5536479E22423D41004CAB58 /* JSDPokerVC.m in Sources */,
@@ -972,7 +1026,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1032,7 +1086,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1055,7 +1109,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J4D5D57QCL;
+				DEVELOPMENT_TEAM = 2K6DTDY865;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JSDPlayground/JSDPrefix.pch";
@@ -1088,7 +1142,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J4D5D57QCL;
+				DEVELOPMENT_TEAM = 2K6DTDY865;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JSDPlayground/JSDPrefix.pch";

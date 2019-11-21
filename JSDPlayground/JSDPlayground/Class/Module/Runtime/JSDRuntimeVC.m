@@ -40,7 +40,7 @@
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
-    self.navigationItem.title = @"Runtime";
+    self.navigationItem.title = @"Runtime 消息转发";
 }
 
 - (void)setupView {

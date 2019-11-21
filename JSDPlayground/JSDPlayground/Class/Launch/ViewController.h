@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSDMessageForwarding.h"
 
 extern NSString *const kJSDCellIdentifier;
 
-@interface ViewController : UIViewController
-
+@interface ViewController : JSDMessageForwarding
+//- (void)zexige;
 
 @end
 

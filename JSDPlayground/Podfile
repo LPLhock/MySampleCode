@@ -12,6 +12,8 @@ target 'JSDPlayground' do
   pod 'Texture'
   pod 'XXShield'
   pod 'Aspects'
+  pod 'JhtMarquee'
+  pod 'SKAutoScrollLabel'
 
   # Pods for JSDPlayground
 
