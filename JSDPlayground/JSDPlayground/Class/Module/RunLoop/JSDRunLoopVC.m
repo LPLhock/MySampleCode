@@ -8,6 +8,19 @@
 
 #import "JSDRunLoopVC.h"
 
+//typedef void (*CFRunLoopObserverCallBack)(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info);
+
+void MyRunLoopObserverCallBack (CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info) {
+    
+//    NSLog(@"回调%@---%lu---%@", observer, activity, info);
+//    NSLog(@"定时器启动");
+}
+
+void zxdCFRunLoopTimerCallBack (CFRunLoopTimerRef timer, void *info) {
+    
+    NSLog(@"定时器启动");
+}
+
 static BOOL runAlways =  YES;
 
 @interface JSDRunLoopVC ()
@@ -60,9 +73,61 @@ static BOOL runAlways =  YES;
             [_thread start];
         }
     }
-    
+
     runAlways = NO;
     
+//    NSRunLoop* myRunLoop = [NSRunLoop currentRunLoop];
+//   // Create a run loop observer and attach it to the run loop.
+//    CFRunLoopObserverContext  context = {0, (__bridge void *)(self), NULL, NULL, NULL};
+//   CFRunLoopObserverRef    observer = CFRunLoopObserverCreate(kCFAllocatorDefault,
+//           kCFRunLoopAllActivities, YES, 0, &MyRunLoopObserverCallBack, &context);
+//
+////    CFRunLoopObserverCreate(<#CFAllocatorRef allocator#>, <#CFOptionFlags activities#>, <#Boolean repeats#>, <#CFIndex order#>, CFRunLoopObserverCallBack callout, <#CFRunLoopObserverContext *context#>)
+//   if (observer)
+//   {
+////       CFRunLoopRef    cfLoop = [myRunLoop getCFRunLoop];
+//       CFRunLoopRef cfLoop = CFRunLoopGetCurrent();
+//       CFRunLoopAddObserver(cfLoop, observer, kCFRunLoopDefaultMode);
+//   }
+
+   // Create and schedule the timer.
+//   [NSTimer scheduledTimerWithTimeInterval:0.1 target:self
+//               selector:@selector(doFireTimer:) userInfo:nil repeats:YES];
+//
+//   NSInteger    loopCount = 10;
+//   do
+//   {
+//       // Run the run loop 10 times to let the timer fire.
+//       [myRunLoop runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];
+//       loopCount--;
+//   }
+//   while (loopCount);
+    
+    
+//    CFRunLoopSourceRef
+//    CFAllocatorRef
+//    CFOptionFlags
+    
+//        CFRunLoopObserverRef* observerRef = CFRunLoopObserverCreate(<#CFAllocatorRef allocator#>, <#CFOptionFlags activities#>, <#Boolean repeats#>, <#CFIndex order#>, <#CFRunLoopObserverCallBack callout#>, <#CFRunLoopObserverContext *context#>)
+//    CFRunLoopObserverContext
+    
+    CFRunLoopRef runLoop = CFRunLoopGetCurrent();
+    CFRunLoopTimerContext context = {0, NULL, NULL, NULL, NULL};
+//    CFRunLoopTimerRef timer = CFRunLoopTimerCreate(kCFAllocatorDefault, 0.1, 0.3, 0, 0,
+//                                            &MyRunLoopObserverCallBack, &context);
+//    typedef void (*CFRunLoopTimerCallBack)(CFRunLoopTimerRef timer, void *info);
+    
+//    CFRunLoopTimerCallBack call = ^ () {
+//
+//    };
+    CFRunLoopTimerRef timer = CFRunLoopTimerCreate(kCFAllocatorDefault, 1.5, 0.3, 0, 0, &zxdCFRunLoopTimerCallBack, &context);
+     
+    CFRunLoopAddTimer(runLoop, timer, kCFRunLoopCommonModes);
+}
+
+- (void)doFireTimer:(id)sender {
+    
+    NSLog(@"电石气");
 }
 
 - (void)runLoop {
