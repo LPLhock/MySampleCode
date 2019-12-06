@@ -41,6 +41,49 @@
 
 - (void)setupNavBar {
     self.navigationItem.title = @"NSOperation";
+    
+    NSOperationQueue* queue = [[NSOperationQueue alloc] init];
+    queue.maxConcurrentOperationCount = 1;
+    NSInvocationOperation* operation1 = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(task) object:nil];
+    NSInvocationOperation* operation2 = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(task2) object:nil];
+    NSInvocationOperation* operation3 = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(task3) object:nil];
+    NSInvocationOperation* operation4 = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(task4) object:nil];
+    
+    NSLog(@"开始执行任务咯");
+    [queue addOperation:operation1];
+    [queue addOperation:operation2];
+    [queue addOperation:operation3];
+    [operation4 addDependency:operation3];
+    [operation4 addDependency:operation2];
+    [operation4 addDependency:operation1];
+    [queue addOperation:operation4];
+    NSLog(@"执行任务结束咯");
+    
+//    [queue cancelAllOperations];
+    
+}
+
+- (void)task {
+    
+    NSLog(@"开始执行任务1%@", [NSThread currentThread]);
+    sleep(3);
+    NSLog(@"完成任务1");
+}
+- (void)task2 {
+    NSLog(@"开始执行任务2%@", [NSThread currentThread]);
+    sleep(3);
+    NSLog(@"完成任务2");
+}
+- (void)task3 {
+    NSLog(@"开始执行任务3%@", [NSThread currentThread]);
+    sleep(3);
+    NSLog(@"完成任务3");
+}
+- (void)task4 {
+    
+    NSLog(@"开始执行任务4");
+    sleep(1);
+    NSLog(@"完成任务4");
 }
 
 - (void)setupView {

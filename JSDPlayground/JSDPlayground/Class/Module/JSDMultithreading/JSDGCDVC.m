@@ -29,7 +29,7 @@
     //2.设置view
     [self setupView];
     //3.请求数据
-    [self setupData];
+//    [self setupData];
     //4.设置通知
     [self setupNotification];
     
@@ -49,6 +49,68 @@
 - (void)setupView {
     
     self.view.backgroundColor = [UIColor whiteColor];
+
+
+//    dispatch_async(queue2, ^{
+//        NSLog(@"完成任务1");
+//        dispatch_group_leave(group);
+//    });
+//    dispatch_group_enter(group);
+//        dispatch_async(queue2, ^{
+//        NSLog(@"完成任务2");
+//        dispatch_group_leave(group);
+//    });
+//    dispatch_group_enter(group);
+//    dispatch_async(queue2, ^{
+//        NSLog(@"完成任务3");
+////        dispatch_group_leave(group);
+//    });
+    
+//    dispatch_group_notify(group, queue2, ^{
+//        NSLog(@"任务完成了");
+//    });
+
+    
+    // 模拟信号量
+    dispatch_semaphore_t semaphore_t = dispatch_semaphore_create(2);
+//    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    dispatch_queue_t queue = dispatch_queue_create("SSS",DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_async(queue, ^{
+       
+        dispatch_semaphore_wait(semaphore_t, DISPATCH_TIME_FOREVER);
+        NSLog(@"正在执行任务1");
+        sleep(10);
+        NSLog(@"任务1执行完毕");
+        dispatch_semaphore_signal(semaphore_t);
+    });
+    
+    dispatch_async(queue, ^{
+       
+        dispatch_semaphore_wait(semaphore_t, DISPATCH_TIME_FOREVER);
+        NSLog(@"正在执行任务2");
+        sleep(10);
+        NSLog(@"任务2执行完毕");
+        dispatch_semaphore_signal(semaphore_t);
+    });
+    dispatch_async(queue, ^{
+       
+        dispatch_semaphore_wait(semaphore_t, DISPATCH_TIME_NOW);
+        NSLog(@"正在执行任务3");
+        sleep(2);
+        NSLog(@"任务3执行完毕");
+        dispatch_semaphore_signal(semaphore_t);
+    });
+    dispatch_async(queue, ^{
+       
+        dispatch_semaphore_wait(semaphore_t, DISPATCH_TIME_NOW);
+        NSLog(@"正在执行任务4");
+        sleep(2);
+        NSLog(@"任务4执行完毕");
+        dispatch_semaphore_signal(semaphore_t);
+    });
+    
+
     
 }
 
@@ -60,6 +122,7 @@
 #pragma mark - 3.Request Data
 
 - (void)setupData {
+    
     
     dispatch_group_t group = dispatch_group_create();
     dispatch_group_t groutp2 = dispatch_group_create();

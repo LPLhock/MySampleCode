@@ -138,5 +138,21 @@
 		<key>class</key>
 		<string>JSDWebViewVC</string>
 	</dict>
+	<dict>
+		<key>route</key>
+		<string>YES</string>
+		<key>title</key>
+		<string>RAC</string>
+		<key>class</key>
+		<string>JSDRACVC</string>
+	</dict>
+	<dict>
+		<key>route</key>
+		<string>YES</string>
+		<key>title</key>
+		<string>数据结构</string>
+		<key>class</key>
+		<string>JSDDataStrVC</string>
+	</dict>
 </array>
 </plist>

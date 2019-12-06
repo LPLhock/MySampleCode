@@ -32,6 +32,13 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0-beta.13):
     - PINCache (= 3.0.1-beta.6)
     - PINRemoteImage/Core
+  - ReactiveCocoa (2.3):
+    - ReactiveCocoa/UI (= 2.3)
+  - ReactiveCocoa/Core (2.3):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3)
+  - ReactiveCocoa/UI (2.3):
+    - ReactiveCocoa/Core
   - SDWebImage (4.4.3):
     - SDWebImage/Core (= 4.4.3)
   - SDWebImage/Core (4.4.3)
@@ -50,6 +57,7 @@ DEPENDENCIES:
   - Aspects
   - JhtMarquee
   - Masonry
+  - ReactiveCocoa (= 2.3)
   - SDWebImage
   - SKAutoScrollLabel
   - Texture
@@ -68,6 +76,7 @@ SPEC REPOS:
   trunk:
     - Aspects
     - JhtMarquee
+    - ReactiveCocoa
     - SKAutoScrollLabel
 
 SPEC CHECKSUMS:
@@ -78,11 +87,12 @@ SPEC CHECKSUMS:
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
+  ReactiveCocoa: 81ee2fb7df2dfc6bd52b5d70473662195e20ca7d
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   SKAutoScrollLabel: 14f44aa0f93b47cb2e7a02d719c3996ab99bb4c2
   Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
   XXShield: 1627b07bbc34be33040b2fed774cc4bae37c36eb
 
-PODFILE CHECKSUM: 6bff4344aa085a4ddf8ebf9e0562573636c7427d
+PODFILE CHECKSUM: f10117f4c16f30a006953ed3ecae77d5b5a4edc9
 
 COCOAPODS: 1.8.1
