@@ -13,25 +13,33 @@
             <key>route</key>
             <true/>
             <key>class</key>
-            <string>JSDSDWebImageVC</string>
+            <string>JSDSDStringVC</string>
             <key>title</key>
-            <string>SDWebImage</string>
+            <string>字符串</string>
         </dict>
         <dict>
             <key>route</key>
             <true/>
             <key>class</key>
-            <string>JSDAFNetworkingVC</string>
+            <string>JSDNodeVC</string>
             <key>title</key>
-            <string>AFNetworking</string>
+            <string>链表反转</string>
         </dict>
         <dict>
             <key>route</key>
             <true/>
             <key>class</key>
-            <string>JSDAsyncDisplayKitVC</string>
+            <string>JSDArrayMergeVC</string>
             <key>title</key>
-            <string>AsyncDisplayKit</string>
+            <string>有序数组合并</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>class</key>
+            <string>JSDHashVC</string>
+            <key>title</key>
+            <string>哈希算法</string>
         </dict>
         <dict>
             <key>route</key>
@@ -39,7 +47,15 @@
             <key>class</key>
             <string>JSDSubViewVC</string>
             <key>title</key>
-            <string>子视图公同父视图</string>
+            <string>子视图共同父视图</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>class</key>
+            <string>JSDSearchMediantVC</string>
+            <key>title</key>
+            <string>数组查找中位数</string>
         </dict>
     </array>
 </plist>

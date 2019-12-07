@@ -46,6 +46,28 @@
 - (void)setupView {
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    char* table = "hehllo,world";
+    
+    int array[256];
+    for (int i = 0; i < 256; i++) {
+        array[i] = 0;
+    }
+    char* p = table;
+    while (*p != '\0') {
+        array[*(p++)]++;
+    }
+    p = table;
+    char result = '\0';
+    while (result == '\0') {
+        if (array[*p] == 1) {
+            result = *p;
+        } else {
+            p++;
+        }
+    }
+    NSLog(@"%c", result);
+    
 }
 
 - (void)reloadView {

@@ -51,7 +51,6 @@
 		5536472722393C89004CAB58 /* JSDArithmetic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5536472622393C89004CAB58 /* JSDArithmetic.plist */; };
 		5536472A22393D36004CAB58 /* JSDStringReversalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536472922393D36004CAB58 /* JSDStringReversalVC.m */; };
 		5536472D22393D50004CAB58 /* JSDTableReversalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536472C22393D50004CAB58 /* JSDTableReversalVC.m */; };
-		5536473022393D60004CAB58 /* JSDArrayMergeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536472F22393D60004CAB58 /* JSDArrayMergeVC.m */; };
 		5536473322393D6C004CAB58 /* JSDHashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536473222393D6C004CAB58 /* JSDHashVC.m */; };
 		5536473622393D78004CAB58 /* JSDSubViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536473522393D78004CAB58 /* JSDSubViewVC.m */; };
 		5536473E223B41CD004CAB58 /* JSDResource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5536473D223B41CD004CAB58 /* JSDResource.plist */; };
@@ -108,6 +107,10 @@
 		B43A4823238E18C000F649E7 /* JSDRAC.plist in Resources */ = {isa = PBXBuildFile; fileRef = B43A4822238E18C000F649E7 /* JSDRAC.plist */; };
 		B4E17B03239A022600DC3E8C /* JSDDataStr.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4E17B02239A022600DC3E8C /* JSDDataStr.plist */; };
 		B4E17BE3239A029300DC3E8C /* JSDDataStrVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E17BE2239A029300DC3E8C /* JSDDataStrVC.m */; };
+		B4E17BE6239A085B00DC3E8C /* JSDSDStringVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E17BE5239A085B00DC3E8C /* JSDSDStringVC.m */; };
+		B4E17BE9239A341700DC3E8C /* JSDNodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E17BE8239A341700DC3E8C /* JSDNodeVC.m */; };
+		B4E17BEC239B58C600DC3E8C /* JSDArrayMergeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E17BEB239B58C600DC3E8C /* JSDArrayMergeVC.m */; };
+		B4E17BF0239B886400DC3E8C /* JSDSearchMediantVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E17BEF239B886400DC3E8C /* JSDSearchMediantVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,8 +196,6 @@
 		5536472922393D36004CAB58 /* JSDStringReversalVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDStringReversalVC.m; sourceTree = "<group>"; };
 		5536472B22393D50004CAB58 /* JSDTableReversalVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTableReversalVC.h; sourceTree = "<group>"; };
 		5536472C22393D50004CAB58 /* JSDTableReversalVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTableReversalVC.m; sourceTree = "<group>"; };
-		5536472E22393D60004CAB58 /* JSDArrayMergeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDArrayMergeVC.h; sourceTree = "<group>"; };
-		5536472F22393D60004CAB58 /* JSDArrayMergeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDArrayMergeVC.m; sourceTree = "<group>"; };
 		5536473122393D6C004CAB58 /* JSDHashVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDHashVC.h; sourceTree = "<group>"; };
 		5536473222393D6C004CAB58 /* JSDHashVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDHashVC.m; sourceTree = "<group>"; };
 		5536473422393D78004CAB58 /* JSDSubViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSubViewVC.h; sourceTree = "<group>"; };
@@ -464,6 +465,14 @@
 		B4E17B02239A022600DC3E8C /* JSDDataStr.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JSDDataStr.plist; sourceTree = "<group>"; };
 		B4E17BE1239A029300DC3E8C /* JSDDataStrVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSDDataStrVC.h; path = ../../../../../../../Documents/JSDDataStrVC.h; sourceTree = "<group>"; };
 		B4E17BE2239A029300DC3E8C /* JSDDataStrVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JSDDataStrVC.m; path = ../../../../../../../Documents/JSDDataStrVC.m; sourceTree = "<group>"; };
+		B4E17BE4239A085B00DC3E8C /* JSDSDStringVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSDSDStringVC.h; path = ../../../../../../../Documents/JSDSDStringVC.h; sourceTree = "<group>"; };
+		B4E17BE5239A085B00DC3E8C /* JSDSDStringVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JSDSDStringVC.m; path = ../../../../../../../Documents/JSDSDStringVC.m; sourceTree = "<group>"; };
+		B4E17BE7239A341700DC3E8C /* JSDNodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSDNodeVC.h; path = ../../../../../../../Documents/JSDNodeVC.h; sourceTree = "<group>"; };
+		B4E17BE8239A341700DC3E8C /* JSDNodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JSDNodeVC.m; path = ../../../../../../../Documents/JSDNodeVC.m; sourceTree = "<group>"; };
+		B4E17BEA239B58C600DC3E8C /* JSDArrayMergeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSDArrayMergeVC.h; path = ../../../../../../../Documents/JSDArrayMergeVC.h; sourceTree = "<group>"; };
+		B4E17BEB239B58C600DC3E8C /* JSDArrayMergeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JSDArrayMergeVC.m; path = ../../../../../../../Documents/JSDArrayMergeVC.m; sourceTree = "<group>"; };
+		B4E17BEE239B886400DC3E8C /* JSDSearchMediantVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSearchMediantVC.h; sourceTree = "<group>"; };
+		B4E17BEF239B886400DC3E8C /* JSDSearchMediantVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSearchMediantVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -722,12 +731,6 @@
 				5536472922393D36004CAB58 /* JSDStringReversalVC.m */,
 				5536472B22393D50004CAB58 /* JSDTableReversalVC.h */,
 				5536472C22393D50004CAB58 /* JSDTableReversalVC.m */,
-				5536472E22393D60004CAB58 /* JSDArrayMergeVC.h */,
-				5536472F22393D60004CAB58 /* JSDArrayMergeVC.m */,
-				5536473122393D6C004CAB58 /* JSDHashVC.h */,
-				5536473222393D6C004CAB58 /* JSDHashVC.m */,
-				5536473422393D78004CAB58 /* JSDSubViewVC.h */,
-				5536473522393D78004CAB58 /* JSDSubViewVC.m */,
 				5536479C22423D41004CAB58 /* JSDPokerVC.h */,
 				5536479D22423D41004CAB58 /* JSDPokerVC.m */,
 			);
@@ -1120,6 +1123,18 @@
 			children = (
 				B4E17BE1239A029300DC3E8C /* JSDDataStrVC.h */,
 				B4E17BE2239A029300DC3E8C /* JSDDataStrVC.m */,
+				B4E17BE4239A085B00DC3E8C /* JSDSDStringVC.h */,
+				B4E17BE5239A085B00DC3E8C /* JSDSDStringVC.m */,
+				B4E17BE7239A341700DC3E8C /* JSDNodeVC.h */,
+				B4E17BE8239A341700DC3E8C /* JSDNodeVC.m */,
+				B4E17BEA239B58C600DC3E8C /* JSDArrayMergeVC.h */,
+				B4E17BEB239B58C600DC3E8C /* JSDArrayMergeVC.m */,
+				5536473122393D6C004CAB58 /* JSDHashVC.h */,
+				5536473222393D6C004CAB58 /* JSDHashVC.m */,
+				5536473422393D78004CAB58 /* JSDSubViewVC.h */,
+				5536473522393D78004CAB58 /* JSDSubViewVC.m */,
+				B4E17BEE239B886400DC3E8C /* JSDSearchMediantVC.h */,
+				B4E17BEF239B886400DC3E8C /* JSDSearchMediantVC.m */,
 			);
 			path = DataStr;
 			sourceTree = "<group>";
@@ -1285,6 +1300,7 @@
 			files = (
 				B43A4688238287C100F649E7 /* JSDUIViewLabelVC.m in Sources */,
 				55F388242238DE0F000CA174 /* JSDDutyManage.m in Sources */,
+				B4E17BE6239A085B00DC3E8C /* JSDSDStringVC.m in Sources */,
 				552C19D8228D37D3008F30F4 /* JSDTransform3DVC.m in Sources */,
 				55278EA821E9811A00DF745C /* ViewController.m in Sources */,
 				552DF02D228ACBBB000EC19A /* JSDCALayerGuideVC.m in Sources */,
@@ -1309,6 +1325,7 @@
 				5511A9D8222E2BCB00966A05 /* JSDViewTouchPointVC.m in Sources */,
 				552DF031228BBC73000EC19A /* JSDImageSpritesVC.m in Sources */,
 				552C19EC228D718C008F30F4 /* JSDCATransformLayer.m in Sources */,
+				B4E17BF0239B886400DC3E8C /* JSDSearchMediantVC.m in Sources */,
 				55F388112237AE9B000CA174 /* JSDNSOperationVC.m in Sources */,
 				55F3880B2237ADE3000CA174 /* JSDMultithreadingVC.m in Sources */,
 				552C19CD228D041A008F30F4 /* JSDSpecialLayerVC.m in Sources */,
@@ -1323,7 +1340,6 @@
 				55278ECE21E9970D00DF745C /* NSObject+JSDPerformSelector.m in Sources */,
 				55364742223B41FA004CAB58 /* JSDResourceVC.m in Sources */,
 				B43A467A2381270900F649E7 /* JSDQuartzVC.m in Sources */,
-				5536473022393D60004CAB58 /* JSDArrayMergeVC.m in Sources */,
 				5536474B223B8512004CAB58 /* JSDAsyncDisplayKitVC.m in Sources */,
 				552C19C5228D0222008F30F4 /* JSDCoreAnimationVC.m in Sources */,
 				55364787223F3A48004CAB58 /* JSDCrashVC.m in Sources */,
@@ -1338,12 +1354,14 @@
 				55F387F32234CE3F000CA174 /* JSDKVOKVCVC.m in Sources */,
 				B43A468B23838EAD00F649E7 /* JSDMessageForwarding.m in Sources */,
 				5536473322393D6C004CAB58 /* JSDHashVC.m in Sources */,
+				B4E17BE9239A341700DC3E8C /* JSDNodeVC.m in Sources */,
 				55364751223CBEA5004CAB58 /* JSDLockVC.m in Sources */,
 				5536479E22423D41004CAB58 /* JSDPokerVC.m in Sources */,
 				B4E17BE3239A029300DC3E8C /* JSDDataStrVC.m in Sources */,
 				55F387F82234CE8F000CA174 /* JSDKVOVC.m in Sources */,
 				5536472522393C49004CAB58 /* JSDArithmeticVC.m in Sources */,
 				55F3880E2237AE65000CA174 /* JSDGCDVC.m in Sources */,
+				B4E17BEC239B58C600DC3E8C /* JSDArrayMergeVC.m in Sources */,
 				552C19C0228BF105008F30F4 /* JSDCALayerClockVC.m in Sources */,
 				55F387FB2234CE9A000CA174 /* JSDKVCVC.m in Sources */,
 				552DF035228BC904000EC19A /* JSDCALayerDelegateVC.m in Sources */,
