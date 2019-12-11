@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   JSDRouters.plist
+   JSDPlayground
+
+   Created by Jersey on 10/12/2019.
+   Copyright (c) 2019 Jersey. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>class</key>
+            <string>JSDSDStringVC</string>
+            <key>title</key>
+            <string>字符串</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>class</key>
+            <string>JSDNodeVC</string>
+            <key>title</key>
+            <string>链表反转</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>class</key>
+            <string>JSDArrayMergeVC</string>
+            <key>title</key>
+            <string>有序数组合并</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>class</key>
+            <string>JSDHashVC</string>
+            <key>title</key>
+            <string>哈希算法</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>class</key>
+            <string>JSDSubViewVC</string>
+            <key>title</key>
+            <string>子视图共同父视图</string>
+        </dict>
+        <dict>
+            <key>route</key>
+            <true/>
+            <key>class</key>
+            <string>JSDSearchMediantVC</string>
+            <key>title</key>
+            <string>数组查找中位数</string>
+        </dict>
+    </array>
+</plist>

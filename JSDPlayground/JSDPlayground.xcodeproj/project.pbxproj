@@ -111,6 +111,8 @@
 		B4E17BE9239A341700DC3E8C /* JSDNodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E17BE8239A341700DC3E8C /* JSDNodeVC.m */; };
 		B4E17BEC239B58C600DC3E8C /* JSDArrayMergeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E17BEB239B58C600DC3E8C /* JSDArrayMergeVC.m */; };
 		B4E17BF0239B886400DC3E8C /* JSDSearchMediantVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E17BEF239B886400DC3E8C /* JSDSearchMediantVC.m */; };
+		B4E17BF5239F89C400DC3E8C /* JSDRouters.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4E17BF4239F89C400DC3E8C /* JSDRouters.plist */; };
+		B4E17BFA239F8A1600DC3E8C /* JSDRoutersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E17BF9239F8A1600DC3E8C /* JSDRoutersVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -473,6 +475,9 @@
 		B4E17BEB239B58C600DC3E8C /* JSDArrayMergeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JSDArrayMergeVC.m; path = ../../../../../../../Documents/JSDArrayMergeVC.m; sourceTree = "<group>"; };
 		B4E17BEE239B886400DC3E8C /* JSDSearchMediantVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSearchMediantVC.h; sourceTree = "<group>"; };
 		B4E17BEF239B886400DC3E8C /* JSDSearchMediantVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSearchMediantVC.m; sourceTree = "<group>"; };
+		B4E17BF4239F89C400DC3E8C /* JSDRouters.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JSDRouters.plist; sourceTree = "<group>"; };
+		B4E17BF8239F8A1600DC3E8C /* JSDRoutersVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDRoutersVC.h; sourceTree = "<group>"; };
+		B4E17BF9239F8A1600DC3E8C /* JSDRoutersVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDRoutersVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -514,6 +519,7 @@
 				B43A467F238184EF00F649E7 /* JSDWebView.plist */,
 				B43A4822238E18C000F649E7 /* JSDRAC.plist */,
 				B4E17B02239A022600DC3E8C /* JSDDataStr.plist */,
+				B4E17BF4239F89C400DC3E8C /* JSDRouters.plist */,
 			);
 			path = ResourceData;
 			sourceTree = "<group>";
@@ -650,6 +656,7 @@
 		55278ECB21E9969B00DF745C /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				B4E17BF7239F8A0A00DC3E8C /* Routers */,
 				B4E17BE0239A027C00DC3E8C /* DataStr */,
 				B43A481D238E182C00F649E7 /* RAC */,
 				B43A467E238184C300F649E7 /* WebView */,
@@ -1139,6 +1146,15 @@
 			path = DataStr;
 			sourceTree = "<group>";
 		};
+		B4E17BF7239F8A0A00DC3E8C /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				B4E17BF8239F8A1600DC3E8C /* JSDRoutersVC.h */,
+				B4E17BF9239F8A1600DC3E8C /* JSDRoutersVC.m */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1228,6 +1244,7 @@
 			files = (
 				5536472722393C89004CAB58 /* JSDArithmetic.plist in Resources */,
 				55278EB021E9811E00DF745C /* LaunchScreen.storyboard in Resources */,
+				B4E17BF5239F89C400DC3E8C /* JSDRouters.plist in Resources */,
 				55278EC121E98CAF00DF745C /* JSDInterViewTopic.plist in Resources */,
 				55F3880122376D75000CA174 /* JSDBlock.plist in Resources */,
 				55EB3E0B22428AD200A1D163 /* Assets.xcassets in Resources */,
@@ -1324,6 +1341,7 @@
 				55364795224096B7004CAB58 /* JSDTimerVC.m in Sources */,
 				5511A9D8222E2BCB00966A05 /* JSDViewTouchPointVC.m in Sources */,
 				552DF031228BBC73000EC19A /* JSDImageSpritesVC.m in Sources */,
+				B4E17BFA239F8A1600DC3E8C /* JSDRoutersVC.m in Sources */,
 				552C19EC228D718C008F30F4 /* JSDCATransformLayer.m in Sources */,
 				B4E17BF0239B886400DC3E8C /* JSDSearchMediantVC.m in Sources */,
 				55F388112237AE9B000CA174 /* JSDNSOperationVC.m in Sources */,

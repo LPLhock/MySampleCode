@@ -14,6 +14,10 @@ target 'JSDPlayground' do
   pod 'JhtMarquee'
   pod 'SKAutoScrollLabel'
   pod 'ReactiveCocoa', '=2.3'
+  pod 'JLRoutes', '1.6'
+  pod 'HHRouter', '~> 0.1.8'
+  pod 'MGJRouter', '~>0.9.0'
+  pod 'Routable', '~> 0.1.1'
 
   # Pods for JSDPlayground
 

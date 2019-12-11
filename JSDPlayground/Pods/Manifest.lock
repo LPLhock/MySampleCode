@@ -15,8 +15,11 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
+  - HHRouter (0.1.9)
   - JhtMarquee (1.0.6)
+  - JLRoutes (1.6)
   - Masonry (1.1.0)
+  - MGJRouter (0.9.3)
   - PINCache (3.0.1-beta.6):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
     - PINCache/Core (= 3.0.1-beta.6)
@@ -24,7 +27,7 @@ PODS:
     - PINCache/Core
   - PINCache/Core (3.0.1-beta.6):
     - PINOperation (~> 1.1.0)
-  - PINOperation (1.1.1)
+  - PINOperation (1.1.2)
   - PINRemoteImage/Core (3.0.0-beta.13):
     - PINOperation
   - PINRemoteImage/iOS (3.0.0-beta.13):
@@ -39,60 +42,85 @@ PODS:
   - ReactiveCocoa/no-arc (2.3)
   - ReactiveCocoa/UI (2.3):
     - ReactiveCocoa/Core
-  - SDWebImage (4.4.3):
-    - SDWebImage/Core (= 4.4.3)
-  - SDWebImage/Core (4.4.3)
+  - Routable (0.1.1)
+  - SDWebImage (5.4.0):
+    - SDWebImage/Core (= 5.4.0)
+  - SDWebImage/Core (5.4.0)
   - SKAutoScrollLabel (0.0.6)
-  - Texture (2.7):
-    - Texture/PINRemoteImage (= 2.7)
-  - Texture/Core (2.7)
-  - Texture/PINRemoteImage (2.7):
+  - Texture (2.8.1):
+    - Texture/AssetsLibrary (= 2.8.1)
+    - Texture/Core (= 2.8.1)
+    - Texture/MapKit (= 2.8.1)
+    - Texture/Photos (= 2.8.1)
+    - Texture/PINRemoteImage (= 2.8.1)
+    - Texture/Video (= 2.8.1)
+  - Texture/AssetsLibrary (2.8.1):
+    - Texture/Core
+  - Texture/Core (2.8.1)
+  - Texture/MapKit (2.8.1):
+    - Texture/Core
+  - Texture/Photos (2.8.1):
+    - Texture/Core
+  - Texture/PINRemoteImage (2.8.1):
     - PINRemoteImage/iOS (= 3.0.0-beta.13)
     - PINRemoteImage/PINCache
+    - Texture/Core
+  - Texture/Video (2.8.1):
     - Texture/Core
   - XXShield (2.2.0)
 
 DEPENDENCIES:
   - AFNetworking
   - Aspects
+  - HHRouter (~> 0.1.8)
   - JhtMarquee
+  - JLRoutes (= 1.6)
   - Masonry
+  - MGJRouter (~> 0.9.0)
   - ReactiveCocoa (= 2.3)
+  - Routable (~> 0.1.1)
   - SDWebImage
   - SKAutoScrollLabel
   - Texture
   - XXShield
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - AFNetworking
+    - Aspects
+    - HHRouter
+    - JhtMarquee
+    - JLRoutes
     - Masonry
+    - MGJRouter
     - PINCache
     - PINOperation
     - PINRemoteImage
+    - ReactiveCocoa
+    - Routable
     - SDWebImage
+    - SKAutoScrollLabel
     - Texture
     - XXShield
-  trunk:
-    - Aspects
-    - JhtMarquee
-    - ReactiveCocoa
-    - SKAutoScrollLabel
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  HHRouter: c096524e95a07a1970e6e23a19ee5a9592dc326d
   JhtMarquee: 38eb0ceb3d515092e77a88b9005e2179c7cd1b2d
+  JLRoutes: 435d791422e96c9b9b5e1c4db1aedb3ae1b1a08f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MGJRouter: f65821e2aeffc8f9e84b254c8f1c0dd80f048aa9
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
-  PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
+  PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   ReactiveCocoa: 81ee2fb7df2dfc6bd52b5d70473662195e20ca7d
-  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  Routable: 42731c7757b9b7ad32dd84d988b3d5428b966dfd
+  SDWebImage: 5bf6aec6481ae2a062bdc59f9d6c1d1e552090e0
   SKAutoScrollLabel: 14f44aa0f93b47cb2e7a02d719c3996ab99bb4c2
-  Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
+  Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
   XXShield: 1627b07bbc34be33040b2fed774cc4bae37c36eb
 
-PODFILE CHECKSUM: f10117f4c16f30a006953ed3ecae77d5b5a4edc9
+PODFILE CHECKSUM: 31a0b54f25b587f9d9dd2e8852307b552f398f96
 
 COCOAPODS: 1.8.1

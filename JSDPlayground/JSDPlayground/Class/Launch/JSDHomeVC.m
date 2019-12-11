@@ -9,6 +9,7 @@
 #import "JSDHomeVC.h"
 #import <objc/runtime.h>
 #import <Aspects.h>
+#import <JLRoutes/JLRoutes.h>
 
 @interface JSDHomeVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -92,6 +93,8 @@
     
     [super loadView];
     NSLog(@"%s", __func__);
+    
+    
 }
 
 - (void)viewWillLayoutSubviews {

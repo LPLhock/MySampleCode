@@ -154,5 +154,13 @@
 		<key>class</key>
 		<string>JSDDataStrVC</string>
 	</dict>
+	<dict>
+		<key>route</key>
+		<string>YES</string>
+		<key>title</key>
+		<string>路由器</string>
+		<key>class</key>
+		<string>JSDRoutersVC</string>
+	</dict>
 </array>
 </plist>
