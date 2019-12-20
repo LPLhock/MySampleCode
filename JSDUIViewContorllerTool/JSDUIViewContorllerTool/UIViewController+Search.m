@@ -17,37 +17,31 @@
     return window.rootViewController;
 }
 
-+ (UIViewController *)jsd_getCurrentViewController{
++ (UIViewController *)jsd_findVisibleViewController {
     
-    UIViewController* currentViewController = [self jsd_getRootViewController];
+    UIViewController* currentViewController = [self jsd_rootViewController];
+
     BOOL runLoopFind = YES;
     while (runLoopFind) {
         if (currentViewController.presentedViewController) {
-            
             currentViewController = currentViewController.presentedViewController;
-        } else if ([currentViewController isKindOfClass:[UINavigationController class]]) {
-            
-          UINavigationController* navigationController = (UINavigationController* )currentViewController;
-            currentViewController = [navigationController.childViewControllers lastObject];
-        } else if ([currentViewController isKindOfClass:[UITabBarController class]]) {
-            
-          UITabBarController* tabBarController = (UITabBarController* )currentViewController;
-            currentViewController = tabBarController.selectedViewController;
         } else {
-            
-            NSUInteger childViewControllerCount = currentViewController.childViewControllers.count;
-            if (childViewControllerCount > 0) {
-                
-                currentViewController = currentViewController.childViewControllers.lastObject;
-                
-                return currentViewController;
+            if ([currentViewController isKindOfClass:[UINavigationController class]]) {
+                currentViewController = ((UINavigationController *)currentViewController).visibleViewController;
+            } else if ([currentViewController isKindOfClass:[UITabBarController class]]) {
+                currentViewController = ((UITabBarController* )currentViewController).selectedViewController;
+            } else if ([currentViewController isKindOfClass:[UISplitViewController class]]) { // 当需要兼容 Ipad 时
+                currentViewController = currentViewController.presentingViewController;
             } else {
-                
-                return currentViewController;
+                if (currentViewController.presentingViewController) {
+                    currentViewController = currentViewController.presentingViewController;
+                } else {
+                    return currentViewController;
+                }
             }
         }
-        
     }
+    
     return currentViewController;
 }
 
