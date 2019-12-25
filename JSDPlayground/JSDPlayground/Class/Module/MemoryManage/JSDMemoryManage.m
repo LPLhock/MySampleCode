@@ -38,14 +38,6 @@
 
 - (void)setupView {
     
-    __weak id objc = nil;
-    @autoreleasepool {
-        objc = [[NSObject alloc] init];
-        _objc_autoreleasePoolPrint();
-        NSLog(@"poolBefore:%@", objc);
-    }
-    NSLog(@"poolAfter:%@", objc);
-    
 }
 
 - (void)reloadingView {
