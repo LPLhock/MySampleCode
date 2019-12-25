@@ -162,5 +162,13 @@
 		<key>class</key>
 		<string>JSDRoutersVC</string>
 	</dict>
+	<dict>
+		<key>route</key>
+		<true/>
+		<key>class</key>
+		<string>JSDMemoryManage</string>
+		<key>title</key>
+		<string>内存管理</string>
+	</dict>
 </array>
 </plist>
