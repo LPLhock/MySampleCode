@@ -19,6 +19,7 @@ target 'JSDPlayground' do
   pod 'MGJRouter', '~>0.9.0'
   pod 'Routable', '~> 0.1.1'
   pod 'YYCache'
+  pod 'YYImage'
 
   # Pods for JSDPlayground
 

@@ -69,6 +69,9 @@ PODS:
     - Texture/Core
   - XXShield (2.3.1)
   - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking
@@ -85,6 +88,7 @@ DEPENDENCIES:
   - Texture
   - XXShield
   - YYCache
+  - YYImage
 
 SPEC REPOS:
   trunk:
@@ -105,6 +109,7 @@ SPEC REPOS:
     - Texture
     - XXShield
     - YYCache
+    - YYImage
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -124,7 +129,8 @@ SPEC CHECKSUMS:
   Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
   XXShield: c3095b2e1f0e29bc9f660be1eea01813b557cd99
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: d888eb96d4d1b327816277e9b3eb3301d1689255
+PODFILE CHECKSUM: 6de0179b4896631fb62279cbecb6ead5d2f78a4c
 
 COCOAPODS: 1.8.1
