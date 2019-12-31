@@ -26,6 +26,7 @@ static NSArray* lockTypeArray;
 @property (nonatomic, assign) NSInteger moneySum;
 @property (nonatomic, copy) NSString* stringA;
 @property (atomic, copy) NSString* stringB;
+@property(nonatomic, strong) UIView *zexidaoView;
 
 @end
 
@@ -50,6 +51,8 @@ static NSArray* lockTypeArray;
     [self setupData];
     //4.设置通知
     [self setupNotification];
+    
+//    self.zexidaoView = [[UIView alloc] init];
     
 }
 
@@ -382,6 +385,7 @@ static NSArray* lockTypeArray;
         
         NSString* filePath = [[NSBundle mainBundle] pathForResource:@"JSDLock" ofType:@"plist"];
         _model = [[NSArray array] initWithContentsOfFile:filePath].copy;
+        
     }
     return _model;
 }

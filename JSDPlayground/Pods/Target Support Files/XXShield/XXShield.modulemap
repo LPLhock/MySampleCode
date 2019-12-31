@@ -1,0 +1,6 @@
+module XXShield {
+  umbrella header "XXShield.h"
+
+  export *
+  module * { export * }
+}

@@ -106,6 +106,7 @@
 		B43A4821238E184D00F649E7 /* JSDRACVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B43A4820238E184D00F649E7 /* JSDRACVC.m */; };
 		B43A4823238E18C000F649E7 /* JSDRAC.plist in Resources */ = {isa = PBXBuildFile; fileRef = B43A4822238E18C000F649E7 /* JSDRAC.plist */; };
 		B4A0677123B347D100E0BBBB /* JSDMemoryManage.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0677023B347D100E0BBBB /* JSDMemoryManage.m */; };
+		B4A0677623B8A33E00E0BBBB /* JSDRunMSG.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0677523B8A33E00E0BBBB /* JSDRunMSG.m */; };
 		B4E17B03239A022600DC3E8C /* JSDDataStr.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4E17B02239A022600DC3E8C /* JSDDataStr.plist */; };
 		B4E17BE3239A029300DC3E8C /* JSDDataStrVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E17BE2239A029300DC3E8C /* JSDDataStrVC.m */; };
 		B4E17BE6239A085B00DC3E8C /* JSDSDStringVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E17BE5239A085B00DC3E8C /* JSDSDStringVC.m */; };
@@ -467,6 +468,8 @@
 		B43A4822238E18C000F649E7 /* JSDRAC.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JSDRAC.plist; sourceTree = "<group>"; };
 		B4A0676F23B347D100E0BBBB /* JSDMemoryManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMemoryManage.h; sourceTree = "<group>"; };
 		B4A0677023B347D100E0BBBB /* JSDMemoryManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMemoryManage.m; sourceTree = "<group>"; };
+		B4A0677423B8A33E00E0BBBB /* JSDRunMSG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDRunMSG.h; sourceTree = "<group>"; };
+		B4A0677523B8A33E00E0BBBB /* JSDRunMSG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDRunMSG.m; sourceTree = "<group>"; };
 		B4E17B02239A022600DC3E8C /* JSDDataStr.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JSDDataStr.plist; sourceTree = "<group>"; };
 		B4E17BE1239A029300DC3E8C /* JSDDataStrVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSDDataStrVC.h; path = ../../../../../../../Documents/JSDDataStrVC.h; sourceTree = "<group>"; };
 		B4E17BE2239A029300DC3E8C /* JSDDataStrVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JSDDataStrVC.m; path = ../../../../../../../Documents/JSDDataStrVC.m; sourceTree = "<group>"; };
@@ -786,6 +789,8 @@
 			children = (
 				55364785223F3A48004CAB58 /* JSDCrashVC.h */,
 				55364786223F3A48004CAB58 /* JSDCrashVC.m */,
+				B4A0677423B8A33E00E0BBBB /* JSDRunMSG.h */,
+				B4A0677523B8A33E00E0BBBB /* JSDRunMSG.m */,
 			);
 			path = Crash;
 			sourceTree = "<group>";
@@ -1358,6 +1363,7 @@
 				B4E17BFA239F8A1600DC3E8C /* JSDRoutersVC.m in Sources */,
 				552C19EC228D718C008F30F4 /* JSDCATransformLayer.m in Sources */,
 				B4E17BF0239B886400DC3E8C /* JSDSearchMediantVC.m in Sources */,
+				B4A0677623B8A33E00E0BBBB /* JSDRunMSG.m in Sources */,
 				55F388112237AE9B000CA174 /* JSDNSOperationVC.m in Sources */,
 				55F3880B2237ADE3000CA174 /* JSDMultithreadingVC.m in Sources */,
 				552C19CD228D041A008F30F4 /* JSDSpecialLayerVC.m in Sources */,

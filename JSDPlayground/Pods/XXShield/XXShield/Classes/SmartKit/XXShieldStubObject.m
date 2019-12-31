@@ -62,5 +62,4 @@ static BOOL __addMethod(Class clazz, SEL sel) {
     return __addMethod(metaClass, sel);
 }
 
-
 @end

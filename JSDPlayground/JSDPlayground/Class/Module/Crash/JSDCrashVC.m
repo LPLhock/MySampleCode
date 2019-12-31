@@ -10,9 +10,12 @@
 #import <objc/runtime.h>
 #import <XXShield/XXShield.h>
 
+NSString* JSDLoginManagerDidLoginNotification = @"jersey";
+
 @interface JSDCrashVC ()
 
 @end
+
 
 @implementation JSDCrashVC
 
@@ -21,7 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     //1.设置导航栏
     [self setupNavBar];
@@ -37,6 +39,7 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+   
 }
 
 #pragma mark - 2.SettingView and Style
@@ -52,6 +55,8 @@
     [XXShieldSDK registerStabilityWithAbility:3];
     
     [self performSelector:@selector(jersey) withObject:nil afterDelay:0];
+    
+//    NSLog(@"%@", JSDLoginManagerDidLoginNotification);
 }
 
 - (void)reloadView {

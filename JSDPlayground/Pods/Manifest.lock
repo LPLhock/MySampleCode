@@ -43,9 +43,9 @@ PODS:
   - ReactiveCocoa/UI (2.3):
     - ReactiveCocoa/Core
   - Routable (0.1.1)
-  - SDWebImage (5.4.0):
-    - SDWebImage/Core (= 5.4.0)
-  - SDWebImage/Core (5.4.0)
+  - SDWebImage (5.4.1):
+    - SDWebImage/Core (= 5.4.1)
+  - SDWebImage/Core (5.4.1)
   - SKAutoScrollLabel (0.0.6)
   - Texture (2.8.1):
     - Texture/AssetsLibrary (= 2.8.1)
@@ -67,7 +67,8 @@ PODS:
     - Texture/Core
   - Texture/Video (2.8.1):
     - Texture/Core
-  - XXShield (2.2.0)
+  - XXShield (2.3.1)
+  - YYCache (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking
@@ -83,6 +84,7 @@ DEPENDENCIES:
   - SKAutoScrollLabel
   - Texture
   - XXShield
+  - YYCache
 
 SPEC REPOS:
   trunk:
@@ -102,6 +104,7 @@ SPEC REPOS:
     - SKAutoScrollLabel
     - Texture
     - XXShield
+    - YYCache
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -116,11 +119,12 @@ SPEC CHECKSUMS:
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   ReactiveCocoa: 81ee2fb7df2dfc6bd52b5d70473662195e20ca7d
   Routable: 42731c7757b9b7ad32dd84d988b3d5428b966dfd
-  SDWebImage: 5bf6aec6481ae2a062bdc59f9d6c1d1e552090e0
+  SDWebImage: 29c340dbdcef342bb13125553f4e19ce056b07a7
   SKAutoScrollLabel: 14f44aa0f93b47cb2e7a02d719c3996ab99bb4c2
   Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
-  XXShield: 1627b07bbc34be33040b2fed774cc4bae37c36eb
+  XXShield: c3095b2e1f0e29bc9f660be1eea01813b557cd99
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 31a0b54f25b587f9d9dd2e8852307b552f398f96
+PODFILE CHECKSUM: d888eb96d4d1b327816277e9b3eb3301d1689255
 
 COCOAPODS: 1.8.1
