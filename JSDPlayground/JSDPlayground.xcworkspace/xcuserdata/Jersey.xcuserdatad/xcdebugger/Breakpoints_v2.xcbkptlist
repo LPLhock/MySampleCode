@@ -759,16 +759,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F2AFAB05-88F1-40FC-A14A-ACAD22A93D80"
+            uuid = "A794A8CC-D36D-404F-9C6B-DE6BB2A4698D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JSDPlayground/Class/Module/Crash/JSDCrashVC.m"
+            filePath = "Pods/AFNetworking/AFNetworking/AFURLSessionManager.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "-setupView"
+            startingLineNumber = "535"
+            endingLineNumber = "535"
+            landmarkName = "-taskDidResume:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1670E5B4-57E0-4CFB-A12B-D90D100A3361"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AFNetworking/AFNetworking/AFURLSessionManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "538"
+            endingLineNumber = "538"
+            landmarkName = "-taskDidResume:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

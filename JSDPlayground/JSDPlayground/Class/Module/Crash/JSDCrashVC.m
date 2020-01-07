@@ -14,6 +14,8 @@ NSString* JSDLoginManagerDidLoginNotification = @"jersey";
 
 @interface JSDCrashVC ()
 
+
+
 @end
 
 
@@ -46,6 +48,7 @@ NSString* JSDLoginManagerDidLoginNotification = @"jersey";
 
 - (void)setupNavBar {
     self.navigationItem.title = @"防Crash方案";
+    
 }
 
 - (void)setupView {
@@ -57,6 +60,9 @@ NSString* JSDLoginManagerDidLoginNotification = @"jersey";
     [self performSelector:@selector(jersey) withObject:nil afterDelay:0];
     
 //    NSLog(@"%@", JSDLoginManagerDidLoginNotification);
+    
+    [NSFileManager defaultManager];
+    
 }
 
 - (void)reloadView {
@@ -82,3 +88,5 @@ NSString* JSDLoginManagerDidLoginNotification = @"jersey";
 #pragma mark - 7.GET & SET
 
 @end
+
+
