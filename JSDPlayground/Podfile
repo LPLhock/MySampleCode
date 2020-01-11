@@ -20,6 +20,7 @@ target 'JSDPlayground' do
   pod 'Routable', '~> 0.1.1'
   pod 'YYCache'
   pod 'YYImage'
+  pod 'AppStartTime' #pre-main
 
   # Pods for JSDPlayground
 

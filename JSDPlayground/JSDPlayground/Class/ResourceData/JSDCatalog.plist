@@ -12,6 +12,14 @@
 	</dict>
 	<dict>
 		<key>title</key>
+		<string>性能优化</string>
+		<key>route</key>
+		<true/>
+		<key>class</key>
+		<string>JSDPerformanceOptimizationVC</string>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>定时器</string>
 		<key>route</key>
 		<true/>

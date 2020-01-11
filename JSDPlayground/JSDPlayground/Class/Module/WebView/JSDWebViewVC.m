@@ -133,10 +133,13 @@ struct Books
 
 - (void)reloadingView {
     
+    WKUserContentController* wk = [[WKUserContentController alloc] init];
     WKWebViewConfiguration* config = [[WKWebViewConfiguration alloc] init];
+    config.userContentController = wk;
     
     self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
 //    self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+    
     
     [self.view addSubview:self.webView];
     

@@ -8,10 +8,18 @@
 
 #import "JSDBlockVC.h"
 
+struct ss {
+   
+    NSInteger a;
+    NSString* b;
+};
+
 @interface JSDBlockVC ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) NSArray* model;
+@property(nonatomic, copy) NSString *ttt;
+@property(nonatomic, assign) int tsstt;
 
 @end
 
@@ -51,6 +59,30 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.tableView];
+    
+    self.restorationIdentifier = @"jersey";
+}
+
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
+    
+    [coder encodeObject:@"jersey" forKey:@"name"];
+    
+    [super encodeRestorableStateWithCoder:coder];
+}
+
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
+    
+    NSDictionary* dic = [coder decodeObject];
+    if ([dic[@"name"] isEqual:@"jersey"]) {
+        
+        NSLog(@"找到");
+    }
+    [super decodeRestorableStateWithCoder:coder];
+}
+
+- (void)applicationFinishedRestoringState {
+    
+    NSLog(@"恢复启动了, 更新一些操作");
 }
 
 - (void)reloadView {

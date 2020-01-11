@@ -53,10 +53,13 @@
     [queue addOperation:operation1];
     [queue addOperation:operation2];
     [queue addOperation:operation3];
-    [operation4 addDependency:operation3];
-    [operation4 addDependency:operation2];
-    [operation4 addDependency:operation1];
+//    [operation4 addDependency:operation3];
+//    [operation4 addDependency:operation2];
+//    [operation4 addDependency:operation1];
     [queue addOperation:operation4];
+//    queue.suspended = YES;
+    sleep(1);
+    [queue cancelAllOperations];
     NSLog(@"执行任务结束咯");
     
 //    [queue cancelAllOperations];
@@ -68,6 +71,8 @@
     NSLog(@"开始执行任务1%@", [NSThread currentThread]);
     sleep(3);
     NSLog(@"完成任务1");
+//    NSOperationQueue* queue = [NSOperationQueue currentQueue];
+//    queue.suspended = NO;
 }
 - (void)task2 {
     NSLog(@"开始执行任务2%@", [NSThread currentThread]);
