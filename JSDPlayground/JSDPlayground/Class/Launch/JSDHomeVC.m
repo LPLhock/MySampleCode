@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 #import <Aspects.h>
 #import <JLRoutes/JLRoutes.h>
+#import <NSLayoutConstraint+MASDebugAdditions.h>
 
 @interface JSDHomeVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -29,6 +30,10 @@
 - (void)zexige {
     
     NSLog(@"haha");
+    
+    UIView*view;
+    [view setNeedsDisplay];
+    [view setNeedsLayout];
 }
 //
 //- (id)forwardingTargetForSelector:(SEL)aSelector {
@@ -245,7 +250,6 @@
         NSString* classStringUTF8 = [classString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         Class class = NSClassFromString(classStringUTF8);
         ViewController* viewController = [[class alloc] init];
-        
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }

@@ -10,6 +10,8 @@
 
 @interface JSDLaunchOptimizationVC ()
 
+@property(nonatomic, strong) UITextView *textView;
+
 @end
 
 @implementation JSDLaunchOptimizationVC
@@ -41,7 +43,12 @@
 
 - (void)setupView {
     
-    
+    [self.view addSubview:self.textView];
+    [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(0);
+        make.width.height.mas_equalTo(self.view);
+    }];
+    self.textView.text = @"1. 减少";
 }
 
 - (void)reloadingView {
@@ -76,6 +83,17 @@
 }
 
 #pragma mark - 7 GET & SET
+
+- (UITextView *)textView {
+    
+    if (!_textView) {
+        _textView = [[UITextView alloc] init];
+        _textView.scrollEnabled = YES;
+        _textView.editable = NO;
+        [_textView setFont:[UIFont systemFontOfSize:20]];
+    }
+    return _textView;
+}
 
 @end
 

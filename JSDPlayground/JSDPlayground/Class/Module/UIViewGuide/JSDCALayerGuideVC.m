@@ -114,8 +114,6 @@
     maskLayer.contents = (__bridge id)[UIImage imageNamed:@"common_note"].CGImage;
     
     maskImageView.layer.mask = maskLayer;
-    
-    
 }
 
 - (void)injected {

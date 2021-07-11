@@ -33,6 +33,13 @@
     
 }
 
+- (void)viewDidLayoutSubviews {
+    
+    [super viewDidLayoutSubviews];
+    
+    NSLog(@"%@---%@", self.nodeView, self.nodeView.layer.delegate);
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -50,7 +57,9 @@
     
     self.nodeView = [[UIView alloc] initWithFrame:CGRectMake(100, 250, 200, 200)];
     self.nodeView.backgroundColor = [UIColor blackColor];
-//    self.nodeView.layer.delegate = self;
+    self.nodeView.layer.delegate = self;
+    
+    NSLog(@"%@---%@", self.nodeView, self.nodeView.layer.delegate);
     
     [self.view addSubview:self.nodeView];
     NSLog(@"开始加载");
@@ -58,12 +67,15 @@
     layer.backgroundColor = [UIColor blueColor].CGColor;
     
     layer.delegate = self; // 设置了代理之后, 当页面 POP 出去, 则会 Crash. 具体不知道什么原因
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [layer setNeedsDisplay];
+    });
     [self.view.layer addSublayer:layer];
     layer.frame = CGRectMake(0, 0, 50, 50);
 //    [self.nodeView.layer display];
 //    [layer display];
-    
 }
+
 
 - (void)reloadView {
     
@@ -77,13 +89,18 @@
 
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
 
-//- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx {
+- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx {
+
+    CGContextSetLineWidth(ctx, 10.0f);
+    CGContextSetStrokeColorWithColor(ctx, [UIColor redColor].CGColor);
+    CGContextStrokeEllipseInRect(ctx, layer.frame);
+    
+    NSLog(@"绘制");
+}
+
+//- (void)displayLayer:(CALayer *)layer {
 //
-//    CGContextSetLineWidth(ctx, 10.0f);
-//    CGContextSetStrokeColorWithColor(ctx, [UIColor redColor].CGColor);
-//    CGContextStrokeEllipseInRect(ctx, layer.frame);
-//
-//    NSLog(@"绘制");
+//    NSLog(@"异步绘制?");
 //}
 //
 //- (void)layerWillDraw:(CALayer *)layer {

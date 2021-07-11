@@ -79,8 +79,15 @@
     return NO;
 }
 
++ (BOOL)resolveInstanceMethod:(SEL)sel {
+    
+    NSLog(@"动态添加方法");
+    return NO;
+}
+
 - (id)forwardingTargetForSelector:(SEL)aSelector {
     
+    NSLog(@"方法转发");
     return nil;
 }
 
