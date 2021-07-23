@@ -1,0 +1,6 @@
+framework module Pods_JSDAsyncAwaitTests {
+  umbrella header "Pods-JSDAsyncAwaitTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

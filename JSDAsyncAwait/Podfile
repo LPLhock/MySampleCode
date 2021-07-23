@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+use_frameworks!
+source 'https://git.hellotalk8.com/bitbucket/scm/ios/hello_specs.git'
+source 'https://cdn.cocoapods.org/'
+
+target 'JSDAsyncAwait' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  pod 'HelloNetwork', '1.0.0'
+
+  # Pods for JSDAsyncAwait
+
+  target 'JSDAsyncAwaitTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'JSDAsyncAwaitUITests' do
+    # Pods for testing
+  end
+
+end

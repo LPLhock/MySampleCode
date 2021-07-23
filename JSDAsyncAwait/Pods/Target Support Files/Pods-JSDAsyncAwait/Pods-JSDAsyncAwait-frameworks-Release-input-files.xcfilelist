@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-JSDAsyncAwait/Pods-JSDAsyncAwait-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/DataCompression/DataCompression.framework
+${BUILT_PRODUCTS_DIR}/HelloNetwork/HelloNetwork.framework
+${BUILT_PRODUCTS_DIR}/ProtocolBuffers/ProtocolBuffers.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework

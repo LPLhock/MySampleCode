@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import HelloNetwork
 
 struct User: Codable {
     let name: String
@@ -51,6 +52,12 @@ class ViewController: UIViewController {
                 self.tableView.reloadData()
             case .failure(let error):
                 print("error: \(error)")
+            }
+        }
+        
+        UserFollowInfoApi(userId: 123456).start { response in
+            if let data = response.data {
+                let model = try? JSONDecoder().decode(FollowInfoModel.self, from: data)
             }
         }
     }
@@ -99,11 +106,25 @@ class ViewController: UIViewController {
             throw FetchError.netError
         }
         let maybeImage = UIImage(data: data)
+//        withThrowingTaskGroup(of: <#T##ChildTaskResult.Type#>, body: <#T##(inout ThrowingTaskGroup<ChildTaskResult, Error>) async throws -> GroupResult#>)
+        withTaskGroup(of: <#T##ChildTaskResult.Type#>, body: <#T##(inout TaskGroup<ChildTaskResult>) async -> GroupResult#>)
         guard let resultImage = await maybeImage?.byPreparingThumbnail(ofSize: CGSize(width: 40, height: 40)) else {
             throw FetchError.netError
         }
         return .success(resultImage)
     }
+    
+//    func fetchOneThumbnail(withID id: String) async throws -> UIImage {
+//        let imageReq = imageRequest(for: id), metadataReq = metadataRequest(for: id)
+//        let (data, _) = try await URLSession.shared.data(for: imageReq)
+//        let (metadata, _) = try await URLSession.shared.data(for: metadataReq)
+//        guard let size = parseSize(from: metadata),
+//              let image = await UIImage(data: data)?.byPreparingThumbnail(ofSize: size)
+//        else {
+//            throw ThumbnailFailedError()
+//        }
+//        return image
+//    }
     
     func fetchUserData(for id: String) async -> Result<[User], Error> {
         let request = URLRequest(url: self.userURL)

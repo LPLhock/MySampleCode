@@ -1,0 +1,6 @@
+framework module HelloNetwork {
+  umbrella header "HelloNetwork-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,33 @@
+PODS:
+  - Alamofire (4.9.1)
+  - DataCompression (3.6.0)
+  - HelloNetwork (1.0.0):
+    - Alamofire (~> 4.7)
+    - DataCompression
+    - ProtocolBuffers (~> 1.9.9.2)
+    - RxSwift
+  - ProtocolBuffers (1.9.9.2)
+  - RxSwift (6.2.0)
+
+DEPENDENCIES:
+  - HelloNetwork (= 1.0.0)
+
+SPEC REPOS:
+  https://git.hellotalk8.com/bitbucket/scm/ios/hello_specs.git:
+    - HelloNetwork
+  trunk:
+    - Alamofire
+    - DataCompression
+    - ProtocolBuffers
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  DataCompression: 06628f9c807b6f152e0da37635633f62fc51dc77
+  HelloNetwork: 43470ebed0fcef3feddfb78df4e07b8699cf0243
+  ProtocolBuffers: 7111461618460961e6b7469177ec45ee551b4f0e
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+
+PODFILE CHECKSUM: b35ee183fc3375ad1c9fa837951eba0fe0087e12
+
+COCOAPODS: 1.10.1
