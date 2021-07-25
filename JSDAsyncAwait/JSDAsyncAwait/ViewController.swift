@@ -60,6 +60,28 @@ class ViewController: UIViewController {
                 let model = try? JSONDecoder().decode(FollowInfoModel.self, from: data)
             }
         }
+        
+//        DispatchQueue.async({
+//
+//        })
+        async {
+            print(await counter.increment())
+        }
+        
+        async {
+            print(await counter.increment2())
+        }
+        
+        async {
+            print(await counter.increment())
+        }
+        
+        DispatchQueue.global().async {
+            async {
+                print(await counter.increment())
+                print(await counter.increment2())
+            }
+        }
     }
     
     enum FetchError: Error {
@@ -106,8 +128,6 @@ class ViewController: UIViewController {
             throw FetchError.netError
         }
         let maybeImage = UIImage(data: data)
-//        withThrowingTaskGroup(of: <#T##ChildTaskResult.Type#>, body: <#T##(inout ThrowingTaskGroup<ChildTaskResult, Error>) async throws -> GroupResult#>)
-        withTaskGroup(of: <#T##ChildTaskResult.Type#>, body: <#T##(inout TaskGroup<ChildTaskResult>) async -> GroupResult#>)
         guard let resultImage = await maybeImage?.byPreparingThumbnail(ofSize: CGSize(width: 40, height: 40)) else {
             throw FetchError.netError
         }
@@ -196,3 +216,28 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+actor Counter {
+    var value = 0
+
+    func increment() -> Int {
+        value = value + 1
+        NSLog("Counter func1")
+        return value
+    }
+    
+    func increment2() -> Int {
+        value = value + 2
+        NSLog("Counter func2")
+        return value
+    }
+}
+
+let counter = Counter()
+
+//asyncDetached {
+//    print(await counter.increment())
+//}
+//
+//asyncDetached {
+//    print(await counter.increment())
+//}
