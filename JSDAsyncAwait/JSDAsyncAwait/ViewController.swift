@@ -26,8 +26,9 @@ class ViewController: UIViewController {
         view.addSubview(tableView)
         tableView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         view.addSubview(photoImageView)
-        photoImageView.frame = CGRect(x: UIScreen.main.bounds.width / 4, y: UIScreen.main.bounds.height / 4, width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 2)
+        photoImageView.frame = CGRect(x: UIScreen.main.bounds.width / 4, y: UIScreen.main.bounds.height / 2, width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 2)
         
+        // 下载图片, 裁剪
         async {
             do {
                 let result = try await asycnAwaitFetchThumbnail(for: "")
@@ -44,6 +45,7 @@ class ViewController: UIViewController {
             }
         }
         
+        // 下载用户信息
         async {
             let result = await fetchUserData(for: "")
             switch result {
@@ -61,9 +63,7 @@ class ViewController: UIViewController {
             }
         }
         
-//        DispatchQueue.async({
-//
-//        })
+        
         async {
             print(await counter.increment())
         }
