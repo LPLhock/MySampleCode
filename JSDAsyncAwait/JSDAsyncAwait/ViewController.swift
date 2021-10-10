@@ -29,9 +29,12 @@ class ViewController: UIViewController {
         photoImageView.frame = CGRect(x: UIScreen.main.bounds.width / 4, y: UIScreen.main.bounds.height / 2, width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 2)
         
         // 下载图片, 裁剪
+        printCurrentThread(falgString: "下载图片前")
         async {
             do {
+                printCurrentThread(falgString: "进入 Async 准备下载图片")
                 let result = try await asycnAwaitFetchThumbnail(for: "")
+                printCurrentThread(falgString: "下载图片后")
                 switch result {
                 case .success(let image):
                     DispatchQueue.main.async { [weak self] in
@@ -46,6 +49,21 @@ class ViewController: UIViewController {
         }
         
         // 下载用户信息
+        printCurrentThread(falgString: "Task", String: "测试1")
+        Task.init(priority: .background) {
+            printCurrentThread(falgString: "Task", String: "测试Task进入1")
+        }
+        printCurrentThread(falgString: "Task", String: "测试2")
+        let taskk = Task.init(priority: .high) { () -> Int in
+            printCurrentThread(falgString: "Task", String: "测试Task进入2")
+            return 10
+        }
+        async {
+            let result = await taskk.value
+            let ttt = result + result
+            printCurrentThread(falgString: "Task + \(ttt)", String: "\(result) +")
+        }
+        
         async {
             let result = await fetchUserData(for: "")
             switch result {
@@ -122,8 +140,10 @@ class ViewController: UIViewController {
     /// - Parameter id: id
     /// - Returns: 回调
     func asycnAwaitFetchThumbnail(for id: String) async throws -> Result<UIImage, Error> {
+        printCurrentThread(falgString: "准备进入图片下载裁剪")
         let request = URLRequest(url: self.imageURL)
         let (data, response) = try await URLSession.shared.data(for: request)
+        printCurrentThread(falgString: "try 图片下载裁剪")
         guard (response as? HTTPURLResponse)?.statusCode == 200 else {
             throw FetchError.netError
         }
@@ -213,6 +233,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         return c
+    }
+    
+    func printCurrentThread(falgString: String? = "", String: String? = "") {
+        let current = Thread.current
+        NSLog("\(falgString) JerseyCafe: \(String) CurrentThread --> \(current)")
     }
 }
 
