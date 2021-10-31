@@ -12,6 +12,10 @@
 
 基于 Block 的异步编程回调是目前 iOS 使用最广泛的异步编程方式，iOS 系统提供的 GCD 库让异步开发变得很简单方便，但是基于这种编程方式的缺点也有很多，主要有以下几点：
 
+
+
+
+
 > 错误处理复杂和冗长
 > 容易忘记调用 completion handler
 > 条件执行变得很困难
@@ -281,25 +285,7 @@ https://docs.swift.org/swift-book/LanguageGuide/Concurrency.html
 https://github.com/alibaba/coobjc/blob/master/README_cn.md
 https://onevcat.com/2016/12/concurrency/
 
+2021-08-27 17:38:29.955171+0800 HelloTalk_Binary[33156:2961981] <Google> <Google:HTML> Invalid click coordinates detected. Click coordinate (0, 67) should be positive and within the ad view boundary.
 
-
-## 生日
-HTDetailChatModel insertBirthdayMessageIfNeeded
-
-1. 图标和文案排列问题
-2. msg.isContainCorrectGiftNotify 改错 HTMessageBase correction_gift_notify, HTMessagesReceiveModel
-3. HTP2PReceiptTypeCultureGiftNotify 文化 HTMessagesSendModel  HTP2PReceiptTypeCultureGiftNotify
-4. HTLocig HT_CorrectGiftNotifyMessage HTP2PReceiptTypeCultureGiftNotify
-5. HTChatGiftCardInfoType
-6. 周年纪念 anniversary_notify
-7. HTMessageExpansionTypeAnniversary HTMessageExpansionTypeGiftCard
-8. 
-9. HTMessagesOfflineModel HTMessagesReceiveModel
-10. HTP2PReceiptTypeMemorialNotify  "anniversary_notify" .anniversary_notify) 聊天纪念 聊天周年纪念 HTMessageExpansionTypeAnniversary
-11. 老的生日礼物贺卡为显示对方昵称
-
-12. HTResponseTypeGetContactsRoomList
-13. HTGetContactsRoomListResponse
-
-
+[bindIDNavVC setSupportRotate:NO];
 

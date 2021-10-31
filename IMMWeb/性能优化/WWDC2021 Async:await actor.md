@@ -196,4 +196,7 @@ Swift 引入了 Actor 概念, 使用 Actor 内部实现数据的同步, 不需�
 
 https://xiaozhuanlan.com/topic/8627905413
 https://developer.apple.com/videos/play/wwdc2021/10132/
+https://www.youtube.com/watch?v=iGNxhCdRuSU
+
+
 
