@@ -113,22 +113,27 @@ class ViewController: UIViewController {
     }
     
     func testData() {
-        DispatchQueue.global().async {
-            for i in 0..<5000 {
-                DispatchQueue.global().async {
-                    self.lock.lock()
-//                    NSLog("JerseyTTT当前正在循环: \(i), string: \(self.testDataString),  : thread:\(Thread.current)")
-                    let random = Int.random(in: 0...1000)
-                    self.testDataString = [random]
-//                    let random2 = Int.random(in: 0...random)
-//                    self.testDataString = [random, random2, random + random2]
-//                    let random3 = Int.random(in: 0...random2)
-//                    self.testDataString = [random, random2, random3, random + random2, random + random2 + random3]
-                    NSLog("JerseyTTT当前正在循环: \(i), string: \(self.testDataString),  : thread:\(Thread.current)")
-                    self.lock.unlock()
-                }
+//        let queue = DispatchQueue(label: "JerseyCafe")
+//        queue.async {
+//        }
+//        self.lock.lock()
+//        self.lock.unlock()
+//        let testActor = Counter()
+        for i in 0..<100000 {
+            DispatchQueue.global().async {
+                let random = Int.random(in: 0...1000)
+                self.testDataString = [random]
+                NSLog("JerseyTTT当前正在循环: \(i), string: \(self.testDataString), : thread:\(Thread.current)")
             }
         }
+//                testActor.testDataString = [random]
+//        Task.init(priority: .high) {
+//            for i in 0..<5000 {
+//                let random = Int.random(in: 0...1000)
+//                await testActor.updateData([random])
+//                NSLog("JerseyTTT当前正在循环: \(i), string: \(await testActor.testDataString),  : thread:\(Thread.current)")
+//            }
+//        }
     }
     
     enum FetchError: Error {
@@ -272,6 +277,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
 actor Counter {
     var value = 0
+    
+    var testDataString: [Int] = [1]
 
     func increment() -> Int {
         value = value + 1
@@ -283,6 +290,10 @@ actor Counter {
         value = value + 2
         NSLog("Counter func2")
         return value
+    }
+    
+    func updateData(_ data :[Int]) {
+        self.testDataString = data
     }
 }
 
