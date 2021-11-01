@@ -20,9 +20,14 @@ class ViewController: UIViewController {
     
     var userData: [User]?
 
+    var testDataString: [Int] = [1]
+    
+    let lock: NSLock = NSLock()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         view.addSubview(tableView)
         tableView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         view.addSubview(photoImageView)
@@ -91,13 +96,37 @@ class ViewController: UIViewController {
         }
         
         async {
+            NSLog("JerseyTTT 1 : thread:\(Thread.current)")
             print(await counter.increment())
+            NSLog("JerseyTTT 2 : thread:\(Thread.current)")
         }
-        
+        NSLog("JerseyTTT 3 : thread:\(Thread.current)")
         DispatchQueue.global().async {
             async {
                 print(await counter.increment())
                 print(await counter.increment2())
+            }
+        }
+        NSLog("JerseyTTT 4 : thread:\(Thread.current)")
+        testData()
+        NSLog("JerseyTTT 5 : thread:\(Thread.current)")
+    }
+    
+    func testData() {
+        DispatchQueue.global().async {
+            for i in 0..<5000 {
+                DispatchQueue.global().async {
+                    self.lock.lock()
+//                    NSLog("JerseyTTT当前正在循环: \(i), string: \(self.testDataString),  : thread:\(Thread.current)")
+                    let random = Int.random(in: 0...1000)
+                    self.testDataString = [random]
+//                    let random2 = Int.random(in: 0...random)
+//                    self.testDataString = [random, random2, random + random2]
+//                    let random3 = Int.random(in: 0...random2)
+//                    self.testDataString = [random, random2, random3, random + random2, random + random2 + random3]
+                    NSLog("JerseyTTT当前正在循环: \(i), string: \(self.testDataString),  : thread:\(Thread.current)")
+                    self.lock.unlock()
+                }
             }
         }
     }
