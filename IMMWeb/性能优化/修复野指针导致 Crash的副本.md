@@ -73,20 +73,3 @@ https://onevcat.com/2016/12/concurrency/#asyncawait%E4%B8%B2%E8%A1%8C%E6%A8%A1%E
 http://satanwoo.github.io/2016/10/23/multithread-dangling-pointer/
 https://www.jianshu.com/p/c4bd2960b3fa
 
-
-
-
-
-let sharedView = LearningDataShareView.init(viewModel: self.viewModel, qrUrl: nil)
-        sharedView.frame = CGRect(x: 0, y: 0, width: UIScreen.width, height: UIScreen.height)
-        sharedView.setNeedsLayout()
-        sharedView.layoutIfNeeded()
-        NSLog("JerseyBro: width:\(UIScreen.width), height: \(UIScreen.height), sharedViewWithd: \(sharedView.ht.width), sharedViewheight: \(sharedView.ht.height)")
-        let sharedVC = UIViewController()
-        sharedVC.view.addSubview(sharedView)
-        sharedView.frame = sharedVC.view.bounds
-        self.present(sharedVC, animated: true, completion: nil)
-        sharedView.rx.tapGesture().when(.recognized)
-            .subscribe(onNext: { _ in
-                sharedVC.dismiss(animated: true)
-            })
