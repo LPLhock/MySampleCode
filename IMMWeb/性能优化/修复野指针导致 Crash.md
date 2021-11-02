@@ -1,5 +1,6 @@
 # 野指针崩溃引发的思考
 
+## 野指针
 
 ## 0x1 多线程下Setter 的崩溃
 
@@ -28,7 +29,7 @@ func testData() {
 ```
 
 
-## 野指针
+## Autoreleasepool
 
 ## RunLoop 与 线程
 

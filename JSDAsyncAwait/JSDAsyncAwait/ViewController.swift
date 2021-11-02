@@ -20,72 +20,53 @@ class ViewController: UIViewController {
     
     var userData: [User]?
 
-    var testDataString: [Int] = [1]
+    var randomArray: [Int]? = [1]
+    
+    var _atomicRandomArray: [Int]?
+    
+    var atomicRandomArray: [Int]? {
+        get {
+            self.arrayGetLock.lock()
+            defer { self.arrayGetLock.unlock() }
+            return _atomicRandomArray
+        }
+        set {
+            self.arraySetLock.lock()
+            defer { self.arraySetLock.unlock() }
+            _atomicRandomArray = newValue
+        }
+    }
+    
+    let arraySetLock: NSLock = NSLock()
+    let arrayGetLock: NSLock = NSLock()
+    
+//    var wrappedValue: Value {
+//          get { return load() }
+//          set { store(newValue: newValue) }
+//        }
+
+    
+    static var userName: String = ""
     
     let lock: NSLock = NSLock()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.title = "Swift"
         
-        view.addSubview(tableView)
-        tableView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        view.addSubview(photoImageView)
-        photoImageView.frame = CGRect(x: UIScreen.main.bounds.width / 4, y: UIScreen.main.bounds.height / 2, width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 2)
+        setupView()
         
         // 下载图片, 裁剪
         printCurrentThread(falgString: "下载图片前")
-        async {
-            do {
-                printCurrentThread(falgString: "进入 Async 准备下载图片")
-                let result = try await asycnAwaitFetchThumbnail(for: "")
-                printCurrentThread(falgString: "下载图片后")
-                switch result {
-                case .success(let image):
-                    DispatchQueue.main.async { [weak self] in
-                        self?.photoImageView.image = image
-                    }
-                case .failure(_):
-                    print("Error")
-                }
-            } catch {
-                 print("Oops: \(error)")
-            }
-        }
-        
-        // 下载用户信息
-        printCurrentThread(falgString: "Task", String: "测试1")
-        Task.init(priority: .background) {
-            printCurrentThread(falgString: "Task", String: "测试Task进入1")
-        }
-        printCurrentThread(falgString: "Task", String: "测试2")
-        let taskk = Task.init(priority: .high) { () -> Int in
-            printCurrentThread(falgString: "Task", String: "测试Task进入2")
-            return 10
-        }
-        async {
-            let result = await taskk.value
-            let ttt = result + result
-            printCurrentThread(falgString: "Task + \(ttt)", String: "\(result) +")
-        }
-        
-        async {
-            let result = await fetchUserData(for: "")
-            switch result {
-            case .success(let users):
-                self.userData = users
-                self.tableView.reloadData()
-            case .failure(let error):
-                print("error: \(error)")
-            }
-        }
+        requestImageURLWithLoad()
+        requestUserDataWithLoad()
         
         UserFollowInfoApi(userId: 123456).start { response in
             if let data = response.data {
                 let model = try? JSONDecoder().decode(FollowInfoModel.self, from: data)
             }
         }
-        
         
         async {
             print(await counter.increment())
@@ -108,24 +89,101 @@ class ViewController: UIViewController {
             }
         }
         NSLog("JerseyTTT 4 : thread:\(Thread.current)")
-        testData()
+        setupData()
         NSLog("JerseyTTT 5 : thread:\(Thread.current)")
     }
     
-    func testData() {
+    // MARK: SetupUI
+    func setupView() {
+        view.addSubview(tableView)
+        tableView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        view.addSubview(photoImageView)
+        photoImageView.frame = CGRect(x: UIScreen.main.bounds.width / 4, y: UIScreen.main.bounds.height / 2, width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 2)
+    }
+    
+    // MARK: Async SetupData
+    
+    func requestImageURLWithLoad() {
+        async {
+            do {
+                printCurrentThread(falgString: "进入 Async 准备下载图片")
+                let result = try await asycnAwaitFetchThumbnail(for: "")
+                printCurrentThread(falgString: "下载图片后")
+                switch result {
+                case .success(let image):
+                    DispatchQueue.main.async { [weak self] in
+                        self?.photoImageView.image = image
+                    }
+                case .failure(_):
+                    print("Error")
+                }
+            } catch {
+                 print("Oops: \(error)")
+            }
+        }
+    }
+    
+    func requestUserDataWithLoad() {
+        async {
+            let result = await fetchUserData(for: "")
+            switch result {
+            case .success(let users):
+                self.userData = users
+                self.tableView.reloadData()
+            case .failure(let error):
+                print("error: \(error)")
+            }
+        }
+    }
+    
+    // MARK: Debug Thread 1: signal SIGABRT
+    
+    func setupData() {
 //        let queue = DispatchQueue(label: "JerseyCafe")
 //        queue.async {
 //        }
 //        self.lock.lock()
 //        self.lock.unlock()
-//        let testActor = Counter()
+//        autoreleasepool(invoking: {
+//        }
+        
         for i in 0..<100000 {
             DispatchQueue.global().async {
-                let random = Int.random(in: 0...1000)
-                self.testDataString = [random]
-                NSLog("JerseyTTT当前正在循环: \(i), string: \(self.testDataString), : thread:\(Thread.current)")
+            let random = Int.random(in: 0...1000)
+            self.atomicRandomArray = [1]
+            NSLog("JerseyTTT当前正在循环: \(i), string: \(self.atomicRandomArray), : thread:\(Thread.current)")
             }
         }
+        
+//        DispatchQueue.global().async {
+//            async {
+//                for i in 0..<100000 {
+//                    let random = Int.random(in: 0...1000)
+//                    self.atomicRandomArray = [1]
+//                    NSLog("JerseyTTT当前正在循环: \(i), string: \(self.atomicRandomArray), : thread:\(Thread.current)")
+//                }
+//            }
+//        }
+        
+//        for i in 0..<100000 {
+//            DispatchQueue.global().async {
+//            let random = Int.random(in: 0...1000)
+//                autoreleasepool(invoking: {
+//                    self.randomArray = [random]
+//                    NSLog("JerseyTTT当前正在循环: \(i), string: \(String(describing: self.randomArray)), : thread:\(Thread.current)")
+//                })
+//            }
+//        }
+//
+//        for i in 0..<100000 {
+//            DispatchQueue.global().async {
+//                let random = Int.random(in: 0...1000)
+//                ViewController.userName = String(random)
+//                NSLog("JerseyTTT当前正在循环: \(i), string: \(ViewController.userName), : thread:\(Thread.current)")
+//            }
+//        }
+        
+//        let testActor = Counter()
 //                testActor.testDataString = [random]
 //        Task.init(priority: .high) {
 //            for i in 0..<5000 {
@@ -229,6 +287,12 @@ class ViewController: UIViewController {
 }
  
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let jsdVC = JSDViewController()
+        let jsdNVC = UINavigationController(rootViewController: jsdVC)
+        self.present(jsdNVC, animated: true, completion: nil)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.userData?.count ?? 20
