@@ -6,6 +6,7 @@
 //
 
 #import "JSDViewController.h"
+#import "JSDAsyncAwait-Swift.h"
 
 @interface JSDViewController ()
 
@@ -24,6 +25,8 @@
     self.title = @"Objective-C";
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self setupView];
     
     self.lock = [NSLock new];
     self.serialQueue = dispatch_queue_create("JSD", DISPATCH_QUEUE_SERIAL);
@@ -44,7 +47,7 @@
 }
 
 - (void)setupNonatomicArray {
-    for (int i = 0; i < 100000; i++) {
+    for (int i = 0; i < 10000; i++) {
         dispatch_queue_t cQueue = dispatch_queue_create("JSD", DISPATCH_QUEUE_CONCURRENT);
         dispatch_async(cQueue, ^{
             NSInteger number =  (arc4random() % 99999) + 1;
@@ -56,7 +59,7 @@
 }
 
 - (void)setupatomicArray {
-    for (int i = 0; i < 1000000; i++) {
+    for (int i = 0; i < 10000; i++) {
         dispatch_queue_t cQueue = dispatch_queue_create("JSD", DISPATCH_QUEUE_CONCURRENT);
         dispatch_async(cQueue, ^{
             NSInteger number =  (arc4random() % 99999) + 1;
@@ -68,7 +71,7 @@
 }
 
 - (void)setupArrayAutoreleasepool {
-    for (int i = 0; i < 1000000; i++) {
+    for (int i = 0; i < 10000; i++) {
         dispatch_queue_t cQueue = dispatch_queue_create("JSD", DISPATCH_QUEUE_CONCURRENT);
         dispatch_async(cQueue, ^{
             @autoreleasepool {
@@ -79,6 +82,22 @@
             }
         });
     }
+}
+
+- (void)setupView {
+    UIButton* button = [UIButton new];
+    [button setTitle:@"RunLoop" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button sizeToFit];
+    [self.view addSubview:button];
+    button.frame = CGRectMake(100, 100, 100, 100);
+    [button addTarget:self action:@selector(onTouchButton) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)onTouchButton {
+    UIViewController* runLoopVC = [[NSClassFromString(@"JSDRunLoopVC") class] new];
+    UINavigationController* runLoopNavVC = [[UINavigationController alloc] initWithRootViewController:runLoopVC];
+    [self presentViewController:runLoopNavVC animated:true completion:nil];
 }
 
 @end

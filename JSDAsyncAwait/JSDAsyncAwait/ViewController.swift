@@ -12,6 +12,10 @@ struct User: Codable {
     let name: String
 }
 
+func printCurrentThread(filterString: String? = "", flagString: Any? = "") {
+    NSLog("==\(filterString)==, printCurrentThread -> JerseyCafe: Flag --> \(flagString), CurrentThread --> \(Thread.current)")
+}
+
 class ViewController: UIViewController {
     
     let userURL: URL = URL(string: "https://jsonplaceholder.typicode.com/users")!
@@ -19,36 +23,6 @@ class ViewController: UIViewController {
     let imageURL: URL = URL(string: "http://cn-head-cdn.hellotalk8.com/hu/210611/c6293e3d4d157.jpg?x-oss-process=style/small&")!
     
     var userData: [User]?
-
-    var randomArray: [Int]? = [1]
-    
-    var _atomicRandomArray: [Int]?
-    
-    var atomicRandomArray: [Int]? {
-        get {
-            self.arrayGetLock.lock()
-            defer { self.arrayGetLock.unlock() }
-            return _atomicRandomArray
-        }
-        set {
-            self.arraySetLock.lock()
-            defer { self.arraySetLock.unlock() }
-            _atomicRandomArray = newValue
-        }
-    }
-    
-    let arraySetLock: NSLock = NSLock()
-    let arrayGetLock: NSLock = NSLock()
-    
-//    var wrappedValue: Value {
-//          get { return load() }
-//          set { store(newValue: newValue) }
-//        }
-
-    
-    static var userName: String = ""
-    
-    let lock: NSLock = NSLock()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +32,7 @@ class ViewController: UIViewController {
         setupView()
         
         // 下载图片, 裁剪
-        printCurrentThread(falgString: "下载图片前")
+        printCurrentThread(filterString: "下载图片前")
         requestImageURLWithLoad()
         requestUserDataWithLoad()
         
@@ -89,7 +63,6 @@ class ViewController: UIViewController {
             }
         }
         NSLog("JerseyTTT 4 : thread:\(Thread.current)")
-        setupData()
         NSLog("JerseyTTT 5 : thread:\(Thread.current)")
     }
     
@@ -106,9 +79,9 @@ class ViewController: UIViewController {
     func requestImageURLWithLoad() {
         async {
             do {
-                printCurrentThread(falgString: "进入 Async 准备下载图片")
+                printCurrentThread(filterString: "进入 Async 准备下载图片")
                 let result = try await asycnAwaitFetchThumbnail(for: "")
-                printCurrentThread(falgString: "下载图片后")
+                printCurrentThread(filterString: "下载图片后")
                 switch result {
                 case .success(let image):
                     DispatchQueue.main.async { [weak self] in
@@ -134,64 +107,6 @@ class ViewController: UIViewController {
                 print("error: \(error)")
             }
         }
-    }
-    
-    // MARK: Debug Thread 1: signal SIGABRT
-    
-    func setupData() {
-//        let queue = DispatchQueue(label: "JerseyCafe")
-//        queue.async {
-//        }
-//        self.lock.lock()
-//        self.lock.unlock()
-//        autoreleasepool(invoking: {
-//        }
-        
-        for i in 0..<100000 {
-            DispatchQueue.global().async {
-            let random = Int.random(in: 0...1000)
-            self.atomicRandomArray = [1]
-            NSLog("JerseyTTT当前正在循环: \(i), string: \(self.atomicRandomArray), : thread:\(Thread.current)")
-            }
-        }
-        
-//        DispatchQueue.global().async {
-//            async {
-//                for i in 0..<100000 {
-//                    let random = Int.random(in: 0...1000)
-//                    self.atomicRandomArray = [1]
-//                    NSLog("JerseyTTT当前正在循环: \(i), string: \(self.atomicRandomArray), : thread:\(Thread.current)")
-//                }
-//            }
-//        }
-        
-//        for i in 0..<100000 {
-//            DispatchQueue.global().async {
-//            let random = Int.random(in: 0...1000)
-//                autoreleasepool(invoking: {
-//                    self.randomArray = [random]
-//                    NSLog("JerseyTTT当前正在循环: \(i), string: \(String(describing: self.randomArray)), : thread:\(Thread.current)")
-//                })
-//            }
-//        }
-//
-//        for i in 0..<100000 {
-//            DispatchQueue.global().async {
-//                let random = Int.random(in: 0...1000)
-//                ViewController.userName = String(random)
-//                NSLog("JerseyTTT当前正在循环: \(i), string: \(ViewController.userName), : thread:\(Thread.current)")
-//            }
-//        }
-        
-//        let testActor = Counter()
-//                testActor.testDataString = [random]
-//        Task.init(priority: .high) {
-//            for i in 0..<5000 {
-//                let random = Int.random(in: 0...1000)
-//                await testActor.updateData([random])
-//                NSLog("JerseyTTT当前正在循环: \(i), string: \(await testActor.testDataString),  : thread:\(Thread.current)")
-//            }
-//        }
     }
     
     enum FetchError: Error {
@@ -232,10 +147,10 @@ class ViewController: UIViewController {
     /// - Parameter id: id
     /// - Returns: 回调
     func asycnAwaitFetchThumbnail(for id: String) async throws -> Result<UIImage, Error> {
-        printCurrentThread(falgString: "准备进入图片下载裁剪")
+        printCurrentThread(filterString: "准备进入图片下载裁剪")
         let request = URLRequest(url: self.imageURL)
         let (data, response) = try await URLSession.shared.data(for: request)
-        printCurrentThread(falgString: "try 图片下载裁剪")
+        printCurrentThread(filterString: "try 图片下载裁剪")
         guard (response as? HTTPURLResponse)?.statusCode == 200 else {
             throw FetchError.netError
         }
@@ -289,9 +204,16 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let jsdVC = JSDViewController()
-        let jsdNVC = UINavigationController(rootViewController: jsdVC)
-        self.present(jsdNVC, animated: true, completion: nil)
+        var presenedVC: UIViewController? = nil
+        if indexPath.row == 0 {
+            presenedVC = JSDViewController()
+        } else if indexPath.row == 1 {
+            presenedVC = JSDSIGABRTVC()
+        } else if indexPath.row == 2 {
+            presenedVC = JSDPerformSelectorVC()
+        }
+        let nav = UINavigationController(rootViewController: presenedVC!)
+        self.present(nav, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -331,11 +253,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         return c
-    }
-    
-    func printCurrentThread(falgString: String? = "", String: String? = "") {
-        let current = Thread.current
-        NSLog("\(falgString) JerseyCafe: \(String) CurrentThread --> \(current)")
     }
 }
 

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		04BE484B2731A3BD00F58668 /* JSDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE484A2731A3BD00F58668 /* JSDViewController.m */; };
+		04BE484D2732DD9100F58668 /* JSDRunLoopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE484C2732DD9100F58668 /* JSDRunLoopVC.swift */; };
+		04BE48512732E75400F58668 /* JSDSIGABRTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE48502732E75400F58668 /* JSDSIGABRTVC.swift */; };
+		04BE48542732EF1100F58668 /* JSDPerformSelectorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE48532732EF1100F58668 /* JSDPerformSelectorVC.m */; };
 		04BF983326A8038B00757E67 /* UserFollowInfoApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF983226A8038B00757E67 /* UserFollowInfoApi.swift */; };
 		5411AFF9654050CCF4A03591 /* Pods_JSDAsyncAwait_JSDAsyncAwaitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4946271157B8266F12BA5CA /* Pods_JSDAsyncAwait_JSDAsyncAwaitUITests.framework */; };
 		B151CD795F8160A93E395449 /* Pods_JSDAsyncAwaitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74560DFDF51D3C670ECBF39B /* Pods_JSDAsyncAwaitTests.framework */; };
@@ -43,6 +46,11 @@
 		04BE48482731A3BD00F58668 /* JSDAsyncAwait-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSDAsyncAwait-Bridging-Header.h"; sourceTree = "<group>"; };
 		04BE48492731A3BD00F58668 /* JSDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDViewController.h; sourceTree = "<group>"; };
 		04BE484A2731A3BD00F58668 /* JSDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDViewController.m; sourceTree = "<group>"; };
+		04BE484C2732DD9100F58668 /* JSDRunLoopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSDRunLoopVC.swift; sourceTree = "<group>"; };
+		04BE484F2732E65C00F58668 /* JSDAsyncAwait-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSDAsyncAwait-Swift.h"; sourceTree = "<group>"; };
+		04BE48502732E75400F58668 /* JSDSIGABRTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSDSIGABRTVC.swift; sourceTree = "<group>"; };
+		04BE48522732EF1100F58668 /* JSDPerformSelectorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDPerformSelectorVC.h; sourceTree = "<group>"; };
+		04BE48532732EF1100F58668 /* JSDPerformSelectorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDPerformSelectorVC.m; sourceTree = "<group>"; };
 		04BF983226A8038B00757E67 /* UserFollowInfoApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFollowInfoApi.swift; sourceTree = "<group>"; };
 		5481A6D8CEF42F3732BAAC99 /* Pods-JSDAsyncAwaitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSDAsyncAwaitTests.debug.xcconfig"; path = "Target Support Files/Pods-JSDAsyncAwaitTests/Pods-JSDAsyncAwaitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61D9C1ADE76FB7C40D4645CC /* Pods-JSDAsyncAwait-JSDAsyncAwaitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSDAsyncAwait-JSDAsyncAwaitUITests.release.xcconfig"; path = "Target Support Files/Pods-JSDAsyncAwait-JSDAsyncAwaitUITests/Pods-JSDAsyncAwait-JSDAsyncAwaitUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,14 +154,19 @@
 				B428B8CB269F2CE5002325A2 /* AppDelegate.swift */,
 				B428B8CD269F2CE5002325A2 /* SceneDelegate.swift */,
 				B428B8CF269F2CE5002325A2 /* ViewController.swift */,
+				04BE48502732E75400F58668 /* JSDSIGABRTVC.swift */,
 				04BE48492731A3BD00F58668 /* JSDViewController.h */,
 				04BE484A2731A3BD00F58668 /* JSDViewController.m */,
+				04BE48522732EF1100F58668 /* JSDPerformSelectorVC.h */,
+				04BE48532732EF1100F58668 /* JSDPerformSelectorVC.m */,
+				04BE484C2732DD9100F58668 /* JSDRunLoopVC.swift */,
 				04BF983226A8038B00757E67 /* UserFollowInfoApi.swift */,
 				B428B8D1269F2CE5002325A2 /* Main.storyboard */,
 				B428B8D4269F2CE7002325A2 /* Assets.xcassets */,
 				B428B8D6269F2CE7002325A2 /* LaunchScreen.storyboard */,
 				B428B8D9269F2CE7002325A2 /* Info.plist */,
 				04BE48482731A3BD00F58668 /* JSDAsyncAwait-Bridging-Header.h */,
+				04BE484F2732E65C00F58668 /* JSDAsyncAwait-Swift.h */,
 			);
 			path = JSDAsyncAwait;
 			sourceTree = "<group>";
@@ -415,10 +428,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B428B8D0269F2CE5002325A2 /* ViewController.swift in Sources */,
+				04BE48512732E75400F58668 /* JSDSIGABRTVC.swift in Sources */,
+				04BE484D2732DD9100F58668 /* JSDRunLoopVC.swift in Sources */,
 				04BE484B2731A3BD00F58668 /* JSDViewController.m in Sources */,
 				B428B8CC269F2CE5002325A2 /* AppDelegate.swift in Sources */,
 				04BF983326A8038B00757E67 /* UserFollowInfoApi.swift in Sources */,
 				B428B8CE269F2CE5002325A2 /* SceneDelegate.swift in Sources */,
+				04BE48542732EF1100F58668 /* JSDPerformSelectorVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +634,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "JSDAsyncAwait/JSDAsyncAwait-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "JSDAsyncAwait-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -653,6 +670,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "JSDAsyncAwait/JSDAsyncAwait-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "JSDAsyncAwait-Swift.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
