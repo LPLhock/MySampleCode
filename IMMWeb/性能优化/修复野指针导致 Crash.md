@@ -1,6 +1,12 @@
-# 野指针崩溃引发的思考
+# 浅谈野指针异常
 
 ## 野指针
+
+## atomic
+
+## Autoreleasepool
+
+## release 
 
 ## 0x1 多线程下Setter 的崩溃
 
@@ -27,9 +33,6 @@ func testData() {
         }
     }
 ```
-
-
-## Autoreleasepool
 
 ## RunLoop 与 线程
 
@@ -91,3 +94,10 @@ let sharedView = LearningDataShareView.init(viewModel: self.viewModel, qrUrl: ni
             .subscribe(onNext: { _ in
                 sharedVC.dismiss(animated: true)
             })
+            
+            
+            
+            
+            
+            
+            0x2809870f0
