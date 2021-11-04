@@ -32,38 +32,14 @@ class ViewController: UIViewController {
         setupView()
         
         // 下载图片, 裁剪
-        printCurrentThread(filterString: "下载图片前")
         requestImageURLWithLoad()
         requestUserDataWithLoad()
         
         UserFollowInfoApi(userId: 123456).start { response in
             if let data = response.data {
-                let model = try? JSONDecoder().decode(FollowInfoModel.self, from: data)
+                let _ = try? JSONDecoder().decode(FollowInfoModel.self, from: data)
             }
         }
-        
-        async {
-            print(await counter.increment())
-        }
-        
-        async {
-            print(await counter.increment2())
-        }
-        
-        async {
-            NSLog("JerseyTTT 1 : thread:\(Thread.current)")
-            print(await counter.increment())
-            NSLog("JerseyTTT 2 : thread:\(Thread.current)")
-        }
-        NSLog("JerseyTTT 3 : thread:\(Thread.current)")
-        DispatchQueue.global().async {
-            async {
-                print(await counter.increment())
-                print(await counter.increment2())
-            }
-        }
-        NSLog("JerseyTTT 4 : thread:\(Thread.current)")
-        NSLog("JerseyTTT 5 : thread:\(Thread.current)")
     }
     
     // MARK: SetupUI
@@ -71,7 +47,7 @@ class ViewController: UIViewController {
         view.addSubview(tableView)
         tableView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         view.addSubview(photoImageView)
-        photoImageView.frame = CGRect(x: UIScreen.main.bounds.width / 4, y: UIScreen.main.bounds.height / 2, width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 2)
+        photoImageView.frame = CGRect(x: 200, y: UIScreen.main.bounds.height - 100, width: 60, height: 60)
     }
     
     // MARK: Async SetupData
@@ -84,9 +60,7 @@ class ViewController: UIViewController {
                 printCurrentThread(filterString: "下载图片后")
                 switch result {
                 case .success(let image):
-                    DispatchQueue.main.async { [weak self] in
-                        self?.photoImageView.image = image
-                    }
+                    self.photoImageView.image = image
                 case .failure(_):
                     print("Error")
                 }
@@ -147,10 +121,9 @@ class ViewController: UIViewController {
     /// - Parameter id: id
     /// - Returns: 回调
     func asycnAwaitFetchThumbnail(for id: String) async throws -> Result<UIImage, Error> {
-        printCurrentThread(filterString: "准备进入图片下载裁剪")
+//        printCurrentThread(filterString: "准备进入图片下载裁剪")
         let request = URLRequest(url: self.imageURL)
         let (data, response) = try await URLSession.shared.data(for: request)
-        printCurrentThread(filterString: "try 图片下载裁剪")
         guard (response as? HTTPURLResponse)?.statusCode == 200 else {
             throw FetchError.netError
         }
@@ -239,9 +212,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             let result = try await asycnAwaitFetchThumbnail(for: "")
             switch result {
             case .success(let image):
-                DispatchQueue.main.async {
-                    c.imageView?.image = image
-                }
+                c.imageView?.image = image
             case .failure(_):
                 print("Error")
             }
@@ -251,6 +222,18 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             let user = self.userData?[indexPath.row]
             c.textLabel?.text = user?.name
         }
+
+        var textString = ""
+        switch indexPath.row {
+            case 0: textString = "JSDViewController"
+            case 1: textString = "JSDSIGABRTVC"
+            case 2: textString = "JSDPerformSelectorVC"
+            default: break
+        }
+        if textString.count > 0 {
+            c.textLabel?.text = textString
+        }
+        
         
         return c
     }
@@ -279,11 +262,3 @@ actor Counter {
 }
 
 let counter = Counter()
-
-//asyncDetached {
-//    print(await counter.increment())
-//}
-//
-//asyncDetached {
-//    print(await counter.increment())
-//}

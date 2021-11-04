@@ -59,15 +59,67 @@ dispatch_async(cQueue, ^{
 ![野指针](https://upload-images.jianshu.io/upload_images/68070-cf1c2444137fa0db.png?imageMogr2/auto-orient/strip|imageView2/2/format/webp====)
 
 ## atomic
+> @property 默认修饰符是 atomic, 原子性可以确保当前被修饰的属性 set get 按顺序执行而不被打断, atomic的作用只是给 getter 和 setter 加了个锁，atomic只能保证代码进入getter或者setter函数内部时是安全的，一旦出了getter和setter，多线程安全只能靠程序员自己保障了。
+
+
+[Runtime-Property 源码](https://opensource.apple.com/source/objc4/objc4-493.9/runtime/Accessors.subproj/objc-accessors.m)
+
+下面是 runtime 实现 @property set 方法: 
+```
+typedef uintptr_t spin_lock_t;
+extern void _spin_lock(spin_lock_t *lockp);
+extern int  _spin_lock_try(spin_lock_t *lockp);
+extern void _spin_unlock(spin_lock_t *lockp);
+PRIVATE_EXTERN void objc_setProperty_non_gc(id self, SEL _cmd, ptrdiff_t offset, id newValue, BOOL atomic, BOOL shouldCopy) {
+    // Retain release world
+    id oldValue, *slot = (id*) ((char*)self + offset);
+
+    // atomic or not, if slot would be unchanged, do nothing.
+    if (!shouldCopy && *slot == newValue) return;
+   
+    if (shouldCopy) {
+        newValue = (shouldCopy == OBJC_PROPERTY_MUTABLECOPY ? [newValue mutableCopyWithZone:NULL] : [newValue copyWithZone:NULL]);
+    } else {
+        newValue = objc_retain(newValue);
+    }
+
+    if (!atomic) {
+        oldValue = *slot;
+        *slot = newValue;
+    } else {
+        spin_lock_t *slotlock = &PropertyLocks[GOODHASH(slot)];
+        _spin_lock(slotlock);
+        oldValue = *slot;
+        *slot = newValue;        
+        _spin_unlock(slotlock);        
+    }
+
+    objc_release(oldValue);
+}
+```
 
 
 ## Autoreleasepool
 
-## release 
+> @autoreleasepool 当自动释放池被销毁或者耗尽时，会向自动释放池中的所有对象发送 release 消息，释放自动释放池中的所有对象。
 
-## 0x1 多线程下Setter 的崩溃
+```
+- (void)testAutoreleasepoolWithNumber:(NSUInteger)number {
+    // largeNumber是一个很大的数
+    for (NSUInteger i = 0; i < number; i++) {
+        @autoreleasepool {
+        NSString *str = [NSString stringWithFormat:@"hello -%04lu", (unsigned long)i];
+        str = [str stringByAppendingString:@" - world"];
+        NSLog(@"%@", str);
+        }
+    }
+}
+```
+
+## 0x1 多线程
 
 Thread 37: EXC_BAD_ACCESS (code=1, address=0x1fcd8dbc9b50)
+BAD_ACCESS
 Thread 13: signal SIGABRT
 
 ```
@@ -91,47 +143,13 @@ func testData() {
     }
 ```
 
-### 参考资料
+## Firebase 现存野指针未解决崩溃问题
 
-https://www.jianshu.com/p/c4bd2960b3fa
-http://satanwoo.github.io/2016/10/23/multithread-dangling-pointer/
-https://mp.weixin.qq.com/s?__biz=MzU2MDQzMjM3Ng==&mid=2247485932&idx=1&sn=169c7571eba452e8a2d03256c97102ca&chksm=fc095c7bcb7ed56d7087330e687af3b073c8af3bbd307a9962febdeebd4dc721a14a49da1143&scene=178&cur_album_id=1658864183834148870#rd
+* HTDetailChatViewController.m  -[HTDetailChatViewController setDataSource:] https://console.firebase.google.com/u/0/project/api-8207851731662405563-887232/crashlytics/app/ios:com.helloTalk.helloTalk/issues?time=last-ninety-days&issuesQuery=setDataSource&state=open&type=all&tag=all
+* HTDatabaseConnect.m [HTDatabaseConnect asyncReadWithTransaction:completionBlock:]_block_invoke
+  https://console.firebase.google.com/u/0/project/api-8207851731662405563-887232/crashlytics/app/ios:com.helloTalk.helloTalk/issues?time=last-ninety-days&state=all&type=all&tag=all&issuesQuery=HTDatabaseConnect
+* [早期崩溃](https://console.firebase.google.com/u/0/project/api-8207851731662405563-887232/crashlytics/app/ios:com.helloTalk.helloTalk/issues?time=last-ninety-days&state=all&type=all&tag=early) 
 
-
-
-
-https://juejin.cn/post/6844903557733285896
-https://github.com/xitu/gold-miner/blob/master/ios.md
-https://mp.weixin.qq.com/s?__biz=MzU2MDQzMjM3Ng==&mid=2247485932&idx=1&sn=169c7571eba452e8a2d03256c97102ca&chksm=fc095c7bcb7ed56d7087330e687af3b073c8af3bbd307a9962febdeebd4dc721a14a49da1143&scene=178&cur_album_id=1658864183834148870#rd
-https://github.com/SwiftOldDriver/iOS-Weekly/releases
-https://mp.weixin.qq.com/s?__biz=MzI2NTAxMzg2MA==&mid=2247492205&idx=1&sn=1b2e05f338b40576891d5ee8da8cb006&chksm=eaa17d66ddd6f470f5c4638fc14c0fe27756ca9c396b055cba67d752f6fda75c42340f470d64&scene=178&cur_album_id=1432795573765193729#rd
-anhuapp.com/web/#/item?tid=4c2c0f24-2302-4fd0-8ddd-0c0509b1767a&fid=all
-https://onevcat.com/2016/12/concurrency/#asyncawait%E4%B8%B2%E8%A1%8C%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B
-http://satanwoo.github.io/2016/10/23/multithread-dangling-pointer/
-https://www.jianshu.com/p/c4bd2960b3fa
-
-
-
-
-
-let sharedView = LearningDataShareView.init(viewModel: self.viewModel, qrUrl: nil)
-        sharedView.frame = CGRect(x: 0, y: 0, width: UIScreen.width, height: UIScreen.height)
-        sharedView.setNeedsLayout()
-        sharedView.layoutIfNeeded()
-        NSLog("JerseyBro: width:\(UIScreen.width), height: \(UIScreen.height), sharedViewWithd: \(sharedView.ht.width), sharedViewheight: \(sharedView.ht.height)")
-        let sharedVC = UIViewController()
-        sharedVC.view.addSubview(sharedView)
-        sharedView.frame = sharedVC.view.bounds
-        self.present(sharedVC, animated: true, completion: nil)
-        sharedView.rx.tapGesture().when(.recognized)
-            .subscribe(onNext: { _ in
-                sharedVC.dismiss(animated: true)
-            })
-            
-            
-            
-            
-            
-            
-            0x2809870f0
-
+### 总结
+* 避免复杂的多线程设计
+* 使用多线程的时候要保持警惕

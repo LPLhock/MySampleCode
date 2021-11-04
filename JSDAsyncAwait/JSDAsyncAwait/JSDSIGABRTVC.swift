@@ -16,8 +16,8 @@ class JSDSIGABRTVC: UIViewController {
     
     var atomicRandomArray: [Int]? {
         get {
-            self.arrayGetLock.lock()
-            defer { self.arrayGetLock.unlock() }
+            self.arraySetLock.lock()
+            defer { self.arraySetLock.unlock() }
             return _atomicRandomArray
         }
         set {
@@ -44,63 +44,62 @@ class JSDSIGABRTVC: UIViewController {
         super.viewDidLoad()
         self.title = "JSDSIGABRTVC"
         self.view.backgroundColor = .white
-        setupData()
+//        setupData()
+//        atomic()
+//        noAtomic()
+//        autoreleasepoolArray()
+//        serialQueue()
     }
     
     // MARK: Debug Thread 1: signal SIGABRT
     func setupData() {
-//        let queue = DispatchQueue(label: "JerseyCafe")
-//        queue.async {
-//        }
+
 //        self.lock.lock()
 //        self.lock.unlock()
-//        autoreleasepool(invoking: {
-//        }
-        
-        for i in 0..<10000 {
+    }
+    
+    func atomic() {
+        for _ in 0..<10000 {
             DispatchQueue.global().async {
-            let random = Int.random(in: 0...1000)
-            self.atomicRandomArray = [1]
-            NSLog("JerseyTTT当前正在循环: \(i), string: \(self.atomicRandomArray), : thread:\(Thread.current)")
+                let random = Int.random(in: 0...1000)
+                self.atomicRandomArray = [random]
+                printCurrentThread(filterString: "JSDSIGABRTVC", flagString: self.atomicRandomArray)
             }
         }
-        
-//        DispatchQueue.global().async {
-//            async {
-//                for i in 0..<100000 {
-//                    let random = Int.random(in: 0...1000)
-//                    self.atomicRandomArray = [1]
-//                    NSLog("JerseyTTT当前正在循环: \(i), string: \(self.atomicRandomArray), : thread:\(Thread.current)")
-//                }
-//            }
-//        }
-        
-//        for i in 0..<100000 {
-//            DispatchQueue.global().async {
-//            let random = Int.random(in: 0...1000)
-//                autoreleasepool(invoking: {
-//                    self.randomArray = [random]
-//                    NSLog("JerseyTTT当前正在循环: \(i), string: \(String(describing: self.randomArray)), : thread:\(Thread.current)")
-//                })
-//            }
-//        }
-//
-//        for i in 0..<100000 {
-//            DispatchQueue.global().async {
-//                let random = Int.random(in: 0...1000)
-//                ViewController.userName = String(random)
-//                NSLog("JerseyTTT当前正在循环: \(i), string: \(ViewController.userName), : thread:\(Thread.current)")
-//            }
-//        }
-        
-//        let testActor = Counter()
-//                testActor.testDataString = [random]
-//        Task.init(priority: .high) {
-//            for i in 0..<5000 {
-//                let random = Int.random(in: 0...1000)
-//                await testActor.updateData([random])
-//                NSLog("JerseyTTT当前正在循环: \(i), string: \(await testActor.testDataString),  : thread:\(Thread.current)")
-//            }
-//        }
+    }
+    
+    func noAtomic() {
+        for _ in 0..<10000 {
+            DispatchQueue.global().async {
+                let random = Int.random(in: 0...1000)
+                self.randomArray = [random]
+                printCurrentThread(filterString: "JSDSIGABRTVC", flagString: self.randomArray)
+            }
+        }
+    }
+    
+    func autoreleasepoolArray() {
+        for _ in 0..<10000 {
+            DispatchQueue.global().async {
+                autoreleasepool {
+                    let random = Int.random(in: 0...1000)
+                    self.atomicRandomArray = [random]
+                    printCurrentThread(filterString: "JSDSIGABRTVC", flagString: self.atomicRandomArray)
+                }
+            }
+        }
+    }
+    
+    func serialQueue() {
+        for _ in 0..<10000 {
+            DispatchQueue.global().async {
+                let serialQueue = DispatchQueue(label: "JerseySerialQueue")
+                serialQueue.async {
+                    let random = Int.random(in: 0...1000)
+                    self.randomArray = [random]
+                    printCurrentThread(filterString: "JSDSIGABRTVC", flagString: self.randomArray)
+                }
+            }
+        }
     }
 }

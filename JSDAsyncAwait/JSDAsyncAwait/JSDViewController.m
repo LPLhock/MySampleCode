@@ -25,16 +25,17 @@
     self.title = @"Objective-C";
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    [self setupView];
-    
     self.lock = [NSLock new];
     self.serialQueue = dispatch_queue_create("JSD", DISPATCH_QUEUE_SERIAL);
     
+    [self setupView];
     
-    [self setupNonatomicArray];
+//    [self setupNonatomicArray];
 //    [self setupatomicArray];
 //    [self setupArrayAutoreleasepool];
+    
+    // 测试 Autoreleasepool 减低内存峰值
+    [self testAutoreleasepoolWithNumber: 9999999999];
 }
 
 - (void)setNonatomicArray:(NSArray *)nonatomicArray {
@@ -81,6 +82,17 @@
                 NSLog(@"JerseyBro: func: %s, index: %d, array: %@", __func__, i, randomArray);
             }
         });
+    }
+}
+
+- (void)testAutoreleasepoolWithNumber:(NSUInteger)number {
+    // largeNumber是一个很大的数
+    for (NSUInteger i = 0; i < number; i++) {
+        @autoreleasepool {
+        NSString *str = [NSString stringWithFormat:@"hello -%04lu", (unsigned long)i];
+        str = [str stringByAppendingString:@" - world"];
+        NSLog(@"%@", str);
+        }
     }
 }
 

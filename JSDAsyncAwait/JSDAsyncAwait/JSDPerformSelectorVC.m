@@ -18,12 +18,12 @@
     self.title = @"JSDPerformSelectorVC";
     self.view.backgroundColor = [UIColor whiteColor];
     
-//    [self testPerformSelector];
-    dispatch_queue_t cQueue = dispatch_queue_create("JSD", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_async(cQueue, ^{
-        [self testPerformSelectorCrash];
-        [self testPerformSelectorOnMainThread];
-    });
+    [self testPerformSelector];
+//    dispatch_queue_t cQueue = dispatch_queue_create("JSD", DISPATCH_QUEUE_CONCURRENT);
+//    dispatch_async(cQueue, ^{
+//        [self testPerformSelectorCrash];
+//        [self testPerformSelectorOnMainThread];
+//    });
     /*
      打印结果为 1、3。原因是：
          1    performSelector:withObject:afterDelay: 的本质是拿到当前线程的 RunLoop 往它里面添加 timer
@@ -37,7 +37,7 @@
     dispatch_queue_t cQueue = dispatch_queue_create("JSD", DISPATCH_QUEUE_CONCURRENT);
     dispatch_async(cQueue, ^{
         NSLog(@"Perform: 1");
-        [self performSelector:@selector(test) withObject:nil afterDelay: 0];
+        [self performSelector:@selector(test) withObject:nil afterDelay: 0.0f];
         NSLog(@"Perform: 3");
     });
 }
