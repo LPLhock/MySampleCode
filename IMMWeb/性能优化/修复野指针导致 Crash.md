@@ -3,6 +3,7 @@
 ## 前言
 工程师们苦 Crash 久矣，尤其是用户感知最为明显的客户端。那居高不下的崩溃率、数不胜数的用户反馈、迟迟无法完成的 KPI，折磨着每一位客户端的开发同学。
 
+
 > 加断点再Debug，堆栈瞬间就爆炸，日志输出如雨下，看到异常就害怕；调试一夜没人陪，心想这锅该归谁？回想当初心后悔，不该重构这地雷；翻日志查半天，博客看了千百遍，低头又点一根烟，闪退还是没复现。
 
 上面这段文字很形象的描述了一位深夜排查闪退问题的工程师。那么 Crash 为何如此难以解决且反复发作，它究竟难在哪里，从客户端工程诞生至今一直困扰着无数的工程师。
@@ -32,7 +33,7 @@ dispatch_async(cQueue, ^{
 
 ## 野指针
 
->野指针是指指向一个已删除的对象或未申请访问受限内存区域的指针
+>野指针是指指向一个已删除的对象或未申请访问受限内存区域的指针, 访问野指针是不会Crash的，只有野指针指向的地址被写上了有问题的数据才会引发Crash
 
 **Obj-C的野指针最常见的一种栈是objc_msgSend**
 
@@ -118,9 +119,11 @@ PRIVATE_EXTERN void objc_setProperty_non_gc(id self, SEL _cmd, ptrdiff_t offset,
 
 ## 0x1 多线程
 
-Thread 37: EXC_BAD_ACCESS (code=1, address=0x1fcd8dbc9b50)
+**Thread 37: EXC_BAD_ACCESS (code=1, address=0x1fcd8dbc9b50)
 BAD_ACCESS
 Thread 13: signal SIGABRT
+objc_msgSend****
+
 
 ```
 func testData() {
@@ -145,11 +148,24 @@ func testData() {
 
 ## Firebase 现存野指针未解决崩溃问题
 
+* HTDetailChatModel 
 * HTDetailChatViewController.m  -[HTDetailChatViewController setDataSource:] https://console.firebase.google.com/u/0/project/api-8207851731662405563-887232/crashlytics/app/ios:com.helloTalk.helloTalk/issues?time=last-ninety-days&issuesQuery=setDataSource&state=open&type=all&tag=all
 * HTDatabaseConnect.m [HTDatabaseConnect asyncReadWithTransaction:completionBlock:]_block_invoke
   https://console.firebase.google.com/u/0/project/api-8207851731662405563-887232/crashlytics/app/ios:com.helloTalk.helloTalk/issues?time=last-ninety-days&state=all&type=all&tag=all&issuesQuery=HTDatabaseConnect
 * [早期崩溃](https://console.firebase.google.com/u/0/project/api-8207851731662405563-887232/crashlytics/app/ios:com.helloTalk.helloTalk/issues?time=last-ninety-days&state=all&type=all&tag=early) 
 
+
+
 ### 总结
-* 避免复杂的多线程设计
-* 使用多线程的时候要保持警惕
+
+* 尽量避免复杂的多线程设计
+* 使用多线程的时候要保持警惕, 尽量加上注释, 防止后面维护的人不清楚
+* 使用串行队列, 锁, 原子性到对应的业务场景确保线程安全
+* 用 Xcode Analyze 检测代码实现漏洞
+* 使用 Xcode Memory Management 提高野指针复现率
+* 如果不知道该用什么, 那就默认选择 serial dispatch_queue_t, 异步串行高效稳定, 可以不用考虑使用什么类型锁而烦恼, 因为认知缺陷,不合理的使用锁, 随之产生的性能, 死锁等一系列难以排查的问题。
+
+
+## 参考
+[如何定位Obj-C野指针随机Crash(二)：让非必现Crash变成必现](https://cloud.tencent.com/developer/article/1070512?from=article.detail.1070505)
+[Swift 中的锁和线程安全](https://swift.gg/2018/06/07/friday-qa-2015-02-06-locks-thread-safety-and-swift/)
