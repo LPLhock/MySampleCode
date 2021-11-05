@@ -18,7 +18,7 @@
     self.title = @"JSDPerformSelectorVC";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self testPerformSelector];
+//    [self testPerformSelector];
 //    dispatch_queue_t cQueue = dispatch_queue_create("JSD", DISPATCH_QUEUE_CONCURRENT);
 //    dispatch_async(cQueue, ^{
 //        [self testPerformSelectorCrash];

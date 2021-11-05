@@ -41,6 +41,7 @@
 - (void)setNonatomicArray:(NSArray *)nonatomicArray {
     if (!nonatomicArray) return;
 //    [self.lock lock];
+//    _nonatomicArray = nonatomicArray;
 //    [self.lock unlock];
     dispatch_async(self.serialQueue, ^{
         self.nonatomicArray = nonatomicArray;

@@ -16,19 +16,19 @@ class JSDSIGABRTVC: UIViewController {
     
     var atomicRandomArray: [Int]? {
         get {
-            self.arraySetLock.lock()
-            defer { self.arraySetLock.unlock() }
+            self.arraySlotLock.lock()
+            defer { self.arraySlotLock.unlock() }
             return _atomicRandomArray
         }
         set {
-            self.arraySetLock.lock()
-            defer { self.arraySetLock.unlock() }
+            self.arraySlotLock.lock()
+            defer { self.arraySlotLock.unlock() }
             _atomicRandomArray = newValue
         }
     }
     
-    let arraySetLock: NSLock = NSLock()
-    let arrayGetLock: NSLock = NSLock()
+    let arraySlotLock: NSLock = NSLock()
+//    let arraySlotlockLock: NSLock = NSLock()
     
 //    var wrappedValue: Value {
 //          get { return load() }
@@ -44,7 +44,6 @@ class JSDSIGABRTVC: UIViewController {
         super.viewDidLoad()
         self.title = "JSDSIGABRTVC"
         self.view.backgroundColor = .white
-//        setupData()
 //        atomic()
 //        noAtomic()
 //        autoreleasepoolArray()
@@ -53,9 +52,6 @@ class JSDSIGABRTVC: UIViewController {
     
     // MARK: Debug Thread 1: signal SIGABRT
     func setupData() {
-
-//        self.lock.lock()
-//        self.lock.unlock()
     }
     
     func atomic() {
