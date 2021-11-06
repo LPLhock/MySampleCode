@@ -38,36 +38,36 @@
     [self testAutoreleasepoolWithNumber: 9999999999];
 }
 
-- (void)setNonatomicArray:(NSArray *)nonatomicArray {
-    if (!nonatomicArray) return;
-//    [self.lock lock];
-//    _nonatomicArray = nonatomicArray;
-//    [self.lock unlock];
-    dispatch_async(self.serialQueue, ^{
-        self.nonatomicArray = nonatomicArray;
-    });
-}
+//- (void)setNonatomicArray:(NSArray *)nonatomicArray {
+//    if (!nonatomicArray) return;
+////    [self.lock lock];
+////    _nonatomicArray = nonatomicArray;
+////    [self.lock unlock];
+//    dispatch_async(self.serialQueue, ^{
+//        self.nonatomicArray = nonatomicArray;
+//    });
+//}
 
 - (void)setupNonatomicArray {
+    dispatch_queue_t cQueue = dispatch_queue_create("JSD", DISPATCH_QUEUE_CONCURRENT);
     for (int i = 0; i < 10000; i++) {
-        dispatch_queue_t cQueue = dispatch_queue_create("JSD", DISPATCH_QUEUE_CONCURRENT);
         dispatch_async(cQueue, ^{
             NSInteger number =  (arc4random() % 99999) + 1;
             NSArray* randomArray = @[@(number)];
             self.nonatomicArray = randomArray;
-            NSLog(@"JerseyBro: func: %s, index: %d, array: %@", __func__, i, randomArray);
+            NSLog(@"JerseyBro: func: %s, index: %d, array: %@", __func__, i, self.nonatomicArray);
         });
     }
 }
 
 - (void)setupatomicArray {
+    dispatch_queue_t cQueue = dispatch_queue_create("JSD", DISPATCH_QUEUE_CONCURRENT);
     for (int i = 0; i < 10000; i++) {
-        dispatch_queue_t cQueue = dispatch_queue_create("JSD", DISPATCH_QUEUE_CONCURRENT);
         dispatch_async(cQueue, ^{
             NSInteger number =  (arc4random() % 99999) + 1;
             NSArray* randomArray = @[@(number)];
             self.atomicArray = randomArray;
-            NSLog(@"JerseyBro: func: %s, index: %d, array: %@", __func__, i, randomArray);
+            NSLog(@"JerseyBro: func: %s, index: %d, array: %@", __func__, i, self.atomicArray);
         });
     }
 }
