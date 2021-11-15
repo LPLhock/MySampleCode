@@ -1,6 +1,6 @@
-# iOS 崩溃符号化分析
+# iOS 崩溃符号化工具
 
-**这里主要介绍  symbolicatecrash 和 atos 工具的使用, 两个工具都是 Xcode 自带, 使用 sh  脚本写的,  symbolicatecrash 实际上也是基于 atos 来进行符号化的, atos 可以针对模块方法进行符号化解析,  symbolicatecrash 是针对整个文件进行符号化**
+**这里主要介绍 symbolicatecrash 和 atos 工具的使用, 以及 iOS15 兼容 Json 格式后, 新出的 CrashSymbolicator.py, 三个工具都是 Xcode 自带, 使用 sh 脚本写的, symbolicatecrash 实际上也是基于 atos 来进行符号化的, atos 可以针对模块方法进行符号化解析, symbolicatecrash 是针对整个文件进行符号化**
 
 目前有 3 种符号化的方法, 最简单方便的是直接把崩溃文件拖拽到 Xcode -> Device -> View Device Log 里面,  但是这里这种符号化有一个局限性, 就是当前崩溃的包必须是在当前机器打出来的, 系统才可以进行符号化。  
 
